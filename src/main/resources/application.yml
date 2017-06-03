@@ -1,0 +1,27 @@
+server:
+  port: 8090
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.8.41.109:3306/lianjia_db
+    username: root
+    password: 123
+  mvc:
+    view:
+      prefix: /WEB-INF/
+      suffix: .jsp
+      
+  http:
+    encoding:
+      force: true
+mybatis:
+  type-aliases-package: com.tedu.pojo
+  config-location: classpath:/mybatis/mybatis-config.xml
+  mapper-locations: classpath:/mybatis/mappers/*.xml
+
+
+
+
+
+

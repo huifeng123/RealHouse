@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tedu.mapper.HouseInfoMapper">
+	<update id="updateHouseInfo">
+		update house_info_p
+		<set>
+
+			<if test="hasbed !=null">hasbed=#{hasbed},</if>
+			<if test="hastv !=null">hastv=#{hastv},</if>
+			<if test="hasfridge !=null">hasfridge=#{hasfridge},</if>
+			<if test="haswasher !=null">haswasher=#{haswasher},</if>
+			<if test="haskt !=null">haskt=#{haskt},</if>
+			<if test="hasnq !=null">hasnq=#{hasnq},</if>
+			<if test="hasnet !=null">hasnet=#{hasnet},</if>
+			<if test="hasfurniture !=null">hasfurniture=#{hasfurniture},</if>
+			<if test="hasgas !=null">hasgas=#{hasgas},</if>
+			<if test="hasrsq !=null">hasrsq=#{hasrsq},</if>
+		</set>
+		where hid=#{hid}
+	</update>
+	<!--按房屋id查询详细信息  -->
+	<select id="findByHouseId" resultType="HouseInfo">
+		SELECT * FROM
+		 house_info_p WHERE  hid=#{hid}
+	</select>
+
+    <delete id="deleteHouseInfo">
+		delete from house_info_p where hid=#{hid}
+	</delete>
+	<!--新增房屋详情 动态新增-->
+	<insert id="saveHouseInfo" >
+		insert into house_info_p
+		<trim prefix="(" suffix=")" suffixOverrides="," >
+			<if test="itmeId !=null">itmeId,</if>
+			<if test="hid !=null">hid,</if>
+			<if test="hasbed !=null">hasbed,</if>
+			<if test="hastv !=null">hastv,</if>
+			<if test="hasfridge !=null">hasfridge,</if>
+			<if test="haswasher !=null">haswasher,</if>
+			<if test="haskt !=null">haskt,</if>
+			<if test="hasnq !=null">hasnq,</if>
+			<if test="hasnet !=null">hasnet,</if>
+			<if test="hasfurniture !=null">hasfurniture,</if>
+			<if test="hasgas !=null">hasgas,</if>
+			<if test="hasrsq !=null">hasrsq,</if>
+		</trim>
+		values
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="itmeId !=null">#{itmeId},</if>
+			<if test="hid !=null">#{hid},</if>
+			<if test="hasbed !=null">#{hasbed},</if>
+			<if test="hastv !=null">#{hastv},</if>
+			<if test="hasfridge !=null">#{hasfridge},</if>
+			<if test="haswasher !=null">#{haswasher},</if>
+			<if test="haskt !=null">#{haskt},</if>
+			<if test="hasnq !=null">#{hasnq},</if>
+			<if test="hasnet !=null">#{hasnet},</if>
+			<if test="hasfurniture !=null">#{hasfurniture},</if>
+			<if test="hasgas !=null">#{hasgas},</if>
+			<if test="hasrsq !=null">#{hasrsq},</if>
+		</trim>
+	</insert>
+	
+
+	
+	
+
+	
+
+	
+	
+	
+	
+	
+</mapper>

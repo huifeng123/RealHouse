@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tedu.mapper.NoticeMapper">
+
+    <select id="findNoticeAll" resultType="Notice">
+          select *  from notice
+    </select>
+
+    <delete id="deleteNotice">
+        delete from notice where id=#{id}
+    </delete>
+
+    <insert id="saveNotice">
+        insert into notice(id,name,notice,datatime)
+        values(
+        #{id},
+        #{name},
+        #{notice},
+        #{datatime}
+        )
+    </insert>
+
+    <select id="findOne" resultType="Notice">
+        select * from notice where id = #{id}
+    </select>
+
+    <update id="updateNotice">
+        update notice
+        <set>
+            <if test="name!=null">name = #{name},</if>
+            <if test="notice!=null">notice = #{notice},</if>
+            <if test="datatime !=null" >datatime=#{datatime},</if>
+        </set>
+        where id=#{id}
+    </update>
+
+
+</mapper>

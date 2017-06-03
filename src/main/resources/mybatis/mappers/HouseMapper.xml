@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tedu.mapper.HouseMapper">
+    <update id="updateHouse">
+        update house_p
+        <set>
+            <if test="hname !=null">hname={hname},</if>
+            <if test="hcountry !=null">hcountry={hcountry},</if>
+            <if test="village !=null">village={village},</if>
+            <if test="area !=null">area={area},</if>
+            <if test="hstructure !=null">hstructure={hstructure},</if>
+            <if test="face !=null">face={face},</if>
+            <if test="harea !=null">harea={harea},</if>
+            <if test="hfloor !=null">hfloor={hfloor},</if>
+            <if test="lend !=null">lend={lend},</if>
+            <if test="price !=null">price={price},</if>
+            <if test="haddress !=null">haddress={haddress},</if>
+            <if test="hrepair !=null">hrepair={hrepair},</if>
+            <if test="validate !=null">validate={validate},</if>
+            <if test="publishtime !=null">publishtime={publishtime},</if>
+            <if test="contact !=null">contact={contact},</if>
+            <if test="tel !=null">tel={tel},</if>
+            <if test="remarks !=null">remarks={remarks},</if>
+            <if test="state !=null">state={state},</if>
+            <if test="think !=null">think={think},</if>
+            <if test="imgurl !=null">imgurl={imgurl},</if>
+        </set>
+        where hid=#{hid}
+    </update>
+    <!--查询所用房屋信息-->
+    <select id="findAll" resultMap="houseRM">
+        SELECT * from
+        (SELECT * from
+        house_p h
+        LEFT JOIN
+        (SELECT itmeId,hid info_hid,hasbed,hastv,hasfridge,haswasher,haskt,hasnq,
+        hasnet,hasfurniture,hasgas,hasrsq FROM house_info_p) info
+        ON h.hid=info.info_hid) hinfo
+        LEFT JOIN
+        (SELECT uid u_uid,uname from user_p) u
+        ON hinfo.uid=u.u_uid
+    </select>
+    <!--结果集封装-->
+    <!--主表封装-->
+    <resultMap id="houseRM" type="House" autoMapping="true">
+        <id  property="hid" column="hid"></id>
+        <!--houseInfo对象封装-->
+        <association property="houseInfo" javaType="HouseInfo">
+            <id column="itmeId" property="itmeId" ></id>
+            <result column="info_hid" property="hid"></result>
+            <result column="hasbed" property="hasbed"></result>
+            <result column="hasfridge" property="hasfridge"></result>
+            <result column="haskt" property="haskt"></result>
+            <result column="hasnq" property="hasnq"></result>
+            <result column="hasnet" property="hasnet"></result>
+            <result column="hasfurniture" property="hasfurniture"></result>
+            <result column="hasgas" property="hasgas"></result>
+            <result column="hasrsq" property="hasrsq"></result>
+        </association>
+        <!--User对象封装-->
+        <association property="userHouse" javaType="User">
+            <id column="u_uid" property="uid"></id>
+            <result column="uname" property="uname"></result>
+        </association>
+
+    </resultMap>
+
+
+    <!--新增房屋信息-->
+    <insert id="saveHouse">
+        insert into house_p(
+
+        <if test="hid !=null">hid,</if>
+        <if test="hname !=null">hname,</if>
+        <if test="hcountry !=null">hcountry,</if>
+        <if test="village !=null">village,</if>
+        <if test="area !=null">area,</if>
+        <if test="hstructure !=null">hstructure,</if>
+        <if test="face !=null">face,</if>
+        <if test="harea !=null">harea,</if>
+        <if test="hfloor !=null">hfloor,</if>
+        <if test="lend !=null">lend,</if>
+        <if test="price !=null">price,</if>
+        <if test="haddress !=null">haddress,</if>
+        <if test="hrepair !=null">hrepair,</if>
+        <if test="validate !=null">validate,</if>
+        <if test="publishtime !=null">publishtime,</if>
+        <if test="contact !=null">contact,</if>
+        <if test="tel !=null">tel,</if>
+        <if test="remarks !=null">remarks,</if>
+        <if test="state !=null">state,</if>
+        <if test="think !=null">think,</if>
+        <if test="imgurl !=null">imgurl,</if>
+        uid
+        )
+        values(
+
+        <if test="hid !=null">#{hid},</if>
+        <if test="hname !=null">#{hname},</if>
+        <if test="hcountry !=null">#{hcountry},</if>
+        <if test="village !=null">#{village},</if>
+        <if test="area !=null">#{area},</if>
+        <if test="hstructure !=null">#{hstructure},</if>
+        <if test="face !=null">#{face},</if>
+        <if test="harea !=null">#{harea},</if>
+        <if test="hfloor !=null">#{hfloor},</if>
+        <if test="lend !=null">#{lend},</if>
+        <!--<if test="userHouse.uid !=null">#{userHose.uid},</if>-->
+        <if test="price !=null">#{price},</if>
+        <if test="haddress !=null">#{haddress},</if>
+        <if test="hrepair !=null">#{hrepair},</if>
+        <if test="validate !=null">#{validate},</if>
+        <if test="publishtime !=null">#{publishtime},</if>
+        <if test="contact !=null">#{contact},</if>
+        <if test="tel !=null">#{tel},</if>
+        <if test="remarks !=null">#{remarks},</if>
+        <if test="state !=null">#{state},</if>
+        <if test="think !=null">#{think},</if>
+        <if test="imgurl !=null">#{imgurl},</if>
+        #{userHouse.uid}
+        )
+    </insert>
+
+    <!--根据房屋ID查询信息-->
+    <select id="findOneByHid" resultMap="houseRM">
+        SELECT * from
+        (SELECT * from
+        house_p h
+        LEFT JOIN
+        (SELECT itmeId,hid info_hid,hasbed,hastv,hasfridge,haswasher,haskt,hasnq,
+        hasnet,hasfurniture,hasgas,hasrsq FROM house_info_p) info
+        ON h.hid=info.info_hid) hinfo
+        LEFT JOIN
+        (SELECT uid u_uid,uname from user_p) u
+        ON hinfo.uid=u.u_uid
+        WHERE hinfo.hid=#{hid}
+
+
+    </select>
+
+
+    <select id="findUidByUuser" resultType="String">
+        SELECT uid from user_p where uuser=#{uuser}
+    </select>
+    <delete id="deleteHouse">
+        delete from house_p where hid=#{hid}
+    </delete>
+
+    <select id="findHousesByArea" resultMap="houseRM">
+        SELECT * from
+        (SELECT * from
+        house_p h
+        LEFT JOIN
+        (SELECT itmeId,hid info_hid,hasbed,hastv,hasfridge,haswasher,haskt,hasnq,
+        hasnet,hasfurniture,hasgas,hasrsq FROM house_info_p) info
+        ON h.hid=info.info_hid) hinfo
+        LEFT JOIN
+        (SELECT uid u_uid,uname from user_p) u
+        ON hinfo.uid=u.u_uid
+        where area = #{area}
+        order by price desc;
+    </select>
+</mapper>
