@@ -62,8 +62,11 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public User findUserByUsernameAndPassword(String userName, String password) {
-		return userMapper.findUserByUsernameAndPassword(userName,password);
+	public void findUserByUsernameAndPassword(String userName, String password) throws MsgException{
+		User user= userMapper.findUserByUsernameAndPassword(userName,password);
+		if(user==null){
+			throw new MsgException();
+		}
 	}
 
 	@Override

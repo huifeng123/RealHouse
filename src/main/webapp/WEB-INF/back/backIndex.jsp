@@ -24,6 +24,10 @@
     </ul>
     
     <ul class="nav navbar-nav pull-right">
+        <c:if test="${!(empty session_admin)}">
+            <li><i class="glyphicon glyphicon-user"> </i>您好，${session_admin.uname}</li>
+            <li><a  href="${ctx}/toAdminLogOut"><i class="glyphicon glyphicon-user"> </i>退出</a></li>
+        </c:if>
        <li class="li-border dropdown"><a href="#" class="mystyle-color" data-toggle="dropdown">
       <span class="glyphicon glyphicon-search"></span> 搜索</a>
          <div class="dropdown-menu search-dropdown">

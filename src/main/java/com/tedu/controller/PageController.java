@@ -17,7 +17,7 @@ public class PageController extends WebMvcConfigurerAdapter {
     }
 
     //跳转到印象搜索页面
-        @RequestMapping("toImpress")
+    @RequestMapping("toImpress")
     public String toImpress(){
         return "forward:/WEB-INF/pages/impress.jsp";
     }

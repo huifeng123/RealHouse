@@ -89,10 +89,24 @@ public class LoginController {
         return "/index";
     }
     //跳转到退出页面
-    @RequestMapping("/toLogOut")
-    public String toLogOut(){
+    @RequestMapping("/toUserLogOut")
+    public String toUserLogOut(HttpSession httpSession){
+            httpSession.removeAttribute("session_user");
+            return "redirect:/";
+    }
+    @RequestMapping("/toAdminLogOut")
+    public String toAdminLogOut(){
         SecurityUtils.getSubject().logout();
-        //httpSession.removeAttribute("session_user");
-        return "redirect:/home";
+        return "redirect:/";
+    }
+    //Ajax校验用户名
+    @RequestMapping("/toAjaxCheckUname")
+    public String toAjaxCheckUname(String uname){
+        User user=userService.findUserByUserName(uname);
+        System.out.println(user);
+        if(user!=null){
+            return "用户名已存在";
+        }
+        return "用户名可以使用";
     }
 }

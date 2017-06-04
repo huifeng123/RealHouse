@@ -22,7 +22,7 @@ public interface UserService {
 	//添加新用户
 	public void saveUser(User user) throws MsgException;
 	//登录用户
-	public User findUserByUsernameAndPassword(String userName,String password);
+	public void findUserByUsernameAndPassword(String userName,String password)throws MsgException;
 	//查找用户是否存在
 	public User findUserByUserName(String userName);
 

@@ -31,6 +31,14 @@
 				$("#"+name+"_msg").html("<font style='color:red; '>"+msg+"</font>");
 			}
 		}
+		$().ready(function () {
+			var uname=$("input[name=uname]").val();
+			alert(uname)
+			//Ajax校验
+			$.post("${ctx}/toAjaxCheckUname", {uname: uname}, function(result){
+				$("#uname_msg").html(result);
+			});
+		})
 	</script>
 <!-- Custom Theme files -->
 <!--menu-->
@@ -66,6 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<form action="${ctx}/register" method="post">
 					<input type="text" name="urname" placeholder="姓名" required="">
 					<input type="text"  name="uname" placeholder="用户名" required="" ><span style="color: red">${msg}</span>
+					<span id="uname_msg"></span>
 					<input type="password" name="upassword" placeholder="密码" required="">
 					<input type="password" name="upassword2" placeholder="确认密码" required="" onblur="formObj.checkPw('upassword','两次密码不一致')">
 					<span id="upassword2_msg"></span>
@@ -73,7 +82,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<span id="uemail_msg"></span>
 					<input type="text" name="sex" placeholder="性别" required="">
 					<input type="text" name="tel" placeholder="电话" required="">
+					<input type="text" name="qq" placeholder="QQ" required="">
 					<input type="text" name="uaddress" placeholder="住址" required="">
+					<input type="text" name="post" placeholder="邮编" required="">
+					<div>
+						<input type="radio" name="upower" value="1" required="">房东
+						<input type="radio" name="upower" value="0" required="">租客
+					</div>
 
 					<label class="hvr-sweep-to-right">
 						<input type="submit" value="注册">
