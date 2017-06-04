@@ -4,55 +4,55 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tedu.mapper.SerchMapper">
     <select id="findSerchAll" resultType="House">
-        SELECT * FROM `house_p` WHERE MATCH (`hname`,`hcountry`,`face`) AGAINST('#{serch}' IN BOOLEAN MODE )
+        SELECT * FROM `house_p` WHERE MATCH (`hname`,`hcountry`,`face`) AGAINST(#{serch} IN BOOLEAN MODE )
     </select>
     <!--结果集封装-->
     <!--主表封装-->
-    <!--<resultMap id="houseRM" type="House" autoMapping="true">-->
-        <!--<id  property="hid" column="hid"></id>-->
-        <!--&lt;!&ndash;对house对象进行封装&ndash;&gt;-->
-        <!--<association property="house" javaType="House">-->
-            <!--<id column="hid" property="hid"></id>-->
-            <!--<result column="hname" property="hname"></result>-->
-            <!--<result column="hcountry" property="hcountry"></result>-->
-            <!--<result column="village" property="village"></result>-->
-            <!--<result column="area" property="area"></result>-->
-            <!--<result column="hstructure" property="hstructure"></result>-->
-            <!--<result column="face" property="face"></result>-->
-            <!--<result column="harea" property="harea"></result>-->
-            <!--<result column="hfloor" property="hfloor"></result>-->
-            <!--<result column="lend" property="lend"></result>-->
-            <!--<result column="uid" property="uid"></result>-->
-            <!--<result column="price" property="price"></result>-->
-            <!--<result column="haddress" property="haddress"></result>-->
-            <!--<result column="hrepair" property="hrepair"></result>-->
-            <!--<result column="validate" property="validate"></result>-->
-            <!--<result column="publishtime" property="publishtime"></result>-->
-            <!--<result column="contact" property="contact"></result>-->
-            <!--<result column="tel" property="tel"></result>-->
-            <!--<result column="remarks" property="remarks"></result>-->
-            <!--<result column="state" property="state"></result>-->
-            <!--<result column="think" property="think"></result>-->
-            <!--<result column="imgurl" property="imgurl"></result>-->
+    <!--<resultMap id="houseRM" type="House" autoMapping="true">
+        <id  property="hid" column="hid"></id>
+        &lt;!&ndash;对house对象进行封装&ndash;&gt;
+        <association property="house" javaType="House">
+           &lt;!&ndash; <id column="hid" property="hid"></id>&ndash;&gt;
+            <result column="hname" property="hname"></result>
+            <result column="hcountry" property="hcountry"></result>
+            <result column="village" property="village"></result>
+            <result column="area" property="area"></result>
+            <result column="hstructure" property="hstructure"></result>
+            <result column="face" property="face"></result>
+            <result column="harea" property="harea"></result>
+            <result column="hfloor" property="hfloor"></result>
+            <result column="lend" property="lend"></result>
+            <result column="uid" property="uid"></result>
+            <result column="price" property="price"></result>
+            <result column="haddress" property="haddress"></result>
+            <result column="hrepair" property="hrepair"></result>
+            <result column="validate" property="validate"></result>
+            <result column="publishtime" property="publishtime"></result>
+            <result column="contact" property="contact"></result>
+            <result column="tel" property="tel"></result>
+            <result column="remarks" property="remarks"></result>
+            <result column="state" property="state"></result>
+            <result column="think" property="think"></result>
+            <result column="imgurl" property="imgurl"></result>
 
-        <!--</association>-->
-        <!---->
-         <!--<association property="houseInfo" javaType="HouseInfo">-->
-             <!--<id column="itmeId" property="itmeId" ></id>-->
-             <!--<result column="info_hid" property="hid"></result>-->
-             <!--<result column="hasbed" property="hasbed"></result>-->
-             <!--<result column="hasfridge" property="hasfridge"></result>-->
-             <!--<result column="haskt" property="haskt"></result>-->
-             <!--<result column="hasnq" property="hasnq"></result>-->
-             <!--<result column="hasnet" property="hasnet"></result>-->
-             <!--<result column="hasfurniture" property="hasfurniture"></result>-->
-             <!--<result column="hasgas" property="hasgas"></result>-->
-             <!--<result column="hasrsq" property="hasrsq"></result>-->
-         <!--</association>-->
+        </association>
+        &lt;!&ndash;&ndash;&gt;
+         &lt;!&ndash;<association property="houseInfo" javaType="HouseInfo">&ndash;&gt;
+             &lt;!&ndash;<id column="itmeId" property="itmeId" ></id>&ndash;&gt;
+             &lt;!&ndash;<result column="info_hid" property="hid"></result>&ndash;&gt;
+             &lt;!&ndash;<result column="hasbed" property="hasbed"></result>&ndash;&gt;
+             &lt;!&ndash;<result column="hasfridge" property="hasfridge"></result>&ndash;&gt;
+             &lt;!&ndash;<result column="haskt" property="haskt"></result>&ndash;&gt;
+             &lt;!&ndash;<result column="hasnq" property="hasnq"></result>&ndash;&gt;
+             &lt;!&ndash;<result column="hasnet" property="hasnet"></result>&ndash;&gt;
+             &lt;!&ndash;<result column="hasfurniture" property="hasfurniture"></result>&ndash;&gt;
+             &lt;!&ndash;<result column="hasgas" property="hasgas"></result>&ndash;&gt;
+             &lt;!&ndash;<result column="hasrsq" property="hasrsq"></result>&ndash;&gt;
+         &lt;!&ndash;</association>&ndash;&gt;
 
-         <!--<association property="userHouse" javaType="User">-->
-             <!--<id column="u_uid" property="uid"></id>-->
-             <!--<result column="uname" property="uname"></result>-->
-         <!--</association>-->
-    <!--</resultMap>-->
+         &lt;!&ndash;<association property="userHouse" javaType="User">&ndash;&gt;
+             &lt;!&ndash;<id column="u_uid" property="uid"></id>&ndash;&gt;
+             &lt;!&ndash;<result column="uname" property="uname"></result>&ndash;&gt;
+         &lt;!&ndash;</association>&ndash;&gt;
+    </resultMap>-->
 </mapper>

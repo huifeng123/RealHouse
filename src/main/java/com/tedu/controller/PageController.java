@@ -13,11 +13,11 @@ public class PageController extends WebMvcConfigurerAdapter {
     //在浏览器地址栏输入“localhost:8090/”即可访问index.jsp主页面
     @RequestMapping("/")
     public String toHome(){
-        return "forward:/WEB-INF/index.jsp";
+        return "/index";
     }
 
     //跳转到印象搜索页面
-    @RequestMapping("toImpress")
+        @RequestMapping("toImpress")
     public String toImpress(){
         return "forward:/WEB-INF/pages/impress.jsp";
     }
@@ -28,4 +28,9 @@ public class PageController extends WebMvcConfigurerAdapter {
         return "forward:/WEB-INF/pages/buy.jsp";
     }
 
+    //跳转到地图找房
+    @RequestMapping("toMap")
+    public String toMaphot(){
+        return "forward:/WEB-INF/pages/map/mapSearch.jsp";
+    }
 }

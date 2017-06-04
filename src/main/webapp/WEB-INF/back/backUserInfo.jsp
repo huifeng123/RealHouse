@@ -20,20 +20,22 @@
     <ul class="nav navbar-nav">
       <li class="li-border"><a class="mystyle-color" href="#">管理控制台</a></li>
     </ul>
-    
-    <ul class="nav navbar-nav pull-right">
-       <li class="li-border dropdown"><a href="#" class="mystyle-color" data-toggle="dropdown">
-      <span class="glyphicon glyphicon-search"></span> 搜索</a>
-         <div class="dropdown-menu search-dropdown">
-            <div class="input-group">
-                <input type="text" class="form-control">
+
+      <form action="/serch" method="POST">
+          <ul class="nav navbar-nav pull-right">
+              <li class="li-border dropdown"><a href="#" class="mystyle-color" data-toggle="dropdown">
+                  <span class="glyphicon glyphicon-search"></span> 搜索</a>
+                  <div class="dropdown-menu search-dropdown">
+                      <div class="input-group">
+                          <input type="text" class="form-control" name="serch">
                  <span class="input-group-btn">
-                   <button type="button" class="btn btn-default">搜索</button>
+                   <input type="submit" class="btn btn-default">搜索</input>
                 </span>
-            </div>
-         </div>
-      </li>
-    </ul>
+                      </div>
+                  </div>
+              </li>
+          </ul>
+      </form>
   </div>
 </div>
 <div class="down-main">
