@@ -17,7 +17,7 @@ public class PageController extends WebMvcConfigurerAdapter {
     }
 
     //跳转到印象搜索页面
-    @RequestMapping("toImpress")
+        @RequestMapping("toImpress")
     public String toImpress(){
         return "forward:/WEB-INF/pages/impress.jsp";
     }
@@ -28,4 +28,9 @@ public class PageController extends WebMvcConfigurerAdapter {
         return "forward:/WEB-INF/pages/buy.jsp";
     }
 
+    //跳转到地图找房
+    @RequestMapping("toMap")
+    public String toMaphot(){
+        return "forward:/WEB-INF/pages/map/mapHot.jsp";
+    }
 }
