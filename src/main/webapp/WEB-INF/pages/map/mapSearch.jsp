@@ -11,6 +11,7 @@
 </head>
 <body>
 <div class="demo_main">
+    <%@include file="/WEB-INF/_head.jsp"%>
     <fieldset class="demo_title">
         地图找房
     </fieldset>
@@ -18,16 +19,16 @@
         <div style="min-height: 800px; width: 100%;" id="map">
         </div>
         <script type="text/javascript">
-            var markerArr = [
-                { title: "名称：北京西站", point: "116.297428, 39.80923", address: "广东省广州市广州火车站", tel: "12306" },
-                { title: "名称：北京西站", point: "116.397428, 39.77923", address: "广东省广州市广州火车站", tel: "12306" },
-                { title: "名称：北京西站", point: "116.497428, 39.90923", address: "广东省广州市广州火车站", tel: "12306" },
-                { title: "名称：广州塔（赤岗塔）", point: "113.330934,23.113401", address: "广东省广州市广州塔（赤岗塔） ", tel: "18500000000" },
-                { title: "名称：广州动物园", point: "113.312213,23.147267", address: "广东省广州市广州动物园", tel: "18500000000" },
-                { title: "名称：天河公园", point: "113.372867,23.134274", address: "广东省广州市天河公园", tel: "18500000000" }
+            <%--var markerArr = [
+             { title: "名称：北京西站", point: "116.297428, 39.80923", address: "广东省广州市广州火车站", tel: "12306" },
+             { title: "名称：北京西站", point: "116.397428, 39.77923", address: "广东省广州市广州火车站", tel: "12306" },
+             { title: "名称：北京西站", point: "116.497428, 39.90923", address: "广东省广州市广州火车站", tel: "12306" },
+             { title: "名称：广州塔（赤岗塔）", point: "113.330934,23.113401", address: "广东省广州市广州塔（赤岗塔） ", tel: "18500000000" },
+             { title: "名称：广州动物园", point: "113.312213,23.147267", address: "广东省广州市广州动物园", tel: "18500000000" },
+             { title: "名称：天河公园", point: "113.372867,23.134274", address: "广东省广州市天河公园", tel: "18500000000" }
+             ];--%>
 
-            ];
-
+            var markerArr = ${houseJson};
             function map_init() {
                 var map = new BMap.Map("map"); // 创建Map实例
                 var point = new BMap.Point(116.397428, 39.90923); //地图中心点，北京市

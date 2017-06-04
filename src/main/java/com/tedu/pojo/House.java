@@ -31,7 +31,9 @@ public class House extends BaseEntity{
     private Integer state;//状态
     private String think;//评价
     private String imgurl;//图片
-
+    public  String getTitle(){
+        return  this.hname;
+    }
     public HouseInfo getHouseInfo() {
         return houseInfo;
     }
