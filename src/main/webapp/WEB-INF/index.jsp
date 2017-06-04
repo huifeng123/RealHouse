@@ -131,10 +131,10 @@
                     </a>
                 </div>
                 <div class=" bottom-head">
-                    <a href="buy.html">
+                    <a href="${ctx}/tosingle">
                         <div class="buy-media">
                             <i class="pg"> </i>
-                            <h6>Hostels</h6>
+                            <h6>single</h6>
                         </div>
                     </a>
                 </div>

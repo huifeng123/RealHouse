@@ -177,7 +177,7 @@
             <div class="map-buy-single">
                 <h4>地图信息</h4>
                 <div class="map-buy-single1">
-                    <iframe src="/map.jsp?visllage=${house.village}">
+                    <iframe src="/tomap?village=${house.village}">
 
                     </iframe>
 
