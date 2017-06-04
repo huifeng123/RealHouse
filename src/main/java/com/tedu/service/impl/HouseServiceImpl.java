@@ -85,7 +85,11 @@ public class HouseServiceImpl implements HouseService {
         }
     }
 
-
+    @Override
+    public List<House> findVIPHousesByHcountry(String hcountry) {
+        return houseMapper.findVIPHouseByHcountry(hcountry
+        );
+    }
 
 
     /**

@@ -21,10 +21,13 @@ public class HouseController {
             //通过hid查询房源的具体信息
             House house = houseService.findOneByHouseId("00a71c9f-96f7-4c3f-bcba-646c75b8c2c0");
             model.addAttribute("house",house);
-            //查询与房源字同地区的房源
+            //查询与房源字同小区(如金域东郡)的房源
             List<House> sameVillage=houseService.findHousesByArea(house.getArea());
             model.addAttribute("sameVillage",sameVillage);
-
+            List<House> goodList = houseService.findVIPHousesByHcountry(house.getHcountry());
+            //查询与房源相同地域(如朝阳区)的房源价格前20
+            System.out.println(goodList);
+            model.addAttribute("goodList",goodList);
             return "/pages/single";
         }
 

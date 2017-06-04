@@ -224,61 +224,23 @@
         <div class="content-bottom-in">
 
             <ul id="flexiselDemo1">
-                <c:forEach items="goodList" var="goodhouse">
+                <c:forEach items="${goodList}" var="goodhouse">
                     <li><div class="project-fur">
-                        <a href="single.html" ><img class="img-responsive" src="${goodhouse}" alt="" />	</a>
+                        <a href="single.html" ><img class="img-responsive" src="${goodhouse.imgurl}" alt="" />	</a>
                         <div class="fur">
                             <div class="fur1">
-                                <span class="fur-money">$2.44 Lacs - 5.28 Lacs </span>
-                                <h6 class="fur-name"><a href="single.html">Contrary to popular</a></h6>
-                                <span>Paris</span>
+                                <span class="fur-money">${goodhouse.price} 元</span>
+                                <h6 class="fur-name"><a href="/tosingle?hid=${goodhouse.hid}">${goodhouse.hname}</a></h6>
+                                <span>${goodhouse.village}</span>
                             </div>
                             <div class="fur2">
-                                <span>2 BHK</span>
+                                <span>${goodhouse.hstructure}</span>
                             </div>
                         </div>
                     </div></li>
                 </c:forEach>
 
-                <li><div class="project-fur">
-                    <a href="single.html" ><img class="img-responsive" src="${ctx}/staticfile/images/pi1.jpg" alt="" />	</a>
-                    <div class="fur">
-                        <div class="fur1">
-                            <span class="fur-money">$2.44 Lacs - 5.28 Lacs </span>
-                            <h6 class="fur-name"><a href="single.html">Contrary to popular</a></h6>
-                            <span>Paris</span>
-                        </div>
-                        <div class="fur2">
-                            <span>2 BHK</span>
-                        </div>
-                    </div>
-                </div></li>
-                <li><div class="project-fur">
-                    <a href="single.html" ><img class="img-responsive" src="${ctx}/staticfile/images/pi2.jpg" alt="" />	</a>
-                    <div class="fur">
-                        <div class="fur1">
-                            <span class="fur-money">$2.44 Lacs - 5.28 Lacs </span>
-                            <h6 class="fur-name"><a href="single.html">Contrary to popular</a></h6>
-                            <span>Paris</span>
-                        </div>
-                        <div class="fur2">
-                            <span>2 BHK</span>
-                        </div>
-                    </div>
-                </div></li>
-                <li><div class="project-fur">
-                    <a href="single.html" ><img class="img-responsive" src="${ctx}/staticfile/images/pi3.jpg" alt="" />	</a>
-                    <div class="fur">
-                        <div class="fur1">
-                            <span class="fur-money">$2.44 Lacs - 5.28 Lacs </span>
-                            <h6 class="fur-name"><a href="single.html">Contrary to popular</a></h6>
-                            <span>Paris</span>
-                        </div>
-                        <div class="fur2">
-                            <span>2 BHK</span>
-                        </div>
-                    </div>
-                </div></li>
+
             </ul>
             <script type="text/javascript">
                 $(window).load(function() {

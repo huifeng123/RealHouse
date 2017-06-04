@@ -46,4 +46,6 @@ public interface HouseMapper {
     public void deleteHouse(String hid);
 
     public void updateHouse(House house,String hid);
+
+    List<House> findVIPHouseByHcountry(String hcountry);
 }
