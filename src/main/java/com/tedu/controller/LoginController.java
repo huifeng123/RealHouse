@@ -46,7 +46,7 @@ public class LoginController {
         UsernamePasswordToken token=new UsernamePasswordToken(uname,upassword);
         //创建Subject对象 就是一个user
         Subject subject= SecurityUtils.getSubject();
-
+        System.out.println(uname+":"+upassword);
         try {
             subject.login(token);//表示用户要进行登录认证
             User user=(User) subject.getPrincipal();
@@ -69,6 +69,7 @@ public class LoginController {
         try {
             String md5Password= MD5Hash.getMd5HashPassword(user.getUpassword(),user.getUname());
             user.setUpassword(md5Password);
+            System.out.println(user);
             userService.saveUser(user);
             return "redirect:/toLogin";
         } catch (MsgException e) {
@@ -81,10 +82,10 @@ public class LoginController {
         }
     }
     //跳转到主页面
-   /* @RequestMapping("/home")
+   @RequestMapping("/home")
     public String toHome(){
         return "/index";
-    }*/
+    }
     //跳转到退出页面
     @RequestMapping("/toLogOut")
     public String toLogOut(HttpSession httpSession){
