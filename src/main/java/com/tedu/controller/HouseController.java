@@ -16,8 +16,8 @@ import java.util.List;
 public class HouseController {
         @Autowired
         private HouseService houseService;
-        @RequestMapping("/tosingle")
-        public  String houseDetail(Model model){
+       // @RequestMapping("/tosingle")
+       /* public  String houseDetail(Model model){
             //通过hid查询房源的具体信息
             House house = houseService.findOneByHouseId("00a71c9f-96f7-4c3f-bcba-646c75b8c2c0");
             model.addAttribute("house",house);
@@ -29,7 +29,7 @@ public class HouseController {
             System.out.println(goodList);
             model.addAttribute("goodList",goodList);
             return "/pages/single";
-        }
+        }*/
 
         @RequestMapping("/tomap")
         public String toMap(Model model,String village){
