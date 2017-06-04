@@ -36,11 +36,24 @@ public class LoginController {
     }
     //登录验证
     @RequestMapping("/login.action")
-    public String login(String uname,String upassword,Model model){
+    public String login(String uname,String upassword,Model model,HttpSession httpSession){
 
         if(StringUtils.isEmpty(uname)||StringUtils.isEmpty(upassword)){
             model.addAttribute("msg","用户名或密码不能为空");
             return "pages/login";
+        }
+        if(!"admin".equals(uname)){
+            try {
+                String password= MD5Hash.getMd5HashPassword(upassword,uname);
+                userService.findUserByUsernameAndPassword(uname,password);
+                User user = userService.findUserByUserName(uname);
+                httpSession.setAttribute("session_user", user);
+                return "redirect:/";
+            } catch (MsgException e) {
+                e.printStackTrace();
+                model.addAttribute("msg", "用户名或密码错误");
+                return "pages/login";
+            }
         }
         //形成用户名和密码的令牌
         UsernamePasswordToken token=new UsernamePasswordToken(uname,upassword);
@@ -49,11 +62,8 @@ public class LoginController {
         try {
             subject.login(token);//表示用户要进行登录认证
             User user=(User) subject.getPrincipal();
-            subject.getSession().setAttribute("session_user", user);
-            if("刘玄德".equals(user.getUname())){
-                return "redirect:/back/index";
-            }
-            return "redirect:/home";
+            subject.getSession().setAttribute("session_admin", user);
+            return "redirect:/back/index";
         } catch (AuthenticationException e) {
             //登录失败转发到登陆页面并提示用户
             e.printStackTrace();
@@ -71,7 +81,6 @@ public class LoginController {
         try {
             String md5Password= MD5Hash.getMd5HashPassword(user.getUpassword(),user.getUname());
             user.setUpassword(md5Password);
-            System.out.println(user);
             userService.saveUser(user);
             return "redirect:/toLogin";
         } catch (MsgException e) {
@@ -79,20 +88,14 @@ public class LoginController {
              * 用户名存在不能注册，则返回到注册页面
              */
             model.addAttribute("msg",e.getMessage());
-            System.out.println(user.getUname());
             return "pages/register";
         }
-    }
-    //跳转到主页面
-   @RequestMapping("/home")
-    public String toHome(){
-        return "/index";
     }
     //跳转到退出页面
     @RequestMapping("/toUserLogOut")
     public String toUserLogOut(HttpSession httpSession){
-            httpSession.removeAttribute("session_user");
-            return "redirect:/";
+        httpSession.removeAttribute("session_user");
+        return "redirect:/";
     }
     @RequestMapping("/toAdminLogOut")
     public String toAdminLogOut(){
@@ -100,7 +103,7 @@ public class LoginController {
         return "redirect:/";
     }
     //Ajax校验用户名
-    @RequestMapping("/toAjaxCheckUname")
+   /* @RequestMapping("/toAjaxCheckUname")
     public String toAjaxCheckUname(String uname){
         User user=userService.findUserByUserName(uname);
         System.out.println(user);
@@ -108,5 +111,5 @@ public class LoginController {
             return "用户名已存在";
         }
         return "用户名可以使用";
-    }
+    }*/
 }

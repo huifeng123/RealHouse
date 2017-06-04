@@ -31,14 +31,14 @@
 				$("#"+name+"_msg").html("<font style='color:red; '>"+msg+"</font>");
 			}
 		}
-		$().ready(function () {
+		/*$().ready(function () {
 			var uname=$("input[name=uname]").val();
 			alert(uname)
 			//Ajax校验
 			$.post("${ctx}/toAjaxCheckUname", {uname: uname}, function(result){
 				$("#uname_msg").html(result);
 			});
-		})
+		})*/
 	</script>
 <!-- Custom Theme files -->
 <!--menu-->
