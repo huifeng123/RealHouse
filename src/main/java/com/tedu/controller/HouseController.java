@@ -19,13 +19,13 @@ public class HouseController {
         @RequestMapping("/tosingle")
         public  String houseDetail(Model model){
             //通过hid查询房源的具体信息
-            House house = houseService.findOneByHouseId("111111");
+            House house = houseService.findOneByHouseId("00a71c9f-96f7-4c3f-bcba-646c75b8c2c0");
             model.addAttribute("house",house);
             //查询与房源字同地区的房源
             List<House> sameVillage=houseService.findHousesByArea(house.getArea());
             model.addAttribute("sameVillage",sameVillage);
 
-            return "single";
+            return "/pages/single";
         }
 
 }
