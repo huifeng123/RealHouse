@@ -5,6 +5,11 @@
 <html>
 <head>
     <title>Title</title>
+    <script>
+        $(function () {
+            $('.label label-default')
+        })
+    </script>
 </head>
 <body>
 <%@include file="/WEB-INF/_head.jsp"%>

@@ -10,7 +10,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Real Home Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-
+    <script>
+        $(function () {
+            $()
+        })
+        
+    </script>
 </head>
 <body>
 <!--header-->
