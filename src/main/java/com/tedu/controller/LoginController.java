@@ -46,11 +46,13 @@ public class LoginController {
         UsernamePasswordToken token=new UsernamePasswordToken(uname,upassword);
         //创建Subject对象 就是一个user
         Subject subject= SecurityUtils.getSubject();
-        System.out.println(uname+":"+upassword);
         try {
             subject.login(token);//表示用户要进行登录认证
             User user=(User) subject.getPrincipal();
             subject.getSession().setAttribute("session_user", user);
+            if("刘玄德".equals(user.getUname())){
+                return "redirect:/back/index";
+            }
             return "redirect:/home";
         } catch (AuthenticationException e) {
             //登录失败转发到登陆页面并提示用户

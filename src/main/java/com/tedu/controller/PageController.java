@@ -13,7 +13,7 @@ public class PageController extends WebMvcConfigurerAdapter {
     //在浏览器地址栏输入“localhost:8090/”即可访问index.jsp主页面
     @RequestMapping("/")
     public String toHome(){
-        return "forward:/WEB-INF/index.jsp";
+        return "/index";
     }
 
     //跳转到印象搜索页面

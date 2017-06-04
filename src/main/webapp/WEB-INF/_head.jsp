@@ -12,7 +12,7 @@
     <div class="container-fluid">
         <nav class="pull">
             <ul>
-                <li><a  href="${ctx}/WEB-INF/index.jsp">恋家</a></li>
+                <li><a  href="${ctx}/">恋家</a></li>
                 <li><a  href="${ctx}/WEB-INF/pages/about.html">公司简介</a></li>
                 <li><a  href="${ctx}/WEB-INF/pages/blog.html">博客</a></li>
                 <li><a  href="${ctx}/WEB-INF/pages/terms.html">条款</a></li>
