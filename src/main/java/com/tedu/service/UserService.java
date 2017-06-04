@@ -25,6 +25,8 @@ public interface UserService {
 	public User findUserByUsernameAndPassword(String userName,String password);
 	//查找用户是否存在
 	public User findUserByUserName(String userName);
+
 	public List<User> findUserByRole(Integer upower);
+
 	public void deleteUsers(String[] uids);
 }

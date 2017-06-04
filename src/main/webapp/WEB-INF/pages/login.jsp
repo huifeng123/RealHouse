@@ -30,7 +30,7 @@
                 </ul>
                 <div class="form-info">
                     <form action="${ctx}/login.action" method="POST">
-                        <input type="text" class="text"  name="uname" placeholder="昵称" required="">
+                        <input type="text" class="text"  name="uname" placeholder="用户名" required="">
                         <input type="password" name="upassword" placeholder="密码" required=""><span  style="color: red">${msg}</span>
                         <label class="hvr-sweep-to-right">
                             <input type="submit" value="登录">
