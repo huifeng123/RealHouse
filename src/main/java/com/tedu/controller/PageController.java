@@ -31,6 +31,6 @@ public class PageController extends WebMvcConfigurerAdapter {
     //跳转到地图找房
     @RequestMapping("toMap")
     public String toMaphot(){
-        return "forward:/WEB-INF/pages/map/mapHot.jsp";
+        return "forward:/WEB-INF/pages/map/mapSearch.jsp";
     }
 }
