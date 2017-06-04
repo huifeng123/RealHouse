@@ -213,101 +213,200 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
     <!---->
-    <div class="top-grid">
-        <h3>热门区域</h3>
-        <div class="grid-at">
-            <div class="col-md-3 grid-city">
-                <div class="grid-lo">
-                    <a href="buy_single.html">
-                        <figure class="effect-layla">
-                            <img class=" img-responsive" src="${ctx}/staticfile/images/ce.jpg" alt="img06">
-                            <figcaption>
-                                <h4>朝阳区</h4>
+    <div class="container">
 
-                            </figcaption>
-                        </figure>
-                    </a>
+        <div class="buy-single">
+            <h3>Residential Flats, Apartments</h3>
+            <div class="box-sin">
+                <div class="col-md-9 single-box">
+                    <div class="box-col">
+                        <div class=" col-sm-7 left-side ">
+                            <a href="single.html"> <img class="img-responsive" src="images/sb.jpg" alt=""></a>
+                        </div>
+                        <div class="  col-sm-5 middle-side">
+                            <h4>Possession: Immediate</h4>
+                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
+                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
+                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
+                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
+                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
+                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
+                            <div class="   right-side">
+                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="box-col">
+                        <div class=" col-sm-7 left-side ">
+                            <a href="single.html"><img class="img-responsive" src="images/sb1.jpg" alt=""></a>
+                        </div>
+                        <div class="  col-sm-5 middle-side">
+                            <h4>Possession: Immediate</h4>
+                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
+                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
+                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
+                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
+                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
+                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
+                            <div class="   right-side">
+                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="box-col">
+                        <div class=" col-sm-7 left-side ">
+                            <a href="single.html"> <img class="img-responsive" src="images/sb2.jpg" alt=""></a>
+                        </div>
+                        <div class="  col-sm-5 middle-side">
+                            <h4>Possession: Immediate</h4>
+                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
+                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
+                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
+                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
+                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
+                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
+                            <div class="   right-side">
+                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="box-col">
+                        <div class=" col-sm-7 left-side ">
+                            <a href="single.html"> <img class="img-responsive" src="images/sb3.jpg" alt=""></a>
+                        </div>
+                        <div class="  col-sm-5 middle-side">
+                            <h4>Possession: Immediate</h4>
+                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
+                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
+                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
+                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
+                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
+                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
+                            <div class="   right-side">
+                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="box-col">
+                        <div class=" col-sm-7 left-side ">
+                            <a href="single.html"> <img class="img-responsive" src="images/sb4.jpg" alt=""></a>
+                        </div>
+                        <div class="  col-sm-5 middle-side">
+                            <h4>Possession: Immediate</h4>
+                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
+                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
+                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
+                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
+                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
+                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
+                            <div class="   right-side">
+                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="box-col">
+                        <div class=" col-sm-7 left-side ">
+                            <a href="single.html"><img class="img-responsive" src="images/sb5.jpg" alt=""></a>
+                        </div>
+                        <div class="  col-sm-5 middle-side">
+                            <h4>Possession: Immediate</h4>
+                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
+                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
+                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
+                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
+                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
+                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
+                            <div class="   right-side">
+                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-3 grid-city">
-                <div class="grid-lo">
-                    <a href="buy_single.html">
-                        <figure class="effect-layla">
-                            <img class=" img-responsive" src="${ctx}/staticfile/images/ce1.jpg" alt="img06">
-                            <figcaption>
-                                <h4>西城区</h4>
-
-                            </figcaption>
-                        </figure>
-                    </a>
+            <div class="col-md-3 map-single-bottom">
+                <div class="map-single">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37494223.23909492!2d103!3d55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x453c569a896724fb%3A0x1409fdf86611f613!2sRussia!5e0!3m2!1sen!2sin!4v1415776049771"></iframe>
                 </div>
-            </div>
-            <div class="col-md-6 grid-city grid-city1">
-                <div class="grid-me">
-                    <div class="col-md-8 grid-lo1">
-                        <div class=" grid-lo">
-                            <a href="buy_single.html">
-                                <figure class="effect-layla">
-                                    <img class=" img-responsive" src="${ctx}/staticfile/images/ce2.jpg" alt="img06">
-                                    <figcaption>
-                                        <h4 class="effect1">东城区</h4>
-
-                                    </figcaption>
-                                </figure>
-                            </a>
+                <div class="single-box-right">
+                    <h4>Featured Communities</h4>
+                    <div class="single-box-img">
+                        <div class="box-img">
+                            <a href="single.html"><img class="img-responsive" src="images/sl.jpg" alt=""></a>
                         </div>
-                    </div>
-                    <div class="col-md-4 grid-lo2">
-                        <div class=" grid-lo">
-                            <a href="buy_single.html">
-                                <figure class="effect-layla">
-                                    <img class=" img-responsive" src="${ctx}/staticfile/images/ce3.jpg" alt="img06">
-                                    <figcaption>
-                                        <h4 class="effect2">大兴区</h4>
-
-                                    </figcaption>
-                                </figure>
-                            </a>
+                        <div class="box-text">
+                            <p><a href="single.html">Lorem ipsum dolor sit amet</a></p>
+                            <a href="single.html" class="in-box">More Info</a>
                         </div>
+                        <div class="clearfix"> </div>
                     </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="grid-me">
-                    <div class="col-md-6 grid-lo3">
-                        <div class=" grid-lo">
-                            <a href="buy_single.html">
-                                <figure class="effect-layla">
-                                    <img class="img-responsive" src="${ctx}/staticfile/images/ce4.jpg" alt="img06">
-                                    <figcaption>
-                                        <h4 class="effect3">昌平区</h4>
-
-                                    </figcaption>
-                                </figure>
-                            </a>
+                    <div class="single-box-img">
+                        <div class="box-img">
+                            <a href="single.html"><img class="img-responsive" src="images/sl1.jpg" alt=""></a>
                         </div>
-                    </div>
-                    <div class="col-md-6 grid-lo4">
-                        <div class=" grid-lo">
-                            <a href="buy_single.html">
-                                <figure class="effect-layla">
-                                    <img class="img-responsive" src="${ctx}/staticfile/images/ce5.jpg" alt="img06">
-                                    <figcaption>
-                                        <h4 class="effect3">通州区</h4>
-
-                                    </figcaption>
-                                </figure>
-                            </a>
+                        <div class="box-text">
+                            <p><a href="single.html">Lorem ipsum dolor sit amet</a></p>
+                            <a href="single.html" class="in-box">More Info</a>
                         </div>
+                        <div class="clearfix"> </div>
                     </div>
-                    <div class="clearfix"> </div>
+                    <div class="single-box-img">
+                        <div class="box-img">
+                            <a href="single.html"><img class="img-responsive" src="images/sl2.jpg" alt=""></a>
+                        </div>
+                        <div class="box-text">
+                            <p><a href="single.html">Lorem ipsum dolor sit amet</a></p>
+                            <a href="single.html" class="in-box">More Info</a>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="single-box-img">
+                        <div class="box-img">
+                            <a href="single.html"><img class="img-responsive" src="images/sl3.jpg" alt=""></a>
+                        </div>
+                        <div class="box-text">
+                            <p><a href="single.html">Lorem ipsum dolor sit amet</a></p>
+                            <a href="single.html" class="in-box">More Info</a>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="single-box-img">
+                        <div class="box-img">
+                            <a href="single.html"><img class="img-responsive" src="images/sl4.jpg" alt=""></a>
+                        </div>
+                        <div class="box-text">
+                            <p><a href="single.html">Lorem ipsum dolor sit amet</a></p>
+                            <a href="single.html" class="in-box">More Info</a>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
                 </div>
             </div>
             <div class="clearfix"> </div>
+            <div class="nav-page">
+                <nav>
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
 
     </div>
-</div>
-<!---->
+
+
+    <!---->
 <!--premium-project-->
 <div class="premium">
     <div class="pre-top">
@@ -319,139 +418,196 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!---->
 <div class="container">
 
-    <div class="future">
-        <h3>热门房源展示</h3>
-        <div class="content-bottom-in">
-            <div class="nbs-flexisel-container"><div class="nbs-flexisel-inner">
+    <div class="container">
 
-                <ul style="left: -256.5px; display: block;" class="nbs-flexisel-ul" id="flexiselDemo1">
-
-                <li style="width: 256.5px;" class="nbs-flexisel-item"><div class="project-fur">
-                    <a href="single.html"><img class="img-responsive" src="${ctx}/staticfile/images/pi2.jpg" alt="">	</a>
-                    <div class="fur">
-                        <div class="fur1">
-                            <span class="fur-money">$2.44 元 - 5.28 元 </span>
-                            <h6 class="fur-name"><a href="single.html">Contrary to popular</a></h6>
-                            <span>Paris</span>
+        <div class="buy-single">
+            <h3>Residential Flats, Apartments</h3>
+            <div class="box-sin">
+                <div class="col-md-9 single-box">
+                    <div class="box-col">
+                        <div class=" col-sm-7 left-side ">
+                            <a href="single.html"> <img class="img-responsive" src="images/sb.jpg" alt=""></a>
                         </div>
-                        <div class="fur2">
-                            <span>2 BHK</span>
+                        <div class="  col-sm-5 middle-side">
+                            <h4>Possession: Immediate</h4>
+                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
+                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
+                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
+                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
+                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
+                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
+                            <div class="   right-side">
+                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
+                            </div>
                         </div>
+                        <div class="clearfix"> </div>
                     </div>
-                </div></li><li style="width: 256.5px;" class="nbs-flexisel-item"><div class="project-fur">
-                <a href="single.html"><img class="img-responsive" src="${ctx}/staticfile/images/pi3.jpg" alt="">	</a>
-                <div class="fur">
-                    <div class="fur1">
-                        <span class="fur-money">$2.44 元 - 5.28 元 </span>
-                        <h6 class="fur-name"><a href="single.html">Contrary to popular</a></h6>
-                        <span>Paris</span>
+                    <div class="box-col">
+                        <div class=" col-sm-7 left-side ">
+                            <a href="single.html"><img class="img-responsive" src="images/sb1.jpg" alt=""></a>
+                        </div>
+                        <div class="  col-sm-5 middle-side">
+                            <h4>Possession: Immediate</h4>
+                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
+                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
+                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
+                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
+                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
+                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
+                            <div class="   right-side">
+                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
                     </div>
-                    <div class="fur2">
-                        <span>2 BHK</span>
+                    <div class="box-col">
+                        <div class=" col-sm-7 left-side ">
+                            <a href="single.html"> <img class="img-responsive" src="images/sb2.jpg" alt=""></a>
+                        </div>
+                        <div class="  col-sm-5 middle-side">
+                            <h4>Possession: Immediate</h4>
+                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
+                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
+                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
+                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
+                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
+                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
+                            <div class="   right-side">
+                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="box-col">
+                        <div class=" col-sm-7 left-side ">
+                            <a href="single.html"> <img class="img-responsive" src="images/sb3.jpg" alt=""></a>
+                        </div>
+                        <div class="  col-sm-5 middle-side">
+                            <h4>Possession: Immediate</h4>
+                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
+                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
+                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
+                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
+                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
+                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
+                            <div class="   right-side">
+                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="box-col">
+                        <div class=" col-sm-7 left-side ">
+                            <a href="single.html"> <img class="img-responsive" src="images/sb4.jpg" alt=""></a>
+                        </div>
+                        <div class="  col-sm-5 middle-side">
+                            <h4>Possession: Immediate</h4>
+                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
+                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
+                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
+                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
+                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
+                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
+                            <div class="   right-side">
+                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="box-col">
+                        <div class=" col-sm-7 left-side ">
+                            <a href="single.html"><img class="img-responsive" src="images/sb5.jpg" alt=""></a>
+                        </div>
+                        <div class="  col-sm-5 middle-side">
+                            <h4>Possession: Immediate</h4>
+                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
+                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
+                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
+                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
+                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
+                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
+                            <div class="   right-side">
+                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
                     </div>
                 </div>
-            </div></li><li style="width: 256.5px;" class="nbs-flexisel-item"><div class="project-fur">
-                <a href="single.html"><img class="img-responsive" src="${ctx}/staticfile/images/pi.jpg" alt="">	</a>
-                <div class="fur">
-                    <div class="fur1">
-                        <span class="fur-money">$2.44 元 - 5.28 元 </span>
-                        <h6 class="fur-name"><a href="single.html">Contrary to popular</a></h6>
-                        <span>Paris</span>
+            </div>
+            <div class="col-md-3 map-single-bottom">
+                <div class="map-single">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37494223.23909492!2d103!3d55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x453c569a896724fb%3A0x1409fdf86611f613!2sRussia!5e0!3m2!1sen!2sin!4v1415776049771"></iframe>
+                </div>
+                <div class="single-box-right">
+                    <h4>Featured Communities</h4>
+                    <div class="single-box-img">
+                        <div class="box-img">
+                            <a href="single.html"><img class="img-responsive" src="images/sl.jpg" alt=""></a>
+                        </div>
+                        <div class="box-text">
+                            <p><a href="single.html">Lorem ipsum dolor sit amet</a></p>
+                            <a href="single.html" class="in-box">More Info</a>
+                        </div>
+                        <div class="clearfix"> </div>
                     </div>
-                    <div class="fur2">
-                        <span>2 BHK</span>
+                    <div class="single-box-img">
+                        <div class="box-img">
+                            <a href="single.html"><img class="img-responsive" src="images/sl1.jpg" alt=""></a>
+                        </div>
+                        <div class="box-text">
+                            <p><a href="single.html">Lorem ipsum dolor sit amet</a></p>
+                            <a href="single.html" class="in-box">More Info</a>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="single-box-img">
+                        <div class="box-img">
+                            <a href="single.html"><img class="img-responsive" src="images/sl2.jpg" alt=""></a>
+                        </div>
+                        <div class="box-text">
+                            <p><a href="single.html">Lorem ipsum dolor sit amet</a></p>
+                            <a href="single.html" class="in-box">More Info</a>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="single-box-img">
+                        <div class="box-img">
+                            <a href="single.html"><img class="img-responsive" src="images/sl3.jpg" alt=""></a>
+                        </div>
+                        <div class="box-text">
+                            <p><a href="single.html">Lorem ipsum dolor sit amet</a></p>
+                            <a href="single.html" class="in-box">More Info</a>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="single-box-img">
+                        <div class="box-img">
+                            <a href="single.html"><img class="img-responsive" src="images/sl4.jpg" alt=""></a>
+                        </div>
+                        <div class="box-text">
+                            <p><a href="single.html">Lorem ipsum dolor sit amet</a></p>
+                            <a href="single.html" class="in-box">More Info</a>
+                        </div>
+                        <div class="clearfix"> </div>
                     </div>
                 </div>
-            </div></li><li style="width: 256.5px;" class="nbs-flexisel-item"><div class="project-fur">
-                <a href="single.html"><img class="img-responsive" src="${ctx}/staticfile/images/pi1.jpg" alt="">	</a>
-                <div class="fur">
-                    <div class="fur1">
-                        <span class="fur-money">$2.44 元 - 5.28 元 </span>
-                        <h6 class="fur-name"><a href="single.html">Contrary to popular</a></h6>
-                        <span>Paris</span>
-                    </div>
-                    <div class="fur2">
-                        <span>2 BHK</span>
-                    </div>
-                </div>
-            </div></li><li style="width: 256.5px;" class="nbs-flexisel-item"><div class="project-fur">
-                <a href="single.html"><img class="img-responsive" src="${ctx}/staticfile/images/pi2.jpg" alt="">	</a>
-                <div class="fur">
-                    <div class="fur1">
-                        <span class="fur-money">$2.44 元 - 5.28 元 </span>
-                        <h6 class="fur-name"><a href="single.html">Contrary to popular</a></h6>
-                        <span>Paris</span>
-                    </div>
-                    <div class="fur2">
-                        <span>2 BHK</span>
-                    </div>
-                </div>
-            </div></li><li style="width: 256.5px;" class="nbs-flexisel-item"><div class="project-fur">
-                <a href="single.html"><img class="img-responsive" src="${ctx}/staticfile/images/pi3.jpg" alt="">	</a>
-                <div class="fur">
-                    <div class="fur1">
-                        <span class="fur-money">$2.44 元 - 5.28 元 </span>
-                        <h6 class="fur-name"><a href="single.html">Contrary to popular</a></h6>
-                        <span>Paris</span>
-                    </div>
-                    <div class="fur2">
-                        <span>2 BHK</span>
-                    </div>
-                </div>
-            </div></li><li style="width: 256.5px;" class="nbs-flexisel-item"><div class="project-fur">
-                <a href="single.html"><img class="img-responsive" src="${ctx}/staticfile/images/pi.jpg" alt="">	</a>
-                <div class="fur">
-                    <div class="fur1">
-                        <span class="fur-money">$2.44 元 - 5.28 元 </span>
-                        <h6 class="fur-name"><a href="single.html">Contrary to popular</a></h6>
-                        <span>Paris</span>
-                    </div>
-                    <div class="fur2">
-                        <span>2 BHK</span>
-                    </div>
-                </div>
-            </div></li><li style="width: 256.5px;" class="nbs-flexisel-item"><div class="project-fur">
-                <a href="single.html"><img class="img-responsive" src="${ctx}/staticfile/images/pi1.jpg" alt="">	</a>
-                <div class="fur">
-                    <div class="fur1">
-                        <span class="fur-money">$2.44 元 - 5.28 元 </span>
-                        <h6 class="fur-name"><a href="single.html">Contrary to popular</a></h6>
-                        <span>Paris</span>
-                    </div>
-                    <div class="fur2">
-                        <span>2 BHK</span>
-                    </div>
-                </div>
-            </div></li></ul><div style="top: 149px;" class="nbs-flexisel-nav-left"></div><div style="top: 149px;" class="nbs-flexisel-nav-right"></div></div></div>
-            <script type="text/javascript">
-                $(window).load(function() {
-                    $("#flexiselDemo1").flexisel({
-                        visibleItems: 4,
-                        animationSpeed: 1000,
-                        autoPlay: true,
-                        autoPlaySpeed: 3000,
-                        pauseOnHover: true,
-                        enableResponsiveBreakpoints: true,
-                        responsiveBreakpoints: {
-                            portrait: {
-                                changePoint:480,
-                                visibleItems: 1
-                            },
-                            landscape: {
-                                changePoint:640,
-                                visibleItems: 2
-                            },
-                            tablet: {
-                                changePoint:768,
-                                visibleItems: 3
-                            }
-                        }
-                    });
-
-                });
-            </script>
-            <script type="text/javascript" src="${ctx}/staticfile/js/jquery.flexisel.js"></script>
+            </div>
+            <div class="clearfix"> </div>
+            <div class="nav-page">
+                <nav>
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
+
     </div>
 
 </div>
