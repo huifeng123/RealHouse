@@ -90,7 +90,7 @@ public class LoginController {
     }
     //跳转到退出页面
     @RequestMapping("/toLogOut")
-    public String toLogOut(HttpSession httpSession){
+    public String toLogOut(){
         SecurityUtils.getSubject().logout();
         //httpSession.removeAttribute("session_user");
         return "redirect:/home";
