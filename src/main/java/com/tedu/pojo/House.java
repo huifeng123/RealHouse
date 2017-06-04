@@ -1,14 +1,21 @@
 package com.tedu.pojo;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
+
 import java.util.Date;
 
 /**
  * Created by bigjsd on 2017/6/2.
  */
+@Document(indexName = "house",type = "house",shards = 1,replicas = 0,refreshInterval = "-1")
 public class House extends BaseEntity{
     private HouseInfo houseInfo; //房屋详情对象
     private HouseArea houseArea; //房屋区域表对象
     private User userHouse; //房东房东
+    @Id
     private String hid;//房屋编号
     private String hname;//房屋名称
     private String hcountry;//地域

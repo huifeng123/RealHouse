@@ -19,7 +19,7 @@ public class HouseController {
         @RequestMapping("/tosingle")
         public  String houseDetail(Model model){
             //通过hid查询房源的具体信息
-            House house = houseService.findOneByHouseId("00a71c9f-96f7-4c3f-bcba-646c75b8c2c0");
+            House house = houseService.findOneByHouseId("01dc4f46-711b-4f6b-a693-b37a008b0eb4");
             model.addAttribute("house",house);
             //查询与房源字同小区(如金域东郡)的房源
             List<House> sameVillage=houseService.findHousesByArea(house.getArea());
