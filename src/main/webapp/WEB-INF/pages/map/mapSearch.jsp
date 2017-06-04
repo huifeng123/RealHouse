@@ -1,8 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="/WEB-INF/base.jsp"%>
 <!doctype html>
 <html>
 <head>
-    <title>多个标注点地图</title>
+    <title>地图找房</title>
     <!--css-->
     <link href="${ctx}/staticfile/style/demo.css" rel="stylesheet" type="text/css" />
     <!--javascript-->
@@ -12,9 +13,6 @@
 <body>
 <div class="demo_main">
     <%@include file="/WEB-INF/_head.jsp"%>
-    <fieldset class="demo_title">
-        地图找房
-    </fieldset>
     <fieldset class="demo_content">
         <div style="min-height: 800px; width: 100%;" id="map">
         </div>
@@ -87,6 +85,7 @@
             window.onload = map_load;
         </script>
     </fieldset>
+    <%@include file="/WEB-INF/_foot.jsp"%>
 </div>
 </body>
 </html>

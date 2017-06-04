@@ -98,11 +98,6 @@ public class HouseServiceImpl implements HouseService {
      */
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
-
-
-
-
-
     public void updateHouse(House house,HouseInfo houseInfo,String uid){
         houseMapper.updateHouse(house,uid);
         houseInfoMapper.updateHouseInfo(houseInfo,uid);
