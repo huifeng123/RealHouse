@@ -11,7 +11,7 @@ import java.util.List;
 public interface HouseService {
 
 
-    public void updateHouse(House house, HouseInfo houseInfo, String hid);
+
 
     public List<House> findHousesByArea(String area);
     /**
@@ -33,4 +33,6 @@ public interface HouseService {
     public House findOneByHouseId(String hid);
 
     public void deleteHouse(String[] hids);
+
+    public void updateHouse(House house);
 }

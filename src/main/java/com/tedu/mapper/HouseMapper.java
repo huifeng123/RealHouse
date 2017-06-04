@@ -44,6 +44,6 @@ public interface HouseMapper {
     public String findUidByUuser(String uuser);
 
     public void deleteHouse(String hid);
+    public void updateHouse(House house);
 
-    public void updateHouse(House house,String hid);
 }

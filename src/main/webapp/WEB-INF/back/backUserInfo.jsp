@@ -104,8 +104,8 @@
                             <tr class="odd">
                                 <td class="tableHeader" >角色：</td>
                                 <td >
-                                    <c:if test="${user.upower=='1'}">房东</c:if>
-                                    <c:if test="${user.upower=='0'}">租客</c:if>
+                                    <c:if test="${user.upower==1}">房东</c:if>
+                                    <c:if test="${user.upower==0}">租客</c:if>
                                 </td>
                             </tr>
                         </table>

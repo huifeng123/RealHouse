@@ -16,5 +16,5 @@ public interface HouseInfoMapper {
      */
     public void saveHouseInfo(HouseInfo houseInfo);
     public void deleteHouseInfo(String hid);
-    public void updateHouseInfo(HouseInfo houseInfo, String hid);
+    public void updateHouseInfo(HouseInfo houseInfo);
 }

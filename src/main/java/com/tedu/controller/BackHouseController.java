@@ -7,6 +7,7 @@ import com.tedu.pojo.HouseInfo;
 import com.tedu.pojo.User;
 import com.tedu.service.HouseInfoService;
 import com.tedu.service.HouseService;
+import com.tedu.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,6 +28,8 @@ public class BackHouseController extends BaseController{
     private HouseService houseService;
     @Autowired
     private HouseInfoService houseInfoService;
+    @Autowired
+    private UserService userService;
     @RequestMapping("/back/houseDelete")
     public String deleteHouse(@RequestParam(value = "hid",required = true)String[] hids){
         houseService.deleteHouse(hids);
@@ -88,6 +91,10 @@ public class BackHouseController extends BaseController{
 //           houseService.saveHouse(house);
 //       }
        //System.out.println(house);
+        /*This application has no explicit mapping for /error, so you are seeing this as a fallback.
+                Sun Jun 04 12:47:25 CST 2017
+        There was an unexpected error (type=Bad Request, status=400).
+                Validation failed for object='house'. Error count: 1*/
       houseService.saveHouse(house);
         return "redirect:/back/backHouse";
     }
@@ -97,20 +104,23 @@ public class BackHouseController extends BaseController{
      * @return
      */
     @RequestMapping("/back/toHouseUpdate")
-    public String toUpdate(String hid,Model model){
+    public String toUpdate(@RequestParam(value="hid") String hid,Model model){
         House house=houseService.findOneByHouseId(hid);
-        HouseInfo houseInfo=houseInfoService.findByHouseId(hid);
-        model.addAttribute("house",house);
+        HouseInfo houseInfo=house.getHouseInfo();
+        User user=house.getUserHouse();
+        model.addAttribute("user",user);
+        model.addAttribute("h",house);
         model.addAttribute("houseInfo",houseInfo);
-       return "/back/backHouseUpdate";
+        return "/back/backHouseUpdate";
     }
 
     /**
      *
      */
     @RequestMapping("/back/updateHouseAndInfo")
-    public String updateHouseAndInfo(House house,HouseInfo houseInfo,String hid){
-        houseService.updateHouse(house,houseInfo,hid);
+    public String updateHouseAndInfo(String hid){
+        House house=houseService.findOneByHouseId(hid);
+        houseService.updateHouse(house);
         return "redirect:/back/backHouse";
     }
 

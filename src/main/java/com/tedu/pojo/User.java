@@ -16,7 +16,7 @@ public class User extends BaseEntity{
     private String post;   //邮编
     private String uaddress;  //地址
     private String qq;    //qq
-    private String upower;   //用户类型  0：租户   1：房东
+    private Integer upower;   //用户类型  0：租户   1：房东
 
 
     public String getUid() {
@@ -107,11 +107,11 @@ public class User extends BaseEntity{
         this.qq = qq;
     }
 
-    public String getUpower() {
+    public Integer getUpower() {
         return upower;
     }
 
-    public void setUpower(String upower) {
+    public void setUpower(Integer upower) {
         this.upower = upower;
     }
 

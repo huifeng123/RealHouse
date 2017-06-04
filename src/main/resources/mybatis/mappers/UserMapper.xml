@@ -7,9 +7,12 @@
     <select id="findAll" resultType="User">
         select * from user_p
     </select>
-    
+    <select id="findUserByRole" resultType="User">
+        select * from user_p where upower=#{upower}
+    </select>
     <insert id="addUser">
-    	insert into user_p(name,age,sex) values(#{name},#{age},#{sex})
+    	insert into user_p(uid,uname,urname,uemail,uuser,upassword,sex,tel,post,uaddress,qq,upower)
+    	values(#{uid},#{uname},#{urname},#{uemail},#{uuser},#{upassword},#{sex},#{tel},#{post},#{uaddress},#{qq},#{upower})
     </insert>
     
     <select id="findUserById" resultType="User">
@@ -17,7 +20,20 @@
     </select>
     
     <update id="updateUser">
-    	update user_p set name=#{name},age=#{age},sex=#{sex} where uid=#{uid}
+        update user_p <set>
+        <if test="uname!=null">uname=#{uname},</if>
+        <if test="urname!=null">urname=#{urname},</if>
+        <if test="uemail!=null">uemail=#{uemail},</if>
+        <if test="uuser!=null">uuser=#{uuser},</if>
+        <if test="upassword!=null">upassword=#{upassword},</if>
+        <if test="sex!=null">sex=#{sex},</if>
+        <if test="tel!=null">tel=#{tel},</if>
+        <if test="uname!=null">post=#{post},</if>
+        <if test="post!=null">uaddress=#{uaddress},</if>
+        <if test="qq!=null">qq=#{qq},</if>
+        <if test="upower!=null">upower=#{upower}</if>
+    </set>
+        where uid=#{uid}
     </update>
     
     <delete id="deleteUser">

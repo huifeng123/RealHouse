@@ -29,10 +29,8 @@ public class BackHouseInfoController {
      */
     @RequestMapping("/houseInfo")
     public String findByHouseId(String hid,Model model){
-       HouseInfo houseInfo = houseInfoService.findByHouseId(hid);
         House house=houseService.findOneByHouseId(hid);
         model.addAttribute("house",house);
-        model.addAttribute("houseInfo",houseInfo);
         return "/back/backHouseInfo";
     }
 }

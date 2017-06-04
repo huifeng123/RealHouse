@@ -78,8 +78,8 @@
                                         <td>${status.index+1}</td>
                                         <td>${u.urname}</td>
                                         <td>
-                                            <c:if test="${u.upower=='1'}">房东</c:if>
-                                            <c:if test="${u.upower=='0'}">租客</c:if>
+                                            <c:if test="${u.upower==1}">房东</c:if>
+                                            <c:if test="${u.upower==0}">租客</c:if>
                                         </td>
                                     </tr>
                                 </c:forEach>
