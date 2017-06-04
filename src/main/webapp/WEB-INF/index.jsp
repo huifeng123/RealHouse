@@ -139,7 +139,7 @@
                     </a>
                 </div>
                 <div class=" bottom-head">
-                    <a href="buy.html">
+                    <a href="${ctx}/toMap">
                         <div class="buy-media">
                             <i class="sell"> </i>
                             <h6>找房</h6>
