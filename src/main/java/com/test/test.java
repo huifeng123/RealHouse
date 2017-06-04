@@ -7,6 +7,5 @@ public class test {
 
 
 //    testset by moon
-//    testset by moon
 //    testset by leo
 }
