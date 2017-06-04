@@ -62,6 +62,66 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--//header-->
 <div class="container">
 
+    <div>
+        <%--搜索框--%>
+        <!---//pop-up-box---->
+        <div id="small-dialog" style="margin-top: -10%;z-index: 10000;border-radius: 20%">
+            <!----- tabs-box ---->
+            <div class="sap_tabs">
+                <div id="horizontalTab" style="width: 100%; margin: 0px;">
+                    <%--<ul class="resp-tabs-list">
+                        <li class="resp-tab-item " aria-controls="tab_item-0" role="tab"><span>All Homes</span></li>
+                        <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>For Sale</span></li>
+                        <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>For Rent</span></li>
+                        <div class="clearfix"></div>
+                    </ul>--%>
+
+                    <div class="resp-tabs-container">
+                        <h2 class="resp-accordion resp-tab-active" role="tab" aria-controls="tab_item-0"><span class="resp-arrow"></span>All Homes</h2><div class="tab-1 resp-tab-content resp-tab-content-active" aria-labelledby="tab_item-0" style="display:block">
+                        <form method="post">
+                            <div class="facts">
+                                <div class="login">
+                                    <input type="text" name="serch" value="查询房源 区域 小区" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '查询房源 区域 小区';}">
+                                    <input type="submit" value="" formaction="/serch">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                        <h2 class="resp-accordion" role="tab" aria-controls="tab_item-1"><span class="resp-arrow"></span>For Sale</h2><div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+                        <div class="facts">
+                            <div class="login">
+                                <input type="text" value="Search Address, Neighborhood, City or Zip" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search Address, Neighborhood, City or Zip';}">
+                                <input type="submit" value="">
+                            </div>
+                        </div>
+                    </div>
+                        <h2 class="resp-accordion" role="tab" aria-controls="tab_item-2"><span class="resp-arrow"></span>For Rent</h2><div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
+                        <div class="facts">
+                            <div class="login">
+                                <input type="text" value="Search Address, Neighborhood, City or Zip" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search Address, Neighborhood, City or Zip';}">
+                                <input type="submit" value="">
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <script src="${ctx}/staticfile/js/easyResponsiveTabs.js" type="text/javascript"></script>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        $('#horizontalTab').easyResponsiveTabs({
+                            type: 'default', //Types: default, vertical, accordion
+                            width: 'auto', //auto or any width like 600px
+                            fit: true   // 100% fit in a container
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+        <%----------%>
+
+    </div>
+
     <!--price-->
     <div class="price">
         <div class="price-grid">
@@ -331,7 +391,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <div class="col-md-3 map-single-bottom">
                 <div class="map-single">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37494223.23909492!2d103!3d55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x453c569a896724fb%3A0x1409fdf86611f613!2sRussia!5e0!3m2!1sen!2sin!4v1415776049771"></iframe>
+                    <%--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37494223.23909492!2d103!3d55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x453c569a896724fb%3A0x1409fdf86611f613!2sRussia!5e0!3m2!1sen!2sin!4v1415776049771"></iframe>--%>
                 </div>
                 <div class="single-box-right">
                     <h4>Featured Communities</h4>
@@ -414,203 +474,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <p>$7.24 元-4.36 元 2-3 BHK, Lorem Ipsum</p>
     </div>
 </div>
-<!--//premium-project-->
-<!---->
-<div class="container">
 
-    <div class="container">
-
-        <div class="buy-single">
-            <h3>Residential Flats, Apartments</h3>
-            <div class="box-sin">
-                <div class="col-md-9 single-box">
-                    <div class="box-col">
-                        <div class=" col-sm-7 left-side ">
-                            <a href="single.html"> <img class="img-responsive" src="images/sb.jpg" alt=""></a>
-                        </div>
-                        <div class="  col-sm-5 middle-side">
-                            <h4>Possession: Immediate</h4>
-                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
-                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
-                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
-                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
-                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
-                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
-                            <div class="   right-side">
-                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
-                            </div>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="box-col">
-                        <div class=" col-sm-7 left-side ">
-                            <a href="single.html"><img class="img-responsive" src="images/sb1.jpg" alt=""></a>
-                        </div>
-                        <div class="  col-sm-5 middle-side">
-                            <h4>Possession: Immediate</h4>
-                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
-                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
-                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
-                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
-                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
-                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
-                            <div class="   right-side">
-                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
-                            </div>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="box-col">
-                        <div class=" col-sm-7 left-side ">
-                            <a href="single.html"> <img class="img-responsive" src="images/sb2.jpg" alt=""></a>
-                        </div>
-                        <div class="  col-sm-5 middle-side">
-                            <h4>Possession: Immediate</h4>
-                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
-                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
-                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
-                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
-                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
-                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
-                            <div class="   right-side">
-                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
-                            </div>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="box-col">
-                        <div class=" col-sm-7 left-side ">
-                            <a href="single.html"> <img class="img-responsive" src="images/sb3.jpg" alt=""></a>
-                        </div>
-                        <div class="  col-sm-5 middle-side">
-                            <h4>Possession: Immediate</h4>
-                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
-                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
-                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
-                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
-                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
-                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
-                            <div class="   right-side">
-                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
-                            </div>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="box-col">
-                        <div class=" col-sm-7 left-side ">
-                            <a href="single.html"> <img class="img-responsive" src="images/sb4.jpg" alt=""></a>
-                        </div>
-                        <div class="  col-sm-5 middle-side">
-                            <h4>Possession: Immediate</h4>
-                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
-                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
-                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
-                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
-                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
-                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
-                            <div class="   right-side">
-                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
-                            </div>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="box-col">
-                        <div class=" col-sm-7 left-side ">
-                            <a href="single.html"><img class="img-responsive" src="images/sb5.jpg" alt=""></a>
-                        </div>
-                        <div class="  col-sm-5 middle-side">
-                            <h4>Possession: Immediate</h4>
-                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
-                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
-                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
-                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
-                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
-                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
-                            <div class="   right-side">
-                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
-                            </div>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 map-single-bottom">
-                <div class="map-single">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37494223.23909492!2d103!3d55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x453c569a896724fb%3A0x1409fdf86611f613!2sRussia!5e0!3m2!1sen!2sin!4v1415776049771"></iframe>
-                </div>
-                <div class="single-box-right">
-                    <h4>Featured Communities</h4>
-                    <div class="single-box-img">
-                        <div class="box-img">
-                            <a href="single.html"><img class="img-responsive" src="images/sl.jpg" alt=""></a>
-                        </div>
-                        <div class="box-text">
-                            <p><a href="single.html">Lorem ipsum dolor sit amet</a></p>
-                            <a href="single.html" class="in-box">More Info</a>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="single-box-img">
-                        <div class="box-img">
-                            <a href="single.html"><img class="img-responsive" src="images/sl1.jpg" alt=""></a>
-                        </div>
-                        <div class="box-text">
-                            <p><a href="single.html">Lorem ipsum dolor sit amet</a></p>
-                            <a href="single.html" class="in-box">More Info</a>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="single-box-img">
-                        <div class="box-img">
-                            <a href="single.html"><img class="img-responsive" src="images/sl2.jpg" alt=""></a>
-                        </div>
-                        <div class="box-text">
-                            <p><a href="single.html">Lorem ipsum dolor sit amet</a></p>
-                            <a href="single.html" class="in-box">More Info</a>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="single-box-img">
-                        <div class="box-img">
-                            <a href="single.html"><img class="img-responsive" src="images/sl3.jpg" alt=""></a>
-                        </div>
-                        <div class="box-text">
-                            <p><a href="single.html">Lorem ipsum dolor sit amet</a></p>
-                            <a href="single.html" class="in-box">More Info</a>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="single-box-img">
-                        <div class="box-img">
-                            <a href="single.html"><img class="img-responsive" src="images/sl4.jpg" alt=""></a>
-                        </div>
-                        <div class="box-text">
-                            <p><a href="single.html">Lorem ipsum dolor sit amet</a></p>
-                            <a href="single.html" class="in-box">More Info</a>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix"> </div>
-            <div class="nav-page">
-                <nav>
-                    <ul class="pagination">
-                        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-
-    </div>
-
-</div>
 <%@include file="/WEB-INF/_foot.jsp"%>
 </body>
 </html>
