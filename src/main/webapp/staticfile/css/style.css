@@ -35,7 +35,7 @@ h1,h2,h3,h4,h5,h6,label,p{
 }
 /*--header--*/
 .header{
-  	background-color: #27da93; 
+  	background-color: #555; 
   	  padding: 0.8em 0;
 }
 .bottom-head {
@@ -111,7 +111,7 @@ h1,h2,h3,h4,h5,h6,label,p{
   	left: 0;
 }
 .bottom-head a:hover .buy-media h6{
-	color:#27da93;
+	color:#555;
 }
 i.buy{
 	width: 32px;
@@ -249,7 +249,7 @@ i.glyphicon.glyphicon-menu-hamburger {
 	margin: 0 7px 0 10px;
 }
 .feed ul li a:hover{
-	color:#27da93;
+	color:#555;
 }
 /* start tabs */
 .sap_tabs{
@@ -282,7 +282,7 @@ i.glyphicon.glyphicon-menu-hamburger {
 }
 .resp-tab-active{
 	color:#fff;	
-	background:#27da93;
+	background:#555;
 }
 .resp-tab-item span{
 	font-size:1.1em;
@@ -316,7 +316,7 @@ h2.resp-accordion:hover{
 	color: #FFF;
 }
 .facts{
-	background-color:#27da93;
+	background-color:#555;
 	padding:2em  1.5em;
 }
 /*----*/
@@ -417,7 +417,7 @@ ul.callbacks_tabs.callbacks1_tabs {
   	padding: 0 0 0.3em;
 }
 .caption h3 span{
-	border-bottom: 7px solid #27DA93;
+	border-bottom: 7px solid #555;
 }
 .caption p{
 	color: #fff;
@@ -486,13 +486,13 @@ ul.callbacks_tabs.callbacks1_tabs {
 }
 .most-1 h5{
    	font-size: 1.2em;
-  	color: #27DA93;
+  	color: #555;
   	padding: 0em 0 0.3em;
     font-family: 'Montserrat-Regular';
 }
 .most-1 h5 a{
    	text-decoration:none;
-  	color: #27DA93;
+  	color: #555;
 }
 .most-1 h5 a:hover{
   	color: #000;
@@ -502,7 +502,7 @@ ul.callbacks_tabs.callbacks1_tabs {
    color: #000;
 }
 span.four {
-  background-color: #27DA93;
+  background-color: #555;
   font-size: 1em;
   color: #FFF;
   display: block;
@@ -570,7 +570,7 @@ a.mask {
 	font-size: 1.4em;
 	text-transform: uppercase;
 	font-family: 'Montserrat-Regular';
-	color:#27da93 ;
+	color:#555 ;
 }
 .ser-top p{
 	color:#a3a3a3;
@@ -595,7 +595,7 @@ a.mask {
 	position: relative;
 	z-index: 1;
 	color:#8e8e8e;
-  	border:3px solid #27da93;
+  	border:3px solid #555;
   	line-height: 4.5em;
   	font-size: 1em;
 }
@@ -766,8 +766,8 @@ p.cost {
 a.more{
 	text-decoration: none;
 	font-size: 0.9em;
-	border: 1px solid #27da93;
-	color:#27da93;
+	border: 1px solid #555;
+	color:#555;
 	padding: 0.3em 0.7em;
 	display:inline-block;
 	margin: 1em 0 0;
@@ -808,7 +808,7 @@ a.more:hover{
   background-size: cover; 
 }
 .mid-content{
-	background:#27da93;
+	background:#555;
 	padding:2em;
 	width:35%;
 	margin:5em auto 0;
@@ -859,7 +859,7 @@ a.more-in{
   left: 0;
   right: 0;
   bottom: 0;
-  background: #27da93;
+  background: #555;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
@@ -882,7 +882,7 @@ a.more-in:before{
 	background:#fff;
 }
 a.more-in:hover{
-	color: #27da93;
+	color: #555;
 }
 /*--//middle--*/
 /*--content-bottom--*/
@@ -935,7 +935,7 @@ i.dolor{
 	padding: 1em 1em 0em;
 }
 .men span {
-	color:#27da93;
+	color:#555;
 	font-size: 1.2em;
 	font-family: 'Montserrat-Regular';
 }
@@ -1008,7 +1008,7 @@ ul.nav-bottom li  a{
 	margin: 0.5em 0;
 }
 ul.nav-bottom li  a:hover{
-	color:#27da93;
+	color:#555;
 }
 .amet-sed p{
 	color:#989696;
@@ -1020,7 +1020,7 @@ ul.nav-bottom li  a:hover{
 	font-size:0.9em;
 }
 .footer-class  p a{
-	color:#27da93;
+	color:#555;
 	text-decoration:none;
 }
 .footer-class  p a:hover{
@@ -1100,7 +1100,7 @@ transform: rotatey(360deg);
   	margin-top: 1.8em;
 }
 .banner-buying h3 span{
-	border-bottom: 7px solid #27DA93;
+	border-bottom: 7px solid #555;
 }
 /*----*/
 .menu-right{
@@ -1148,7 +1148,7 @@ ul {
 }
 .menu ul li a:hover{
 	background: #fbfbfb;
- 	 color: #27DA93;
+ 	 color: #555;
 }
 ul.cute {
   background-color: #fff;
@@ -1175,7 +1175,7 @@ ul.kid-menu li.menu-kid-left{
 .price-top h4,.price-top1 h4{
 	font-size: 1.2em;
   	font-family: 'Montserrat-Regular';
-  	color: #27da93;
+  	color: #555;
   	margin: 0 0 0.5em;
 }
 select.in-drop {
@@ -1488,13 +1488,13 @@ span.fur-money{
 	color:#000;
 }
 .fur1 h6{
-	color:#27da93;
+	color:#555;
 	font-size: 1em;
 	font-family: 'Montserrat-Regular';
 	margin: 0.3em 0;
 }
 .fur1 h6 a{
-	color:#27da93;
+	color:#555;
 	text-decoration: none;
 }
 .fur1 h6 a:hover{
@@ -1591,7 +1591,7 @@ option.rm{
 }
 .single-bottom h4{
 	font-size: 1.3em;
-  	color: #27da93;
+  	color: #555;
   	font-family: 'Montserrat-Regular';
 }
 /*--checkbox--*/
@@ -1654,7 +1654,7 @@ option.rm{
 .middle-side h4 {
 	font-size: 1.2em;
   	text-transform: uppercase;
- 	color: #27DA93;
+ 	color: #555;
 	margin: 0 0 0.5em;
 	font-family: 'Montserrat-Regular';
 }
@@ -1705,7 +1705,7 @@ option.rm{
   padding: 1em 2em;
 }
 a.builder{
-	background: #27da93;
+	background: #555;
 	font-size: 0.9em;
 	padding: 0.4em 0.8em;
 	text-decoration: none;
@@ -1740,7 +1740,7 @@ a.builder:before {
 	color: #000;
 }
 .box-text p a:hover {
-   color: #27DA93;
+   color: #555;
 }
 a.in-box{
 	font-size: 0.8em;
@@ -1750,7 +1750,7 @@ a.in-box{
   	display: block;
 }
 a.in-box:hover {
-  	color: #27da93;
+  	color: #555;
 }
 .single-box-img {
   	padding: 1.5em 0 0;
@@ -1764,7 +1764,7 @@ a.in-box:hover {
 }
 .single-box-right h4{
 	font-size: 1.3em;
- 	color: #27DA93;
+ 	color: #555;
 	font-family: 'Montserrat-Regular';
 }
 /*--//single--*/
@@ -1867,8 +1867,8 @@ font-family: 'Montserrat-Regular';
   font-size: 0.9em;
   padding: 0.4em 0.8em;
   text-decoration: none;
-  color: #27da93;
-  border: 1px solid #27da93;
+  color: #555;
+  border: 1px solid #555;
 }
 .loan-point img{
 	margin: 0 auto;
@@ -1885,7 +1885,7 @@ font-family: 'Montserrat-Regular';
 	line-height: 2em;
 }
 .loan-point1 ul li a:hover {
-  color: #27da93;
+  color: #555;
 }
 .loan-point1 ul li i{
 	font-size: 0.8em;
@@ -1934,7 +1934,7 @@ font-family: 'Montserrat-Regular';
   margin: 0 1%;
 }
 .loan-col h4 ,.loan-col1 h4{
-    color:#27da93;
+    color:#555;
   	font-family: 'Montserrat-Regular';
   	padding: 1em 0;
   	  font-size: 1.2em;
@@ -1991,8 +1991,8 @@ select.drop-select1 {
   	margin: 0.5em 0 1em;
 }
 label.hvr-sweep-to-right{
-	color: #27DA93;
-	 border: 1px solid #27DA93;
+	color: #555;
+	 border: 1px solid #555;
 	   font-weight: normal;
 }
 .sub input[type="submit"] {
@@ -2058,7 +2058,7 @@ font-family: 'Montserrat-Regular';
 	  float: left;
   	font-size: 1.8em;
   	color: #fff;
-  	background: #27DA93;
+  	background: #555;
   	border-radius: 100px;
   	width: 50px;
   	height: 50px;
@@ -2068,13 +2068,13 @@ font-family: 'Montserrat-Regular';
 .dealer-grid-top h6{
 	float: right;
 	font-size: 1.4em;
-  	color: #27DA93;
+  	color: #555;
   	width: 78%;
   	line-height: 1.3em;
   	font-family: 'Montserrat-Regular';
 }
 .dealer-grid-top h6 a{
-  	color:#27DA93;
+  	color:#555;
   	text-decoration: none;
 }
 .dealer-grid-top h6 a:hover{
@@ -2100,7 +2100,7 @@ font-family: 'Montserrat-Regular';
 	  font-family: 'Montserrat-Regular';
 }
 .top-deal1 h5 a{
-	color:#27DA93;
+	color:#555;
 	text-decoration: none;
 }
 .top-deal1 h5 a:hover{
@@ -2160,7 +2160,7 @@ font-family: 'Montserrat-Regular';
 }
 .about-in h6 a{
 	text-decoration:none;
-  	color: #27DA93;
+  	color: #555;
 }
 .about-in h6 a:hover{
   	color: #000;
@@ -2198,7 +2198,7 @@ font-family: 'Montserrat-Regular';
 }
 .about-mid h6 a{
 	text-decoration:none;
-  	color: #27da93;
+  	color: #555;
 }
 .about-mid h6 a:hover{
   	color: #000;
@@ -2210,7 +2210,7 @@ font-family: 'Montserrat-Regular';
 }
 .about-mid1{
 	text-align:center;
-	background:#27DA93;
+	background:#555;
 	padding:4em 2em;
 }
 .about-mid1 p{
@@ -2248,7 +2248,7 @@ font-family: 'Montserrat-Regular';
 	padding: 0 0 0.3em;
 	font-size: 1.4em;
 	text-transform: uppercase;
-	color:#27DA93;
+	color:#555;
 	font-family: 'Montserrat-Regular';
 }
 .beautiful label{
@@ -2272,13 +2272,13 @@ font-family: 'Montserrat-Regular';
 	padding: 5em 0;
 }
 .bottom-about h4{
-	color: #27da93;
+	color: #555;
     font-size: 1.3em;
   font-family: 'Montserrat-Regular';
     line-height: 1.5em;
 }
 .bottom-about h4 a{
-	color: #27da93;
+	color: #555;
     text-decoration: none;
 }
 .bottom-about h4 a:hover{
@@ -2334,7 +2334,7 @@ font-family: 'Montserrat-Regular';
 }
 .event h6 a{
 	text-decoration:none;
-	color:#27da93;
+	color:#555;
 	display: inline-block;
 }
 .event h6 a:hover{
@@ -2373,10 +2373,10 @@ font-family: 'Montserrat-Regular';
     font-size: 1.1em;
     margin: 1em 0 0.3em;
   font-family: 'Montserrat-Regular';
-    color:#27DA93;
+    color:#555;
 }
 .blog-top h4 a{
-	color: #27DA93;
+	color: #555;
 	text-decoration: none;
 }
 .blog-top h4 a:hover {
@@ -2414,7 +2414,7 @@ ul.blog-links li a {
 ul.blog-links li a i{
   	width: 30px;
   	height: 30px;
-  	background: #27da93;
+  	background: #555;
   	float: left;
   	color: #fff;
   	font-size: 12px;
@@ -2446,7 +2446,7 @@ ul.blog-links li a i{
 }
 .blog-list h4,.blog-list1 h4,.blog-list2 h4{
 	font-size:1.4em;
-	color:#27da93;
+	color:#555;
 	margin-bottom:0.8em;
 	text-transform: uppercase;
 	font-family: 'Montserrat-Regular';
@@ -2467,7 +2467,7 @@ ul.blog-links li a i{
 	color:#000;
 }
 .blog-text p a:hover {
-  color: #27da93;
+  color: #555;
 }
 .blog-text span{
 	font-size:0.8em;
@@ -2475,7 +2475,7 @@ ul.blog-links li a i{
 }
 .blog-text span a{
 	text-decoration: none;
-	color:#27DA93;
+	color:#555;
 }
 .blog-list-top {
   padding: 0.5em 0 1.5em;
@@ -2496,7 +2496,7 @@ ul.blog-links li a i{
   	margin: 0 0 0.6em;
 }
 .blog-list2 ul li a:hover {
-  background: #27da93;
+  background: #555;
 }
 .blog {
   padding: 5em 0;
@@ -2508,8 +2508,8 @@ ul.pagination {
   border-radius: 0 !important;
 }
 .pagination > .active > a,.pagination > .active > a:hover {
-  background-color: #27da93;
-  border-color: #27da93;
+  background-color: #555;
+  border-color: #555;
 }
 /*--//blog--*/
 /*--blog_single--*/
@@ -2518,7 +2518,7 @@ img.media-object {
 }
 h4.media-heading {
   font-size: 1.2em;
-  color: #27da93;
+  color: #555;
 font-family: 'Montserrat-Regular';
 }
 .media-body p {
@@ -2635,7 +2635,7 @@ font-family: 'Montserrat-Regular';
 }
 .contact-address h5{
 	display: block;
-  	color: #27DA93;
+  	color: #555;
   font-size: 1.3em;
   font-family: 'Montserrat-Regular';
 }
@@ -2647,7 +2647,7 @@ font-family: 'Montserrat-Regular';
    text-decoration: none;
 }
 .contact-top1 p a:hover{
-   color: #27da93;
+   color: #555;
 }
 .contact-top {
   padding: 4em 0 5em;
@@ -2678,7 +2678,7 @@ font-family: 'Montserrat-Regular';
 }
 .terms h4 {
   	font-size: 1.5em;
-  	color:#27da93;
+  	color:#555;
 	font-family: 'Montserrat-Regular';
 }
 .terms p{
@@ -2699,7 +2699,7 @@ ul.terms-start li a{
 	line-height: 2em;
 }
 ul.terms-start li a:hover {
-  color: #27DA93;
+  color: #555;
 }
 ul.terms-start li a i{
 	display: inline-block;
@@ -2733,7 +2733,7 @@ ul.terms-start li a i{
 }
 .privacy h4 {
   	font-size: 1.5em;
-  	color:#27da93;
+  	color:#555;
 	font-family: 'Montserrat-Regular';
 }
 .privacy p{
@@ -2754,7 +2754,7 @@ ul.privacy-start li a{
 	line-height: 2em;
 }
 ul.privacy-start li a:hover {
-  color: #27DA93;
+  color: #555;
 }
 ul.privacy-start li a i{
 	display: inline-block;
@@ -2914,7 +2914,7 @@ ul.login-icons li:nth-child(2),ul.login-icons li:nth-child(4) {
 	color:#000;
 }
 .form-info p a:hover{
-	color:#27DA93;
+	color:#555;
 }
 /*--//login--*/
 /*--feedback--*/
@@ -2987,7 +2987,7 @@ ul.login-icons li:nth-child(2),ul.login-icons li:nth-child(4) {
 	padding: 5em 0;
 }
 .questions h5{
-	color: #27da93;
+	color: #555;
 	font-size: 1.3em;
 	font-family: 'Montserrat-Regular';
 	line-height: 1.6em;
@@ -3026,7 +3026,7 @@ ul.login-icons li:nth-child(2),ul.login-icons li:nth-child(4) {
 }
 .career h4 {
   font-size: 1.4em;
-  color: #27DA93;
+  color: #555;
   margin: 0.5em 0;
   font-family: 'Montserrat-Regular';
 }
@@ -3045,7 +3045,7 @@ ul.career-start li a {
   line-height: 2em;
 }
 ul.career-start li a:hover {
-  color: #27DA93;
+  color: #555;
 }
 ul.career-start li a i {
   display: inline-block;
@@ -4196,7 +4196,7 @@ ul.right-icons {
   font-size: 1.6em;
 }
 .caption h3 span {
-  border-bottom: 4px solid #27DA93;
+  border-bottom: 4px solid #555;
 }
 .caption p {
   font-size: 1.1em;

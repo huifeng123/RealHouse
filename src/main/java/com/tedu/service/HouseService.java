@@ -33,4 +33,14 @@ public interface HouseService {
     public House findOneByHouseId(String hid);
 
     public void deleteHouse(String[] hids);
+
+    /**
+     * 通过房屋所在区域(hcountry)查询精品房源(暂时按照价格高低分配)
+     * @param hcountry 房屋所在区域
+     * @return 精品房源
+     */
+    public List<House> findVIPHousesByHcountry(String hcountry);
+
+    List<House> findHouses(String city, String hcountry, String hstructure, String minPrice, String maxPrice, String minArea, String maxArea);
+
 }

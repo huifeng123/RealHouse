@@ -55,7 +55,7 @@
         </div>
         <%--搜索框--%>
         <!---//pop-up-box---->
-        <div id="small-dialog" style="margin-top: -15%;z-index: 10000;border-radius: 20%">
+        <div id="small-dialog" style="margin-top: -10%;z-index: 10000;border-radius: 20%;>
             <!----- tabs-box ---->
             <div class="sap_tabs">
                 <div id="horizontalTab" style="width: 100%; margin: 0px;">
@@ -65,15 +65,19 @@
                         <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>For Rent</span></li>
                         <div class="clearfix"></div>
                     </ul>--%>
+
                     <div class="resp-tabs-container">
                         <h2 class="resp-accordion resp-tab-active" role="tab" aria-controls="tab_item-0"><span class="resp-arrow"></span>All Homes</h2><div class="tab-1 resp-tab-content resp-tab-content-active" aria-labelledby="tab_item-0" style="display:block">
-                        <div class="facts">
+                       <form method="post">
+                        <div class="facts" style="background-color: rgba(255,255,255,0.5);border-radius: 10px">
                             <div class="login">
-                                <input type="text" value="Search Address, Neighborhood, City or Zip" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search Address, Neighborhood, City or Zip';}">
-                                <input type="submit" value="">
+                                <input type="text" name="serch" value="查询房源 区域 小区" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '查询房源 区域 小区';}">
+                                <input type="submit" value="" formaction="/serch">
                             </div>
                         </div>
+                       </form>
                     </div>
+
                         <h2 class="resp-accordion" role="tab" aria-controls="tab_item-1"><span class="resp-arrow"></span>For Sale</h2><div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
                         <div class="facts">
                             <div class="login">

@@ -5,6 +5,11 @@
 <html>
 <head>
     <title>Title</title>
+    <script>
+    $(function () {
+
+    })
+    </script>
 </head>
 <body>
 <%@include file="/WEB-INF/_head.jsp"%>
@@ -16,13 +21,13 @@
             <ul class="menu">
                 <li class="item1"><a href="#"> Menu<i class="glyphicon glyphicon-menu-down"> </i> </a>
                     <ul class="cute">
-                        <li class="subitem1"><a href="buy.html">Buy </a></li>
-                        <li class="subitem2"><a href="buy.html">Rent </a></li>
-                        <li class="subitem3"><a href="buy.html">Hostels </a></li>
-                        <li class="subitem1"><a href="buy.html">Resale </a></li>
-                        <li class="subitem2"><a href="loan.html">Home Loan</a></li>
-                        <li class="subitem3"><a href="buy.html">Apartment </a></li>
-                        <li class="subitem3"><a href="dealers.html">Dealers</a></li>
+                        <li class="subitem1"><a href="/toBuy">购买 </a></li>
+                        <li class="subitem2"><a href="/toBuy">租房 </a></li>
+                        <li class="subitem3"><a href="/toMap">看图找房</a></li>
+                        <li class="subitem1"><a href="/toImpress">印象找房</a></li>
+                        <li class="subitem2"><a href="/">主页</a></li>
+                        <li class="subitem3"><a href="/toAbout">关于我们</a></li>
+
                     </ul>
                 </li>
             </ul>
@@ -45,7 +50,15 @@
                         $(this).next().stop(true,true).slideUp('normal');
                     }
                 });
+                $("#house_info > span").each (function () {
 
+                    var value = this.value;
+
+                    if(value==1){
+                        $span.attr("class","label label-primary");
+                    }
+
+                });
             });
         </script>
 
@@ -149,16 +162,38 @@
                     <p><span class="bath">出租 </span>:<span class="two"> ${house.lend}</span></p>
                     <p><span class="bath">楼层 </span>:<span class="two"> ${house.hfloor}</span></p>
                     <p><span class="bath">评价 </span>:<span class="two"> ${house.think}</span></p>
-                    <div id="house_info" class="col-md-12"><span class="label label-default">冰箱</span>
+                    <div id="house_info" class="col-md-12">
+                    <c:if test="${house.houseInfo.hasbed==1}" >
+                        <span class="label label-default" >冰箱</span>
+                    </c:if>
+                    <c:if test="${house.houseInfo.hasbed==1}" >
                         <span class="label label-default">床</span>
-                        <span class="label label-default" >电视</span>
+                    </c:if>
+                    <c:if test="${house.houseInfo.hastv==1}" >
+                        <span class="label label-default">电视</span>
+                         </c:if>
+                    <c:if test="${house.houseInfo.haswasher==1}" >
                         <span class="label label-default">洗衣机</span>
+                         </c:if>
+                    <c:if test="${house.houseInfo.haskt==1}" >
                         <span class="label label-default">空调</span>
+                         </c:if>
+                    <c:if test="${house.houseInfo.hasnq==1}" >
                         <span class="label label-default">暖气</span>
+                         </c:if>
+                    <c:if test="${house.houseInfo.hasnet==1}" >
                         <span class="label label-default">宽带</span>
+                         </c:if>
+                    <c:if test="${house.houseInfo.hasfurniture==1}" >
                         <span class="label label-default">家具</span>
+                         </c:if>
+                    <c:if test="${house.houseInfo.hasgas==1}" >
                         <span class="label label-default">天然气</span>
-                        <span class="label label-default">热水器</span>
+                         </c:if>
+                    <c:if test="${house.houseInfo.hasrsq==1}" >
+                        <span class="label label-default" >热水器</span>
+                    </c:if>
+
                     </div>
 
                     <div class="   right-side">
@@ -203,7 +238,7 @@
                         </div>
                         <div class="box-text">
                             <p><a href="single.action">${h.hname}</a></p>
-                            <a href="single.action" class="in-box">More Info</a>
+                            <a href="single.action" class="in-box">更多信息</a>
                         </div>
                         <div class="clearfix"> </div>
                     </div>
@@ -222,63 +257,24 @@
     <div class="future">
         <h3 >精品社区</h3>
         <div class="content-bottom-in">
-
             <ul id="flexiselDemo1">
-                <c:forEach items="goodList" var="goodhouse">
+                <c:forEach items="${goodList}" var="goodhouse">
                     <li><div class="project-fur">
-                        <a href="single.html" ><img class="img-responsive" src="${goodhouse}" alt="" />	</a>
+                        <a href="single.html" ><img class="img-responsive" src="${goodhouse.imgurl}" alt="" />	</a>
                         <div class="fur">
                             <div class="fur1">
-                                <span class="fur-money">$2.44 Lacs - 5.28 Lacs </span>
-                                <h6 class="fur-name"><a href="single.html">Contrary to popular</a></h6>
-                                <span>Paris</span>
+                                <span class="fur-money">${goodhouse.price} 元</span>
+                                <h6 class="fur-name"><a href="/tosingle?hid=${goodhouse.hid}">${goodhouse.hname}</a></h6>
+                                <span>${goodhouse.village}</span>
                             </div>
                             <div class="fur2">
-                                <span>2 BHK</span>
+                                <span>${goodhouse.hstructure}</span>
                             </div>
                         </div>
                     </div></li>
                 </c:forEach>
 
-                <li><div class="project-fur">
-                    <a href="single.html" ><img class="img-responsive" src="${ctx}/staticfile/images/pi1.jpg" alt="" />	</a>
-                    <div class="fur">
-                        <div class="fur1">
-                            <span class="fur-money">$2.44 Lacs - 5.28 Lacs </span>
-                            <h6 class="fur-name"><a href="single.html">Contrary to popular</a></h6>
-                            <span>Paris</span>
-                        </div>
-                        <div class="fur2">
-                            <span>2 BHK</span>
-                        </div>
-                    </div>
-                </div></li>
-                <li><div class="project-fur">
-                    <a href="single.html" ><img class="img-responsive" src="${ctx}/staticfile/images/pi2.jpg" alt="" />	</a>
-                    <div class="fur">
-                        <div class="fur1">
-                            <span class="fur-money">$2.44 Lacs - 5.28 Lacs </span>
-                            <h6 class="fur-name"><a href="single.html">Contrary to popular</a></h6>
-                            <span>Paris</span>
-                        </div>
-                        <div class="fur2">
-                            <span>2 BHK</span>
-                        </div>
-                    </div>
-                </div></li>
-                <li><div class="project-fur">
-                    <a href="single.html" ><img class="img-responsive" src="${ctx}/staticfile/images/pi3.jpg" alt="" />	</a>
-                    <div class="fur">
-                        <div class="fur1">
-                            <span class="fur-money">$2.44 Lacs - 5.28 Lacs </span>
-                            <h6 class="fur-name"><a href="single.html">Contrary to popular</a></h6>
-                            <span>Paris</span>
-                        </div>
-                        <div class="fur2">
-                            <span>2 BHK</span>
-                        </div>
-                    </div>
-                </div></li>
+
             </ul>
             <script type="text/javascript">
                 $(window).load(function() {

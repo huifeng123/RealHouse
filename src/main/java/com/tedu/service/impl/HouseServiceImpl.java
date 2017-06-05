@@ -85,7 +85,16 @@ public class HouseServiceImpl implements HouseService {
         }
     }
 
+    @Override
+    public List<House> findVIPHousesByHcountry(String hcountry) {
+        return houseMapper.findVIPHouseByHcountry(hcountry
+        );
+    }
 
+    @Override
+    public List<House> findHouses(String city, String hcountry, String hstructure, String minPrice, String maxPrice, String minArea, String maxArea) {
+        return houseMapper.findHouses(hcountry,hstructure,minPrice,maxPrice,minArea,maxArea);
+    }
 
 
     /**
@@ -94,11 +103,6 @@ public class HouseServiceImpl implements HouseService {
      */
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
-
-
-
-
-
     public void updateHouse(House house,HouseInfo houseInfo,String uid){
         houseMapper.updateHouse(house,uid);
         houseInfoMapper.updateHouseInfo(houseInfo,uid);
