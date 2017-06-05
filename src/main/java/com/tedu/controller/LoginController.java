@@ -34,6 +34,7 @@ public class LoginController {
         //跳转到登陆页面
         return "pages/login";
     }
+
     //登录验证
     @RequestMapping("/login.action")
     public String login(String uname,String upassword,Model model){
