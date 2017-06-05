@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 /**
  * Created by LYJ on 2017/3/19.
@@ -44,21 +45,23 @@ public class UserController {
     
     //转向用户修改页面
     @RequestMapping("/toUpdateUser")
-    public String toUpdate(String id,Model model){
-    	
-    	//根据用户Id查询数据库
-    	User user = userService.findUserById(id);
+    public String toUpdate(String uid,Model model){
+
+        //根据用户Id查询数据库
+    	User user = userService.findUserById(uid);
     	model.addAttribute("user", user);
+
     	//转向用户修改页面
-    	return "updateUser";
+    	return "/pages/myMessageUpdate";
     }
     
     @RequestMapping("/updateUser")
-    public String update(User user){
+    public String update(HttpSession session,User user){
     	
     	userService.updateUser(user);
+        session.setAttribute("session_user",user);
     	//重定向到用户列表页面
-    	return "redirect:/findAll";
+    	return "redirect:/toshowMyMessage";
     }
     
     @RequestMapping("/deleteUser")

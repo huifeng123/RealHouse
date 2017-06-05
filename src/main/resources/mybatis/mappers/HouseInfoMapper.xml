@@ -61,7 +61,14 @@
 			<if test="hasgas !=null">#{hasgas},</if>
 			<if test="hasrsq !=null">#{hasrsq},</if>
 		</trim>
+
 	</insert>
+
+
+	<!--前端删除-->
+	<delete id="deleteHouseInfoqian">
+		delete from house_info_p where hid=#{hid}
+	</delete>
 
 
 </mapper>
