@@ -26,6 +26,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public void addUser(User user) {
+    	user.setUid(UUID.randomUUID().toString());
 		userMapper.addUser(user);
 		
 	}

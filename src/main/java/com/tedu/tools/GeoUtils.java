@@ -14,12 +14,17 @@ import java.util.Arrays;
  */
 public class GeoUtils {
 
-    public static String[] getJsonByUrl() throws IOException {
+    public static void insertGeo(){
+
+//        getJsonByUrl(address);
+    }
+
+    public static String[] getJsonByUrl(String address) throws IOException {
 
         String ak =  "f47bfffa7e61a28398ee5cdb42e65d47";
-        String address = "方恒国际中心A座";
+//        String address = "方恒国际中心A座";
         String city = "北京";
-        String url = "http://restapi.amap.com/v3/geocode/geo?key="+ak+"&address="+address+"&city="+city+"";
+        String url = "http://restapi.amap.com/v3/geocode/geo?key="+ak+"&address="+address+"&city="+city;
         InputStream is = new URL(url).openStream();
         BufferedReader br = new BufferedReader(new InputStreamReader(is));
         StringBuffer sb = new StringBuffer();
@@ -50,7 +55,8 @@ public class GeoUtils {
 
     public static void main(String[] args) {
         try {
-            String[] strs = getJsonByUrl();
+            String address = "方恒国际中心A座";
+            String[] strs = getJsonByUrl(address);
             System.out.println(Arrays.toString(strs));
         } catch (IOException e) {
             e.printStackTrace();

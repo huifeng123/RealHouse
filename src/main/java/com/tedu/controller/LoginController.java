@@ -36,6 +36,7 @@ public class LoginController {
         //跳转到登陆页面
         return "pages/login";
     }
+
     //登录验证
     @RequestMapping("/login.action")
     public String login(String uname,String upassword,Model model,HttpSession httpSession){
@@ -64,8 +65,10 @@ public class LoginController {
         try {
             subject.login(token);//表示用户要进行登录认证
             User user=(User) subject.getPrincipal();
+
             subject.getSession().setAttribute("session_admin", user);
             return "redirect:/back/index";
+
         } catch (AuthenticationException e) {
             //登录失败转发到登陆页面并提示用户
             e.printStackTrace();
@@ -98,6 +101,7 @@ public class LoginController {
     public String toUserLogOut(HttpSession httpSession){
         httpSession.removeAttribute("session_user");
         return "redirect:/";
+
     }
     //管理者退出页面
     @RequestMapping("/toAdminLogOut")
@@ -118,6 +122,7 @@ public class LoginController {
         }catch (IOException e){
             e.printStackTrace();
         }
+
 
     }
 }

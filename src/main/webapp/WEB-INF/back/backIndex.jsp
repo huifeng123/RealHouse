@@ -11,6 +11,7 @@
 
 <body>
 <div class="nav navbar-default navbar-mystyle navbar-fixed-top">
+
     <div class="navbar-header">
         <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
@@ -33,6 +34,7 @@
                 <div class="dropdown-menu search-dropdown">
                     <div class="input-group">
                         <input type="text" class="form-control">
+
                  <span class="input-group-btn">
                    <button type="button" class="btn btn-default">搜索</button>
                 </span>
@@ -80,8 +82,7 @@
             
        </div>			
 	 </div>
-  </div>
-</div>
+
 <script type="text/javascript">
 $(function(){
 /*换肤*/

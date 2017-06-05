@@ -74,26 +74,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</ul>
 			<div class="form-info">
 				<form action="${ctx}/register" method="post">
-					<input type="text" name="urname" placeholder="姓名" required="">
-					<input type="text"  name="uname" placeholder="用户名" required="" ><span style="color: red">${msg}</span>
+
+					<input type="text" class="form-control" name="urname" placeholder="姓名" required="">
+					<input type="text" class="form-control"  name="uname" placeholder="用户名" required="" ><span style="color: red">${msg}</span>
 					<span id="uname_msg"></span>
-					<input type="password" name="upassword" placeholder="密码" required="">
-					<input type="password" name="upassword2" placeholder="确认密码" required="" onblur="formObj.checkPw('upassword','两次密码不一致')">
+					<input type="password" class="form-control" name="upassword" placeholder="密码" required="">
+					<input type="password" class="form-control" name="upassword2" placeholder="确认密码" required="" onblur="formObj.checkPw('upassword','两次密码不一致')">
 					<span id="upassword2_msg"></span>
-					<input type="text"  name="uemail" placeholder="邮箱" required="" onblur="formObj.checkEmail('uemail','邮箱格式不正确')" >
+					<input type="text"  class="form-control" name="uemail" placeholder="邮箱" required="" onblur="formObj.checkEmail('uemail','邮箱格式不正确')" >
 					<span id="uemail_msg"></span>
-					<input type="text" name="sex" placeholder="性别" required="">
-					<input type="text" name="tel" placeholder="电话" required="">
-					<input type="text" name="qq" placeholder="QQ" required="">
-					<input type="text" name="uaddress" placeholder="住址" required="">
-					<input type="text" name="post" placeholder="邮编" required="">
+					<input type="text" class="form-control" name="sex" placeholder="性别" required="">
+					<input type="text" class="form-control" name="tel" placeholder="电话" required="">
+					<input type="text" class="form-control" name="qq" placeholder="QQ" required="">
+					<input type="text" class="form-control" name="uaddress" placeholder="住址" required="">
+					<input type="text" class="form-control" name="post" placeholder="邮编" required="">
 					<div>
-						<input type="radio" name="upower" value="1" required="">房东
-						<input type="radio" name="upower" value="0" required="">租客
+						<input type="radio" class="form-control" name="upower" value="1" required="">房东
+						<input type="radio" class="form-control"  name="upower" value="0" required="">租客
+
+
 					</div>
 
 					<label class="hvr-sweep-to-right">
-						<input type="submit" value="注册">
+						<input type="submit" class="btn btn-default" value="注册">
 					</label>
 				</form>
 				<p>已经有一个真实的家庭账户了吗? <a href="${ctx}/toLogin">登录</a></p>

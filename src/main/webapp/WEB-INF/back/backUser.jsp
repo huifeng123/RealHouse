@@ -99,8 +99,8 @@
                                        <td>${u.uaddress}</td>
                                        <td>${u.qq}</td>
                                        <td>
-                                           <c:if test="${u.upower=='1'}">房东</c:if>
-                                           <c:if test="${u.upower=='0'}">租客</c:if>
+                                           <c:if test="${u.upower==1}">房东</c:if>
+                                           <c:if test="${u.upower==0}">租客</c:if>
                                        </td>
                                    </tr>
                                </c:forEach>

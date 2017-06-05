@@ -1,14 +1,24 @@
 package com.tedu.pojo;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
+
 import java.util.Date;
 
 /**
  * Created by bigjsd on 2017/6/2.
  */
+@Document(indexName = "house",type = "house",shards = 1,replicas = 0,refreshInterval = "-1")
 public class House extends BaseEntity{
+    @Field(type= FieldType.Nested)
     private HouseInfo houseInfo; //房屋详情对象
+    @Field(type= FieldType.Nested)
     private HouseArea houseArea; //房屋区域表对象
+    @Field(type= FieldType.Nested)
     private User userHouse; //房东房东
+    @Id
     private String hid;//房屋编号
     private String hname;//房屋名称
     private String hcountry;//地域
@@ -16,11 +26,11 @@ public class House extends BaseEntity{
     private String area;//地区
     private String hstructure;//户型
     private String face;//朝向
-    private String harea;//房屋面积
+    private Double harea;//房屋面积
     private String hfloor;//楼层
     private String lend;//出租方式
     private String uid;//用户编号
-    private String price;//房屋价格
+    private Double price;//房屋价格
     private String haddress;//房屋地址
     private String hrepair;//装修情况
     private String validate;//有效期
@@ -31,6 +41,7 @@ public class House extends BaseEntity{
     private Integer state;//状态
     private String think;//评价
     private String imgurl;//图片
+    //跳转tomap前端json显示
     public  String getTitle(){
         return  this.hname;
     }
@@ -114,11 +125,11 @@ public class House extends BaseEntity{
         this.face = face;
     }
 
-    public String getHarea() {
+    public Double getHarea() {
         return harea;
     }
 
-    public void setHarea(String harea) {
+    public void setHarea(Double harea) {
         this.harea = harea;
     }
 
@@ -146,11 +157,11 @@ public class House extends BaseEntity{
         this.uid = uid;
     }
 
-    public String getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
@@ -247,11 +258,11 @@ public class House extends BaseEntity{
                 ", area='" + area + '\'' +
                 ", hstructure='" + hstructure + '\'' +
                 ", face='" + face + '\'' +
-                ", harea='" + harea + '\'' +
+                ", harea=" + harea +
                 ", hfloor='" + hfloor + '\'' +
                 ", lend='" + lend + '\'' +
                 ", uid='" + uid + '\'' +
-                ", price='" + price + '\'' +
+                ", price=" + price +
                 ", haddress='" + haddress + '\'' +
                 ", hrepair='" + hrepair + '\'' +
                 ", validate='" + validate + '\'' +
