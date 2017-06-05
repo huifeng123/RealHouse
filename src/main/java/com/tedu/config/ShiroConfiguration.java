@@ -36,16 +36,13 @@ public class ShiroConfiguration {
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         //Shiro的核心安全接口,这个属性是必须的
         shiroFilterFactoryBean.setSecurityManager(securityManager());
-        //要求登录时的链接(可根据项目的URL进行替换),非必须的属性,默认会自动寻找Web工程根目录下的"/login.jsp"页面
-        shiroFilterFactoryBean.setSecurityManager(securityManager());
         /*定义shiro过滤链  Map结构
         Map中key(xml中是指value值)的第一个'/'代表的路径是相对于
         */
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<String, String>();
         // authc:所有url都必须认证通过才可以访问; anon:所有url都都可以匿名访问
         filterChainDefinitionMap.put("/staticfile/**", "anon");
-        filterChainDefinitionMap.
-                put("/pages/**", "anon");
+        //filterChainDefinitionMap.put("/pages/**", "anon");
         //如果不让用户访问后台可以按照下面范例配置路径
         filterChainDefinitionMap.put("/back/**","authc");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);

@@ -11,34 +11,36 @@
 	<script type="text/javascript">
 
 		var formObj = {
-			checkPw:function(name,msg){
-				var pw1=$("input[name="+name+"]").val();
-				var pw2=$("input[name="+name+"2]").val();
-				this.setMsg(name+"2","");
-				if(pw1!=pw2){
-					this.setMsg(name+"2","两次密码不一致")
+			checkPw: function (name, msg) {
+				var pw1 = $("input[name=" + name + "]").val();
+				var pw2 = $("input[name=" + name + "2]").val();
+				this.setMsg(name + "2", "");
+				if (pw1 != pw2) {
+					this.setMsg(name + "2", "两次密码不一致")
 				}
 			},
-			checkEmail:function(name,msg){
-				var email=$("input[name="+name+"]").val();
-				this.setMsg(name,"");
-				var regex=/^\w+@\w+(\.\w+)+$/;
-				if(email!=""&&!regex.test(email)){
-					this.setMsg(name,msg);
+			checkEmail: function (name, msg) {
+				var email = $("input[name=" + name + "]").val();
+				this.setMsg(name, "");
+				var regex = /^\w+@\w+(\.\w+)+$/;
+				if (email != "" && !regex.test(email)) {
+					this.setMsg(name, msg);
 				}
 			},
-			setMsg:function(name,msg){
-				$("#"+name+"_msg").html("<font style='color:red; '>"+msg+"</font>");
+			setMsg: function (name, msg) {
+				$("#" + name + "_msg").html("<font style='color:red; '>" + msg + "</font>");
 			}
 		}
-		/*$().ready(function () {
-			var uname=$("input[name=uname]").val();
-			alert(uname)
-			//Ajax校验
-			$.post("${ctx}/toAjaxCheckUname", {uname: uname}, function(result){
-				$("#uname_msg").html(result);
-			});
-		})*/
+
+			//Ajax校验用户名
+			$(function () {
+				$("input[name=uname]").blur(function () {
+					var uname=$(this).val();
+					$.post("${ctx}/toAjaxCheckUname",{uname:uname},function (result) {
+						$("#uname_msg").html(result);
+					})
+				})
+			})
 	</script>
 <!-- Custom Theme files -->
 <!--menu-->
