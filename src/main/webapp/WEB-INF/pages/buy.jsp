@@ -281,7 +281,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                <p><span class="bath4">出租</span> : <span class="two">${h.lend}</span></p>
                                <p><span class="bath5">价格</span>:<span class="two"> ${h.price} 元</span></p>
                                <div class="   right-side">
-                                   <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
+                                   <a href="/tosingle?hid=${h.hid}" class="hvr-sweep-to-right more" >更多信息</a>
                                </div>
 
                            </div>
@@ -310,7 +310,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                 <div class="single-box-right">
                     <h4>特色社区</h4>
-                    <c:forEach var="goodHouse" items="${goodList}">
+                    <c:forEach var="goodHouse" items="${goodList}" begin="0" end="8">
                     <div class="single-box-img">
                         <div class="box-img">
                             <a href="/tosingle?hid=${goodHouse.hid}"><img class="img-responsive" src="${goodHouse.imgurl}" alt=""></a>
@@ -331,14 +331,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="nav-page">
                 <nav>
                     <ul class="pagination">
-                        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                        <li class="disabled"><a href="/toBuy" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                        <li class="active"><a href="/toBuy?end=5">1 <span class="sr-only">(current)</span></a></li>
 
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                        <li><a href="/toBuy?end=10">2</a></li>
+                        <li><a href="/toBuy?end=15">3</a></li>
+                        <li><a href="/toBuy?end=20">4</a></li>
+                        <li><a href="/toBuy?end=25">5</a></li>
+                        <li><a href="/toBuy" aria-label="Next"><span aria-hidden="true">»</span></a></li>
                     </ul>
                 </nav>
             </div>

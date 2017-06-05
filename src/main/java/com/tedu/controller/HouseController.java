@@ -63,12 +63,26 @@ public class HouseController {
             Double priceMin = Double.parseDouble(minPrice);
             Double areaMin = Double.parseDouble(maxArea);
             Double areaMax = Double.parseDouble(minArea);
-            
+
             List<House> houseList = houseService.findHousesByInfo(hcountry,hstructure,minPrice,maxPrice,minArea,maxArea);
             model.addAttribute("houseList",houseList);
 
+            List<House> goodList = houseService.findVIPHousesByHcountry("房山");
+            //  System.out.println(goodList);
+            model.addAttribute("goodList",goodList);
+
             return "/pages/buy";
         }
+        @RequestMapping("/toHotArea")
+        public String toHotArea(String hcountry,Model model){
+            List<House> houseList = houseService.findVIPHousesByHcountry(hcountry);
+            model.addAttribute("houseList",houseList);
+            List<House> goodList = houseService.findVIPHousesByHcountry("房山");
+            //  System.out.println(goodList);
+            model.addAttribute("goodList",goodList);
+            return "/pages/buy";
+        }
+
 
 
 
