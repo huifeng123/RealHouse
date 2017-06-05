@@ -39,6 +39,7 @@
         city: '北京市',
         panel: 'panel',
         policy: AMap.TransferPolicy.LEAST_TIME //乘车策略
+
     };
     //构造公交换乘类
     var transfer = new AMap.Transfer(transOptions);
