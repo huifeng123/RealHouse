@@ -8,8 +8,8 @@ import java.util.List;
 /**
  * Created by Ryan Noodles on 2017/6/5.
  */
-@Component("esHouseRepository")
+@Component()
 public interface EsHouseRepository extends ElasticsearchRepository<House, String> {
 
-    House findHouseList(String village);
+    public House findByHid(String hid);
 }

@@ -10,33 +10,57 @@ import java.util.Date;
 /**
  * Created by bigjsd on 2017/6/2.
  */
-@Document(indexName = "house",type = "house",shards = 1,replicas = 0,refreshInterval = "-1")
+@Document(indexName = "house3",type = "house3",shards = 1,replicas = 0,refreshInterval = "-1")
 public class House extends BaseEntity{
+    @Field(type= FieldType.Nested)
     private HouseInfo houseInfo; //房屋详情对象
+    @Field(type= FieldType.Nested)
     private HouseArea houseArea; //房屋区域表对象
+    @Field(type= FieldType.Nested)
     private User userHouse; //房东房东
     @Id
     private String hid;//房屋编号
+    @Field
     private String hname;//房屋名称
+    @Field
     private String hcountry;//地域
+    @Field
     private String village;//小区
+    @Field
     private String area;//地区
+    @Field
     private String hstructure;//户型
+    @Field
     private String face;//朝向
+    @Field
     private String harea;//房屋面积
+    @Field
     private String hfloor;//楼层
+    @Field
     private String lend;//出租方式
+    @Field
     private String uid;//用户编号
+    @Field
     private String price;//房屋价格
+    @Field
     private String haddress;//房屋地址
+    @Field
     private String hrepair;//装修情况
+    @Field
     private String validate;//有效期
+    @Field
     private Date publishtime;//发布日期
+    @Field
     private String contact;//联系人
+    @Field
     private String tel;//联系电话
+    @Field
     private String remarks;//说明
+    @Field
     private Integer state;//状态
+    @Field
     private String think;//评价
+    @Field
     private String imgurl;//图片
     public  String getTitle(){
         return  this.hname;

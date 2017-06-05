@@ -11,13 +11,20 @@ import java.util.List;
 /**
  * Created by Ryan Noodles on 2017/6/5.
  */
-@Service("esServiceImpl")
+@Service
 public class EsServiceImpl implements EsService{
+
 
     @Autowired
     private EsHouseRepository esHouseRepository;
+
     @Override
-    public House findHouseList(String village) {
-        return esHouseRepository.findHouseList(village);
+    public House findByHid(String hid) {
+        return esHouseRepository.findByHid(hid);
     }
+
+//    @Override
+//    public House findHouseList(String hid) {
+//        return esHouseRepository.findHouseList(hid);
+//    }
 }

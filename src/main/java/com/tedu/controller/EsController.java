@@ -14,13 +14,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class EsController {
 
     @Autowired
-    private EsService esServiceImpl;
+    private EsService esService;
 
 
     @RequestMapping("/toeshouse")
     public String toEs(Model model){
-        String keywords = "021c8ace-bd1d-4984-bec4-94d8b5ed31b6";
-        House house = esServiceImpl.findHouseList(keywords);
+        String keywords = "03e5f6f8-c843-40b5-be9a-b2fcfaa661ee";
+        House house = esService.findByHid(keywords);
         model.addAttribute("eshouse",house);
         return "/pages/single";
     }
