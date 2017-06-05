@@ -20,8 +20,9 @@
 <div class="login" style="margin-top:50px;">
 
     <div class="header" style="background-color: rgba(255,255,255,0.5)">
-        <div class="switch" id="switch"><a class="switch_btn_focus" id="switch_qlogin" href="javascript:void(0);" tabindex="7">快速登录</a>
-            <a class="switch_btn" id="switch_login" href="javascript:void(0);" tabindex="8">快速注册</a><div class="switch_bottom" id="switch_bottom" style="position: absolute; width: 64px; left: 0px;"></div>
+        <div class="switch" id="switch">
+            <a class="switch_btn_focus" id="switch_qlogin" href="javascript:void(0);" tabindex="7">快速登录</a>
+            <%--<a class="switch_btn" id="switch_login" href="javascript:void(0);" tabindex="8">快速注册</a><div class="switch_bottom" id="switch_bottom" style="position: absolute; width: 64px; left: 0px;"></div>--%>
         </div>
     </div>
 
@@ -64,7 +65,7 @@
     </div>
 
     <!--注册-->
-    <div class="qlogin" id="qlogin" style="display: none; ">
+    <%--<div class="qlogin" id="qlogin" style="display: none; ">
 
         <div class="web_login"><form name="form2" id="regUser" accept-charset="utf-8"  action="" method="post">
             <input type="hidden" name="to" value="reg"/>
@@ -150,10 +151,10 @@
         </div>
 
 
-    </div>
+    </div>--%>
     <!--注册end-->
 </div>
-<div class="jianyi">*推荐使用ie8或以上版本ie浏览器或Chrome内核浏览器访问本站</div>
+
 
 </body>
 </html>
