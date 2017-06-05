@@ -15,9 +15,11 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -91,25 +93,31 @@ public class LoginController {
             return "pages/register";
         }
     }
-    //跳转到退出页面
+    //普通用户跳转到退出页面
     @RequestMapping("/toUserLogOut")
     public String toUserLogOut(HttpSession httpSession){
         httpSession.removeAttribute("session_user");
         return "redirect:/";
     }
+    //管理者退出页面
     @RequestMapping("/toAdminLogOut")
     public String toAdminLogOut(){
         SecurityUtils.getSubject().logout();
         return "redirect:/";
     }
     //Ajax校验用户名
-   /* @RequestMapping("/toAjaxCheckUname")
-    public String toAjaxCheckUname(String uname){
+    @RequestMapping("/toAjaxCheckUname")
+    public void toAjaxCheckUname(String uname, HttpServletResponse response){
         User user=userService.findUserByUserName(uname);
-        System.out.println(user);
-        if(user!=null){
-            return "用户名已存在";
+        try {
+            if(user!=null) {
+                response.getWriter().write("<font color='red'>用户名已存在</font>");
+                return;
+            }
+            response.getWriter().write("<font color='red'>用户名可以使用</font>");
+        }catch (IOException e){
+            e.printStackTrace();
         }
-        return "用户名可以使用";
-    }*/
+
+    }
 }
