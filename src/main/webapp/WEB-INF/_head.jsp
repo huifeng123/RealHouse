@@ -5,10 +5,9 @@
 <head>
 
 </head>
-<body>
 
 <!--header-->
-<div class="navigation">
+<div class="navigation ">
     <div class="container-fluid">
         <nav class="pull">
             <ul>
@@ -22,6 +21,7 @@
         </nav>
     </div>
 </div>
+
 <div class="header">
     <div class="container">
         <!--logo-->
@@ -95,5 +95,5 @@
     </div>
 </div>
 
-</body>
+
 </html>

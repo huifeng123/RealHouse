@@ -48,4 +48,6 @@ public interface HouseMapper {
     public void updateHouse(House house,String hid);
 
     List<House> findVIPHouseByHcountry(String hcountry);
+
+    List<House> findHouses( String hcountry, String hstructure, String minPrice, String maxPrice, String minArea, String maxArea);
 }

@@ -45,7 +45,17 @@
     </update>
     <!--查询所用房屋信息-->
     <select id="findAll" resultMap="houseRM">
---        <include refid="selectall"></include>
+       SELECT * from
+        (SELECT * from
+        house_p h
+        LEFT JOIN
+        (SELECT itmeId,hid info_hid,hasbed,hastv,hasfridge,haswasher,haskt,hasnq,
+        hasnet,hasfurniture,hasgas,hasrsq FROM house_info_p) info
+        ON h.hid=info.info_hid) hinfo
+        LEFT JOIN
+        (SELECT uid u_uid,uname from user_p) u
+        ON hinfo.uid=u.u_uid
+        order by price asc
     </select>
     <!--结果集封装-->
     <!--主表封装-->
@@ -130,7 +140,16 @@
 
     <!--根据房屋ID查询信息-->
     <select id="findOneByHid" resultMap="houseRM">
-        <include refid="selectall"></include>
+        SELECT * from
+        (SELECT * from
+        house_p h
+        LEFT JOIN
+        (SELECT itmeId,hid info_hid,hasbed,hastv,hasfridge,haswasher,haskt,hasnq,
+        hasnet,hasfurniture,hasgas,hasrsq FROM house_info_p) info
+        ON h.hid=info.info_hid) hinfo
+        LEFT JOIN
+        (SELECT uid u_uid,uname from user_p) u
+        ON hinfo.uid=u.u_uid
         WHERE hinfo.hid=#{hid}
 
 
@@ -145,16 +164,54 @@
     </delete>
 
     <select id="findHousesByArea" resultMap="houseRM">
-        <include refid="selectall"></include>
+        SELECT * from
+        (SELECT * from
+        house_p h
+        LEFT JOIN
+        (SELECT itmeId,hid info_hid,hasbed,hastv,hasfridge,haswasher,haskt,hasnq,
+        hasnet,hasfurniture,hasgas,hasrsq FROM house_info_p) info
+        ON h.hid=info.info_hid) hinfo
+        LEFT JOIN
+        (SELECT uid u_uid,uname from user_p) u
+        ON hinfo.uid=u.u_uid
         where area = #{area}
         order by price desc;
     </select>
 
     <select id="findVIPHouseByHcountry" resultMap="houseRM">
-        <include refid="selectall"></include>
+        SELECT * from
+        (SELECT * from
+        house_p h
+        LEFT JOIN
+        (SELECT itmeId,hid info_hid,hasbed,hastv,hasfridge,haswasher,haskt,hasnq,
+        hasnet,hasfurniture,hasgas,hasrsq FROM house_info_p) info
+        ON h.hid=info.info_hid) hinfo
+        LEFT JOIN
+        (SELECT uid u_uid,uname from user_p) u
+        ON hinfo.uid=u.u_uid
         where hcountry = #{hcountry}
         order by price desc
         limit 20
     </select>
+    <select id="findHouses" resultMap="houseRM">
+         SELECT * from
+        (SELECT * from
+        house_p h
+        LEFT JOIN
+        (SELECT itmeId,hid info_hid,hasbed,hastv,hasfridge,haswasher,haskt,hasnq,
+        hasnet,hasfurniture,hasgas,hasrsq FROM house_info_p) info
+        ON h.hid=info.info_hid) hinfo
+        LEFT JOIN
+        (SELECT uid u_uid,uname from user_p) u
+        ON hinfo.uid=u.u_uid
+        <where>
+            <if test="#{hcountry != null}">hcountry==#{hcountry},</if>
+            <if test="#{hstructure != null}">hstructure==#{hstructure} </if>
+            price in (
+            <if test="#{hstructure != null}">hstructure==#{hstructure} </if>,
+            <if test="#{hstructure != null}">hstructure==#{hstructure} </if>
+            )
 
+        </where>
+    </select>
 </mapper>
