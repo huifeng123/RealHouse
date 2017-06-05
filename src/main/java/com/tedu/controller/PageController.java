@@ -1,19 +1,24 @@
 package com.tedu.controller;
 
+import com.tedu.pojo.House;
+import com.tedu.service.HouseService;
+import net.sf.json.JSONArray;
+import org.springframework.beans.factory.annotation.Autowired;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tedu.pojo.House;
 import com.tedu.service.HouseService;
-import com.tedu.tools.GeoUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * 主要用于控制页面跳转
@@ -40,20 +45,21 @@ public class PageController extends WebMvcConfigurerAdapter {
 
     //跳转到地图找房
     @RequestMapping("toMap")
-    public String toMaphot(Model model) throws IOException {
-        List<House> houseList = houseService.findAll();
+    public String toMaphot(Model model) {
+        List<House> houseList=houseService.findAll();
 
-        //遍历houseList修改地理位置为坐标值
+        List<String> list=new ArrayList<String>();
+
         for (House house:houseList) {
-            String keywords = house.getVillage();
-            String[] jsonByUrl = GeoUtils.getJsonByUrl(keywords);
-//            System.out.println(Arrays.toString(jsonByUrl));
+           list.add(house.getVillage());
         }
 
-        //将houseList转换成json
-        String houseJson = new ObjectMapper().writeValueAsString(houseList);
-        model.addAttribute("houseJson",houseJson);
+        JSONArray jsonArray = JSONArray.fromObject(list);
 
-        return "pages/map/mapSearch";
+        model.addAttribute("village", jsonArray);
+
+        //model.addAttribute("village",village);
+
+        return "pages/map/mapHot";
     }
 }
