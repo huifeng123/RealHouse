@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
+
 /**
  * Created by Ryan Noodles on 2017/6/5.
  */
@@ -20,8 +22,11 @@ public class EsController {
     @RequestMapping("/toeshouse")
     public String toEs(Model model){
         String keywords = "03e5f6f8-c843-40b5-be9a-b2fcfaa661ee";
+        String village = "国际";
         House house = esService.findByHid(keywords);
+        List<House> houseList = esService.findByVillage(village);
         model.addAttribute("eshouse",house);
+        model.addAttribute("ehouseList",houseList);
         return "/pages/single";
     }
 }

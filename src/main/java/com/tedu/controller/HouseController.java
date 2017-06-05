@@ -20,7 +20,7 @@ public class HouseController {
         @RequestMapping("/tosingle")
         public  String houseDetail(Model model,String hid){
             //通过hid查询房源的具体信息
-            House house = houseService.findOneByHouseId("hid");
+            House house = houseService.findOneByHouseId(hid);
 //            House house = houseService.findOneByHouseId("01dc4f46-711b-4f6b-a693-b37a008b0eb4");
             //House house = houseService.findOneByHouseId("01dc4f46-711b-4f6b-a693-b37a008b0eb4");
             model.addAttribute("house",house);

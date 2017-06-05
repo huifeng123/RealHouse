@@ -12,4 +12,5 @@ import java.util.List;
 public interface EsHouseRepository extends ElasticsearchRepository<House, String> {
 
     public House findByHid(String hid);
+    public List<House> findByVillage(String village);
 }

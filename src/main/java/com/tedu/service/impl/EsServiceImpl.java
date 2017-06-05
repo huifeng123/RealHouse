@@ -23,6 +23,11 @@ public class EsServiceImpl implements EsService{
         return esHouseRepository.findByHid(hid);
     }
 
+    @Override
+    public List<House> findByVillage(String village) {
+        return esHouseRepository.findByVillage(village);
+    }
+
 //    @Override
 //    public House findHouseList(String hid) {
 //        return esHouseRepository.findHouseList(hid);
