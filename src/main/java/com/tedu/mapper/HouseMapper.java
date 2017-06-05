@@ -1,6 +1,7 @@
 package com.tedu.mapper;
 
 import com.tedu.pojo.House;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -49,5 +50,6 @@ public interface HouseMapper {
 
     List<House> findVIPHouseByHcountry(String hcountry);
 
-    List<House> findHouses( String hcountry, String hstructure, String minPrice, String maxPrice, String minArea, String maxArea);
+
+    List<House> findHousesByInfo(@Param(value = "hcountry") String hcountry,@Param(value = "hstructure") String hstructure,@Param(value = "minPrice") String minPrice,@Param(value = "maxPrice") String maxPrice,@Param(value = "minArea") String minArea,@Param(value = "maxArea") String maxArea);
 }

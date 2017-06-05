@@ -10,7 +10,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Real Home Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-    
+
 </head>
 <body>
 <!--header-->
@@ -126,7 +126,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 
     <!--price-->
-    <from name="searchform" method="post" action="/searchform">
+   <%-- <form method="post">
+
+    </form>--%>
+    <form method="post"  >
     <div class="price">
         <div class="price-grid">
             <div class="col-sm-4 price-top">
@@ -157,13 +160,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="col-sm-4 price-top">
                 <h4>区域</h4>
                 <select class="in-drop" name="hcountry">
-                    <option >---请选择区域---</option>
-                    <option>海淀区</option>
-                    <option>朝阳区</option>
-                    <option>通州区</option>
-                    <option>昌平区</option>
-                    <option>丰台区</option>
-                    <option>顺义区</option>
+                    <option value=null>---请选择区域---</option>
+                    <option>海淀</option>
+                    <option>朝阳</option>
+                    <option>通州</option>
+                    <option>昌平</option>
+                    <option>丰台</option>
+                    <option>顺义</option>
                     <option>东城</option>
                     <option>西城</option>
                 </select>
@@ -171,7 +174,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="col-sm-4 price-top">
                 <h4>房屋结构</h4>
                 <select class="in-drop" name="hstructure">
-                    <option >---请选择结构---</option>
+                    <option value=null>---请选择结构---</option>
                     <option >1室1厅</option>
                     <option >2室1厅</option>
                     <option >2室2厅</option>
@@ -188,8 +191,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul>
                     <li>
                         <select class="in-drop" name="minPrice">
-                            <option>最低价</option>
-                            <option value="">0</option>
+                            <option value="0">最低价</option>
                             <option value="3000">3000 元 </option>
                             <option value="5000">5000 元</option>
                             <option value="10000">10000 元</option>
@@ -202,7 +204,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <span>-</span>
                     <li>
                         <select class="in-drop" name="maxPrice">
-                            <option>最高价</option>
+                            <option value=100000>最高价</option>
                             <option value="1500">1500</option>
                             <option value="3000">3000 元 </option>
                             <option value="5000">5000 元</option>
@@ -220,8 +222,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul>
                     <li>
                         <select class="in-drop" name="minArea">
-                            <option>最小面积</option>
-                            <option value="0">0</option>
+                            <option value="0">最小面积</option>
                             <option value="40">40平方米</option>
                             <option value="50">50平方米</option>
                             <option value="80">80平方米</option>
@@ -236,7 +237,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <span>-</span>
                     <li>
                         <select class="in-drop" name="maxArea">
-                            <option>最大面积</option>
+                            <option value="1000">最大面积</option>
                             <option value="40">40平方米</option>
                             <option value="50">50平方米</option>
                             <option value="80">80平方米</option>
@@ -252,11 +253,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <div class="clearfix"> </div>
         </div>
-        <div class="cintainer">
-            <button class="btn btn-default" type="submit" ><span class="glyphicon glyphicon-search"></span></button>
-        </div>
+        <input type="submit" formaction="/toSearch">
+
     </div>
-    </from>
+    </form>
     <!---->
     <div class="container">
 

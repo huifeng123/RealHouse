@@ -41,6 +41,6 @@ public interface HouseService {
      */
     public List<House> findVIPHousesByHcountry(String hcountry);
 
-    List<House> findHouses(String city, String hcountry, String hstructure, String minPrice, String maxPrice, String minArea, String maxArea);
 
+    List<House> findHousesByInfo(String hcountry, String hstructure, String minPrice, String maxPrice, String minArea, String maxArea);
 }
