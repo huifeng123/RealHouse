@@ -62,6 +62,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="container">
 
     <div>
+
+        <%@ include file="/serch.jsp"%>
+
         <%--搜索框--%>
         <!---//pop-up-box---->
         <div id="small-dialog" style="margin-top: -10%;z-index: 10000;border-radius: 20%">
@@ -118,6 +121,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         </div>
         <%----------%>
+
 
     </div>
 
@@ -257,6 +261,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
 
         <div class="buy-single">
+
             <h3>选你所选</h3>
             <div class="box-sin">
                 <div class="col-md-9 single-box">
@@ -317,6 +322,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="clearfix"> </div>
                     </div>
                     </c:forEach>
+
                 </div>
             </div>
 
@@ -325,8 +331,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="nav-page">
                 <nav>
                     <ul class="pagination">
-                        <li class="disabled"><a href="" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-                        <li class="active"><a href="">1 <span class="sr-only">(current)</span></a></li>
+                        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+
                         <li><a href="#">2</a></li>
                         <li><a href="#">3</a></li>
                         <li><a href="#">4</a></li>

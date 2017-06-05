@@ -106,8 +106,8 @@
                                 <td class="tableHeader" >角色：</td>
                                 <td >
 
-                                    <input type="radio" name="upower" value="1" <c:if test="${user.upower=='1'}">checked='checked'</c:if>/>房东
-                                    <input type="radio" name="upower" value="0" <c:if test="${user.upower=='0'}">checked='checked'</c:if>/>租客
+                                    <input type="radio" name="upower" value="1" <c:if test="${user.upower==1}">checked='checked'</c:if>/>房东
+                                    <input type="radio" name="upower" value="0" <c:if test="${user.upower==0}">checked='checked'</c:if>/>租客
                                 </td>
                             </tr>
                         </table>

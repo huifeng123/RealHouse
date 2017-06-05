@@ -11,48 +11,51 @@
 
 <body>
 <div class="nav navbar-default navbar-mystyle navbar-fixed-top">
-  <div class="navbar-header">
-    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
-     <span class="icon-bar"></span> 
-     <span class="icon-bar"></span> 
-     <span class="icon-bar"></span> 
-    </button>
-    <a class="navbar-brand mystyle-brand"><span class="glyphicon glyphicon-home"></span></a> </div>
-  <div class="collapse navbar-collapse">
-    <ul class="nav navbar-nav">
-      <li class="li-border"><a class="mystyle-color" href="#">管理控制台</a></li>
-    </ul>
-    
-    <ul class="nav navbar-nav pull-right">
-        <c:if test="${!(empty session_admin)}">
-            <li><i class="glyphicon glyphicon-user"> </i>您好，${session_admin.uname}</li>
-            <li><a  href="${ctx}/toAdminLogOut"><i class="glyphicon glyphicon-user"> </i>退出</a></li>
-        </c:if>
-       <li class="li-border dropdown"><a href="#" class="mystyle-color" data-toggle="dropdown">
-      <span class="glyphicon glyphicon-search"></span> 搜索</a>
-         <div class="dropdown-menu search-dropdown">
-            <div class="input-group">
-                <input type="text" class="form-control">
+
+    <div class="navbar-header">
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand mystyle-brand"><span class="glyphicon glyphicon-home"></span></a> </div>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="li-border"><a class="mystyle-color" href="#">管理控制台</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav pull-right">
+            <c:if test="${!(empty session_admin)}">
+                <li class="li-border"><a href="javascript:void(0)">您好，${session_admin.uname}</a></li>
+                <li class="li-border"><a  href="${ctx}/toAdminLogOut">退出</a></li>
+            </c:if>
+            <li class="li-border dropdown"><a href="#" class="mystyle-color" data-toggle="dropdown">
+                <span class="glyphicon glyphicon-search"></span> 搜索</a>
+                <div class="dropdown-menu search-dropdown">
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+
                  <span class="input-group-btn">
                    <button type="button" class="btn btn-default">搜索</button>
                 </span>
-            </div>
-         </div>
-      </li>
-    </ul>
-  </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
 <div class="down-main">
-  <div class="left-main left-full">
-    <div class="sidebar-fold"><span class="glyphicon glyphicon-menu-hamburger"></span></div>
-    <div class="subNavBox">
-      <div class="sBox">
-       <div class="subNav sublist-down"><span class="title-icon glyphicon glyphicon-chevron-down"></span><span class="sublist-title">用户中心</span>
-        </div>
+    <div class="left-main left-full">
+        <div class="sidebar-fold"><span class="glyphicon glyphicon-menu-hamburger"></span></div>
+        <div class="subNavBox">
+            <div class="sBox">
+                <div class="subNav sublist-down"><span class="title-icon glyphicon glyphicon-chevron-down"></span><span class="sublist-title">用户中心</span>
+                </div>
           <%@include file="base_jsp.jsp"%>
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
   <div class="right-product my-index right-full">
      <div class="container-fluid">
 	   <div class="info-center">
@@ -79,8 +82,7 @@
             
        </div>			
 	 </div>
-  </div>
-</div>
+
 <script type="text/javascript">
 $(function(){
 /*换肤*/

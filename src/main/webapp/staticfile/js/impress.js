@@ -51,6 +51,7 @@ var m3D = function () {
 				/* ---- using canvas in place of images (performance trick) ---- */
 				this.srcImg = new Image();
 				this.srcImg.src = imagesPath + img.src;
+
 				this.img = document.createElement("canvas");
 				this.canvas = true;
 				scr.appendChild(this.img);
@@ -61,7 +62,7 @@ var m3D = function () {
 				scr.appendChild(this.img);
 			}
 			/* ---- on click event ---- */
-			this.img.onclick = function () {
+			this.img.onclick = function (e) {
 				if (camera.s) return;
 				if (this.diapo.isLoaded) {
 					if (this.diapo.urlActive) {
@@ -79,6 +80,7 @@ var m3D = function () {
 							selected.img.style.cursor = "pointer";
 							selected.urlActive = false;
 							urlInfo.style.visibility = "hidden";
+							/*alert($(e.target). );*/
 						}
 						/* ---- select current img ---- */
 						this.diapo.but.className = "button selected";
@@ -245,6 +247,7 @@ var m3D = function () {
 		while( o = diapo[i++] ) o.anim();
 		/* ---- loop ---- */
 		setTimeout(run, 32);
+		
 	}
 	return {
 		////////////////////////////////////////////////////////////////////////////

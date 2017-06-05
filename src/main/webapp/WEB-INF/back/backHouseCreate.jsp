@@ -188,7 +188,7 @@
                                         <td><input type="text" name="tel"/></td>
                                         <td class="tableHeader">状态</td>
                                         <td>
-                                            <input type="radio" name="state" value="1" checked="checked"/>待出租
+                                            <input type="radio" name="state" value="1" />待出租
                                             <input type="radio" name="state" value="0"/>已出租
                                         </td>
                                     </tr>
@@ -197,65 +197,65 @@
                                     <tr class="warning">
                                         <td class="tableHeader">床</td>
                                         <td>
-                                            <input type="radio" name="houseInfo.hasbed" value="1" />有
-                                            <input type="radio" name="houseInfo.hasbed" value="0" checked="checked"/>无
+                                            <input type="radio" name="hasbed" value="1" />有
+                                            <input type="radio" name="hasbed" value="0" />无
                                         </td>
                                         <td class="tableHeader">电视</td>
                                         <td>
-                                            <input type="radio" name="houseInfo.hastv" value="1" />有
-                                            <input type="radio" name="houseInfo.hastv" value="0" checked="checked"/>无
+                                            <input type="radio" name="hastv" value="1" />有
+                                            <input type="radio" name="hastv" value="0" />无
                                         </td>
                                     </tr>
 
                                     <tr class="warning">
                                         <td class="tableHeader">冰箱</td>
                                         <td>
-                                            <input type="radio" name="houseInfo.hasfridge" value="1" />有
-                                            <input type="radio" name="houseInfo.hasfridge" value="0" checked="checked"/>无
+                                            <input type="radio" name="hasfridge" value="1" />有
+                                            <input type="radio" name="hasfridge" value="0" />无
                                         </td>
                                         <td class="tableHeader">洗衣机</td>
                                         <td>
-                                            <input type="radio" name="houseInfo.haswasher" value="1" />有
-                                            <input type="radio" name="houseInfo.haswasher" value="0" checked="checked"/>无
+                                            <input type="radio" name="haswasher" value="1" />有
+                                            <input type="radio" name="haswasher" value="0" />无
                                         </td>
                                     </tr>
 
                                     <tr class="warning">
                                         <td class="tableHeader">空调</td>
                                         <td>
-                                            <input type="radio" name="houseInfo.haskt" value="1" />有
-                                            <input type="radio" name="houseInfo.haskt" value="0" checked="checked"/>无
+                                            <input type="radio" name="haskt" value="1" />有
+                                            <input type="radio" name="haskt" value="0" />无
                                         </td>
                                         <td class="tableHeader">暖气</td>
                                         <td>
-                                            <input type="radio" name="houseInfo.hasnq" value="1" />有
-                                            <input type="radio" name="houseInfo.hasnq" value="0" checked="checked"/>无
+                                            <input type="radio" name="hasnq" value="1" />有
+                                            <input type="radio" name="hasnq" value="0" />无
                                         </td>
                                     </tr>
 
                                     <tr class="warning">
                                         <td class="tableHeader">宽带</td>
                                         <td>
-                                            <input type="radio" name="houseInfo.hasnet" value="1" checked="checked"/>有
-                                            <input type="radio" name="houseInfo.hasnet" value="0" checked="checked"/>无
+                                            <input type="radio" name="hasnet" value="1" />有
+                                            <input type="radio" name="hasnet" value="0"/>无
                                         </td>
                                         <td class="tableHeader">家具</td>
                                         <td>
-                                            <input type="radio" name="houseInfo.hasfurniture" value="1" />有
-                                            <input type="radio" name="houseInfo.hasfurniture" value="0" checked="checked"/>无
+                                            <input type="radio" name="hasfurniture" value="1" />有
+                                            <input type="radio" name="hasfurniture" value="0" />无
                                         </td>
                                     </tr>
 
                                     <tr class="warning">
                                         <td class="tableHeader">天然气</td>
                                         <td>
-                                            <input type="radio" name="houseInfo.hasgas" value="1" />有
-                                            <input type="radio" name="houseInfo.hasgas" value="0" checked="checked"/>无
+                                            <input type="radio" name="hasgas" value="1" />有
+                                            <input type="radio" name="hasgas" value="0" />无
                                         </td>
                                         <td class="tableHeader">热水器</td>
                                         <td>
-                                            <input type="radio" name="houseInfo.hasrsq" value="1" />有
-                                            <input type="radio" name="houseInfo.hasrsq" value="0" checked="checked"/>无
+                                            <input type="radio" name="hasrsq" value="1" />有
+                                            <input type="radio" name="hasrsq" value="0" />无
                                         </td>
                                     </tr>
 
