@@ -40,4 +40,7 @@ public interface HouseService {
      * @return 精品房源
      */
     public List<House> findVIPHousesByHcountry(String hcountry);
+
+    List<House> findHouses(String city, String hcountry, String hstructure, String minPrice, String maxPrice, String minArea, String maxArea);
+
 }

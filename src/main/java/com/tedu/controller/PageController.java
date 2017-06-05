@@ -33,11 +33,7 @@ public class PageController extends WebMvcConfigurerAdapter {
         return "forward:/WEB-INF/pages/impress.jsp";
     }
 
-    //跳转到租赁页面
-    @RequestMapping("toBuy")
-    public String toBuy(){
-        return "forward:/WEB-INF/pages/buy.jsp";
-    }
+
 
     //跳转到地图找房
     @RequestMapping("toMap")

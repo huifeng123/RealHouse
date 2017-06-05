@@ -91,6 +91,11 @@ public class HouseServiceImpl implements HouseService {
         );
     }
 
+    @Override
+    public List<House> findHouses(String city, String hcountry, String hstructure, String minPrice, String maxPrice, String minArea, String maxArea) {
+        return houseMapper.findHouses(hcountry,hstructure,minPrice,maxPrice,minArea,maxArea);
+    }
+
 
     /**
      * 新增房屋信息
