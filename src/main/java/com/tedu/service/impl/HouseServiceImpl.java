@@ -92,8 +92,15 @@ public class HouseServiceImpl implements HouseService {
     }
 
     @Override
-    public List<House> findHouses(String city, String hcountry, String hstructure, String minPrice, String maxPrice, String minArea, String maxArea) {
-        return houseMapper.findHouses(hcountry,hstructure,minPrice,maxPrice,minArea,maxArea);
+    public List<House> findHousesByInfo(String hcountry, String hstructure, String minPrice, String maxPrice, String minArea, String maxArea) {
+
+        System.out.println("hcountry"+hcountry);
+        System.out.println("hstructure"+hstructure);
+        System.out.println("maxArea"+maxArea);
+        System.out.println("maxPrice"+maxPrice);
+        System.out.println("minArea"+minArea);
+        System.out.println("minPrice"+minPrice);
+        return houseMapper.findHousesByInfo(hcountry,hstructure,minPrice,maxPrice,minArea,maxArea);
     }
 
 
