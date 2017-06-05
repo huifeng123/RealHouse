@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html>
@@ -21,19 +22,25 @@
         resizeEnable: true
     });
     function geocoder() {
-
         var geocoder = new AMap.Geocoder({
             city: "010", //城市，默认：“全国”
             radius: 1000 //范围，默认：500
         });
         //地理编码,返回地理编码结果
-        geocoder.getLocation("${requestScope.village}", function(status, result) {
+        //地理编码,返回地理编码结果
 
-            if (status === 'complete' && result.info === 'OK') {
-                geocoder_CallBack(result);
-            }
-        });
+        var arr= ${village};
+
+        for(var i=0;i<arr.length;i++){
+            geocoder.getLocation(arr[i], function(status, result) {
+                if (status === 'complete' && result.info === 'OK') {
+                    geocoder_CallBack(result);
+                }
+            });
+        }
     }
+
+
     function addMarker(i, d) {
         var marker = new AMap.Marker({
             map: map,

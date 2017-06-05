@@ -30,9 +30,10 @@ public class HouseController {
 
         @RequestMapping("/tomap")
         public String toMap(Model model,String village){
-    //            House house = houseService.findHouseByHid("44f105ee-aa27-47af-a10c-0a94a39dd49b");
-            System.out.println(village);
-            model.addAttribute("village",village);
+            System.out.println("!!!!!!!!!!!!!!!!!!");
+            List<House> houseList=houseService.findAll();
+            System.out.println(houseList+"!!!!!!!!!!!!!!!!!!");
+            model.addAttribute("houseList",houseList);
             return "pages/map/mapHot";
         }
 
