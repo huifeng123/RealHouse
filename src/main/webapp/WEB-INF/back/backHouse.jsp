@@ -46,12 +46,13 @@
   <div class="right-product view-product right-full">
      <div class="container-fluid">
 				<div class="manage account-manage info-center">
+                    <form method="post">
 					<div class="page-header">
                         <div class="pull-left">
 						   <h4>用户中心</h4>      
 					    </div>
                     </div>
-                    <form method="post">
+
                     <div >
 
 
@@ -59,7 +60,7 @@
                         <input class="btn btn-primary" type="submit" value="查看评价">
                         <input class="btn btn-primary" type="submit" value="添加" formaction="${ctx}/back/houseCreate">
                         <input class="btn btn-primary" type="submit" value="删除" formaction="${ctx}/back/houseDelete">
-                        <input class="btn btn-primary" type="submit" value="修改" formaction="${ctx}/back/">
+                        <input class="btn btn-primary" type="submit" value="修改" formaction="${ctx}/back/toHouseUpdate">
 
 
                     </div>
@@ -102,9 +103,11 @@
 
 
                         </table>
-                        </form>
+
 					</div>
+                    </form>
                 </div>
+
 		</div>
   </div>
 </div>

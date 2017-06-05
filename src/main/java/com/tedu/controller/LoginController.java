@@ -51,7 +51,7 @@ public class LoginController {
             subject.login(token);//表示用户要进行登录认证
             User user=(User) subject.getPrincipal();
             subject.getSession().setAttribute("session_user", user);
-            return "redirect:/home";
+            return "redirect:/";
         } catch (AuthenticationException e) {
             //登录失败转发到登陆页面并提示用户
             e.printStackTrace();
@@ -89,6 +89,6 @@ public class LoginController {
     @RequestMapping("/toLogOut")
     public String toLogOut(HttpSession httpSession){
         httpSession.removeAttribute("session_user");
-        return "redirect:/home";
+        return "redirect:/";
     }
 }
