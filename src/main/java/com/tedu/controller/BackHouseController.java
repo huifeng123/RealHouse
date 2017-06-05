@@ -118,9 +118,9 @@ public class BackHouseController extends BaseController{
      *
      */
     @RequestMapping("/back/updateHouseAndInfo")
-    public String updateHouseAndInfo(String hid){
-        House house=houseService.findOneByHouseId(hid);
-        houseService.updateHouse(house);
+    public String updateHouseAndInfo(House house,HouseInfo houseInfo,String hid){
+//        House house=houseService.findOneByHouseId(hid);
+        houseService.updateHouse(house,houseInfo,hid);
         return "redirect:/back/backHouse";
     }
 

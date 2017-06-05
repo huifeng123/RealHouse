@@ -4,12 +4,15 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tedu.pojo.House;
 import com.tedu.service.HouseService;
+import com.tedu.tools.GeoUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -37,11 +40,20 @@ public class PageController extends WebMvcConfigurerAdapter {
 
     //跳转到地图找房
     @RequestMapping("toMap")
-    public String toMaphot(Model model) throws JsonProcessingException {
+    public String toMaphot(Model model) throws IOException {
         List<House> houseList = houseService.findAll();
+
+        //遍历houseList修改地理位置为坐标值
+        for (House house:houseList) {
+            String keywords = house.getVillage();
+            String[] jsonByUrl = GeoUtils.getJsonByUrl(keywords);
+//            System.out.println(Arrays.toString(jsonByUrl));
+        }
+
+        //将houseList转换成json
         String houseJson = new ObjectMapper().writeValueAsString(houseList);
-        System.out.println(houseJson);
         model.addAttribute("houseJson",houseJson);
-        return "forward:/WEB-INF/pages/map/mapSearch.jsp";
+
+        return "pages/map/mapSearch";
     }
 }
