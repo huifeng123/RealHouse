@@ -74,6 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</ul>
 			<div class="form-info">
 				<form action="${ctx}/register" method="post">
+
 					<input type="text" class="form-control" name="urname" placeholder="姓名" required="">
 					<input type="text" class="form-control"  name="uname" placeholder="用户名" required="" ><span style="color: red">${msg}</span>
 					<span id="uname_msg"></span>
@@ -90,6 +91,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div>
 						<input type="radio" class="form-control" name="upower" value="1" required="">房东
 						<input type="radio" class="form-control"  name="upower" value="0" required="">租客
+
+
 					</div>
 
 					<label class="hvr-sweep-to-right">

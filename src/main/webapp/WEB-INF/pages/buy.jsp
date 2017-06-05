@@ -4,18 +4,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Buy</title>
+    <title>List</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Real Home Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-    <script>
-        $(function () {
-            $()
-        })
-        
-    </script>
+    
 </head>
 <body>
 <!--header-->
@@ -27,15 +22,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!---->
         <div class="menu-right">
             <ul class="menu">
-                <li class="item1"><a href="#"> Menu<i class="glyphicon glyphicon-menu-down"> </i> </a>
+                <li class="item1"><a href="#"> 菜单<i class="glyphicon glyphicon-menu-down"> </i> </a>
                     <ul class="cute">
-                        <li class="subitem1"><a href="buy.html">Buy </a></li>
-                        <li class="subitem2"><a href="buy.html">Rent </a></li>
-                        <li class="subitem3"><a href="buy.html">Hostels </a></li>
-                        <li class="subitem1"><a href="buy.html">Resale </a></li>
-                        <li class="subitem2"><a href="loan.html">Home Loan</a></li>
-                        <li class="subitem3"><a href="buy.html">Apartment </a></li>
-                        <li class="subitem3"><a href="dealers.html">Dealers</a></li>
+                        <li class="subitem1"><a href="/toindex">主页</a></li>
+                        <li class="subitem2"><a href="/toBuy">租房</a></li>
+                        <li class="subitem3"><a href="/toMap">按图找房</a></li>
+                        <li class="subitem1"><a href="/toBuy">买房</a></li>
+                        <li class="subitem2"><a href="/toImpress">印象搜房</a></li>
+                        <li class="subitem3"><a href="/about">关于我们</a></li>
                     </ul>
                 </li>
             </ul>
@@ -68,16 +62,76 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="container">
 
     <div>
+
         <%@ include file="/serch.jsp"%>
+
+        <%--搜索框--%>
+        <!---//pop-up-box---->
+        <div id="small-dialog" style="margin-top: -10%;z-index: 10000;border-radius: 20%">
+            <!----- tabs-box ---->
+            <div class="sap_tabs">
+                <div id="horizontalTab" style="width: 100%; margin: 0px;">
+                    <%--<ul class="resp-tabs-list">
+                        <li class="resp-tab-item " aria-controls="tab_item-0" role="tab"><span>All Homes</span></li>
+                        <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>For Sale</span></li>
+                        <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>For Rent</span></li>
+                        <div class="clearfix"></div>
+                    </ul>--%>
+
+                    <div class="resp-tabs-container">
+                        <h2 class="resp-accordion resp-tab-active" role="tab" aria-controls="tab_item-0"><span class="resp-arrow"></span>全部房源</h2><div class="tab-1 resp-tab-content resp-tab-content-active" aria-labelledby="tab_item-0" style="display:block">
+                        <form method="post">
+                            <div class="facts">
+                                <div class="login">
+                                    <input type="text" name="serch" value="查询房源 区域 小区" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '查询房源 区域 小区';}">
+                                    <input type="submit" value="" formaction="/serch">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                        <h2 class="resp-accordion" role="tab" aria-controls="tab_item-1"><span class="resp-arrow"></span>For Sale</h2><div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+                        <div class="facts">
+                            <div class="login">
+                                <input type="text" value="Search Address, Neighborhood, City or Zip" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search Address, Neighborhood, City or Zip';}">
+                                <input type="submit" value="">
+                            </div>
+                        </div>
+                    </div>
+                        <h2 class="resp-accordion" role="tab" aria-controls="tab_item-2"><span class="resp-arrow"></span>For Rent</h2><div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
+                        <div class="facts">
+                            <div class="login">
+                                <input type="text" value="Search Address, Neighborhood, City or Zip" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search Address, Neighborhood, City or Zip';}">
+                                <input type="submit" value="">
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <script src="${ctx}/staticfile/js/easyResponsiveTabs.js" type="text/javascript"></script>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        $('#horizontalTab').easyResponsiveTabs({
+                            type: 'default', //Types: default, vertical, accordion
+                            width: 'auto', //auto or any width like 600px
+                            fit: true   // 100% fit in a container
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+        <%----------%>
+
 
     </div>
 
     <!--price-->
+    <from name="searchform" method="post" action="/searchform">
     <div class="price">
         <div class="price-grid">
             <div class="col-sm-4 price-top">
                 <h4>城市</h4>
-                <select class="in-drop">
+                <select class="in-drop" name="city">
                     <option>---请选择城市---</option>
                     <option>北京</option>
                     <option>Tokyo</option>
@@ -102,83 +156,61 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <div class="col-sm-4 price-top">
                 <h4>区域</h4>
-                <select class="in-drop">
-                    <option>---请选择区域---</option>
+                <select class="in-drop" name="hcountry">
+                    <option >---请选择区域---</option>
                     <option>海淀区</option>
-                    <option>Independent House</option>
-                    <option>Row House</option>
-                    <option>Villa</option>
-                    <option>Builder Floor</option>
-                    <option>Farm House</option>
-                    <option>Penthouse</option>
+                    <option>朝阳区</option>
+                    <option>通州区</option>
+                    <option>昌平区</option>
+                    <option>丰台区</option>
+                    <option>顺义区</option>
+                    <option>东城</option>
+                    <option>西城</option>
                 </select>
             </div>
             <div class="col-sm-4 price-top">
                 <h4>房屋结构</h4>
-                <select class="in-drop">
-                    <option>没有要求</option>
-                    <option>一居室</option>
-                    <option>两居室</option>
-                    <option>三居室</option>
-                    <option>四居室</option>
-                    <option>四+居室</option>
+                <select class="in-drop" name="hstructure">
+                    <option >---请选择结构---</option>
+                    <option >1室1厅</option>
+                    <option >2室1厅</option>
+                    <option >2室2厅</option>
+                    <option >3室1厅</option>
+                    <option >3室2厅</option>
+                    <option >6室2厅</option>
                 </select>
             </div>
             <div class="clearfix"> </div>
         </div>
         <div class="price-grid">
             <div class="col-sm-6 price-top1">
-                <h4>租金区间</h4>
+                <h4>价格区间</h4>
                 <ul>
                     <li>
-                        <select class="in-drop">
+                        <select class="in-drop" name="minPrice">
                             <option>最低价</option>
-                            <option>0</option>
-                            <option>5 元 </option>
-                            <option>10 元</option>
-                            <option>15 元</option>
-                            <option>20 元</option>
-                            <option>25 元</option>
-                            <option>30 元</option>
-                            <option>35 元</option>
-                            <option>40 元</option>
-                            <option>45 元</option>
-                            <option>50 元</option>
-                            <option>55 元</option>
-                            <option>60 元</option>
-                            <option>65 元</option>
-                            <option>70 元</option>
-                            <option>75 元</option>
-                            <option>80 元</option>
-                            <option>85 元</option>
-                            <option>90 元</option>
-                            <option>95 元</option>
+                            <option value="">0</option>
+                            <option value="3000">3000 元 </option>
+                            <option value="5000">5000 元</option>
+                            <option value="10000">10000 元</option>
+                            <option value="15000">15000 元</option>
+                            <option value="20000">20000 元</option>
+                            <option value="30000">30000 元</option>
+
                         </select>
                     </li>
                     <span>-</span>
                     <li>
-                        <select class="in-drop">
+                        <select class="in-drop" name="maxPrice">
                             <option>最高价</option>
-                            <option>5 元</option>
-                            <option>10 元</option>
-                            <option>15 元</option>
-                            <option>20 元</option>
-                            <option>25 元</option>
-                            <option>30 元</option>
-                            <option>35 元</option>
-                            <option>40 元</option>
-                            <option>45 元</option>
-                            <option>50 元</option>
-                            <option>55 元</option>
-                            <option>60 元</option>
-                            <option>65 元</option>
-                            <option>70 元</option>
-                            <option>75 元</option>
-                            <option>80 元</option>
-                            <option>85 元</option>
-                            <option>90 元</option>
-                            <option>95 元</option>
-                            <option>100 Cr</option>
+                            <option value="1500">1500</option>
+                            <option value="3000">3000 元 </option>
+                            <option value="5000">5000 元</option>
+                            <option value="10000">10000 元</option>
+                            <option value="15000">15000 元</option>
+                            <option value="20000">20000 元</option>
+                            <option value="30000">30000 元</option>
+                            <option value="40000">40000 元</option>
                         </select>
                     </li>
                 </ul>
@@ -187,222 +219,121 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <h4>面积区间</h4>
                 <ul>
                     <li>
-                        <select class="in-drop">
+                        <select class="in-drop" name="minArea">
                             <option>最小面积</option>
-                            <option>0</option>
-                            <option>5 平方米</option>
-                            <option>10平方米</option>
-                            <option>15平方米</option>
-                            <option>20平方米</option>
-                            <option>25 平方米</option>
-                            <option>30平方米</option>
-                            <option>35平方米</option>
-                            <option>40 平方米</option>
-                            <option>45平方米</option>
+                            <option value="0">0</option>
+                            <option value="40">40平方米</option>
+                            <option value="50">50平方米</option>
+                            <option value="80">80平方米</option>
+                            <option value="100">100平方米</option>
+                            <option value="150">150平方米</option>
+                            <option value="200">200平方米</option>
+                            <option value="300">300平方米</option>
+                            <option value="400">400平方米</option>
+
                         </select>
                     </li>
                     <span>-</span>
                     <li>
-                        <select class="in-drop">
+                        <select class="in-drop" name="maxArea">
                             <option>最大面积</option>
-                            <option>50平方米</option>
-                            <option>100 平方米</option>
-                            <option>150平方米</option>
-                            <option>200平方米</option>
-                            <option>250平方米</option>
-                            <option>300 平方米</option>
-                            <option>350平方米</option>
-                            <option>400平方米</option>
-                            <option>450平方米</option>
-                            <option>500+ 平方米</option>
+                            <option value="40">40平方米</option>
+                            <option value="50">50平方米</option>
+                            <option value="80">80平方米</option>
+                            <option value="100">100平方米</option>
+                            <option value="150">150平方米</option>
+                            <option value="200">200平方米</option>
+                            <option value="300">300平方米</option>
+                            <option value="400">400平方米</option>
+                            <option value="500">500平方米</option>
                         </select>
                     </li>
                 </ul>
             </div>
             <div class="clearfix"> </div>
         </div>
+        <div class="cintainer">
+            <button class="btn btn-default" type="submit" ><span class="glyphicon glyphicon-search"></span></button>
+        </div>
     </div>
+    </from>
     <!---->
     <div class="container">
 
         <div class="buy-single">
-            <h3>Residential Flats, Apartments</h3>
+
+            <h3>选你所选</h3>
             <div class="box-sin">
                 <div class="col-md-9 single-box">
-                    <div class="box-col">
-                        <div class=" col-sm-7 left-side ">
-                            <a href="single.html"> <img class="img-responsive" src="images/sb.jpg" alt=""></a>
-                        </div>
-                        <div class="  col-sm-5 middle-side">
-                            <h4>Possession: Immediate</h4>
-                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
-                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
-                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
-                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
-                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
-                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
-                            <div class="   right-side">
-                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
-                            </div>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="box-col">
-                        <div class=" col-sm-7 left-side ">
-                            <a href="single.html"><img class="img-responsive" src="images/sb1.jpg" alt=""></a>
-                        </div>
-                        <div class="  col-sm-5 middle-side">
-                            <h4>Possession: Immediate</h4>
-                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
-                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
-                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
-                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
-                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
-                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
-                            <div class="   right-side">
-                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
-                            </div>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="box-col">
-                        <div class=" col-sm-7 left-side ">
-                            <a href="single.html"> <img class="img-responsive" src="images/sb2.jpg" alt=""></a>
-                        </div>
-                        <div class="  col-sm-5 middle-side">
-                            <h4>Possession: Immediate</h4>
-                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
-                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
-                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
-                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
-                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
-                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
-                            <div class="   right-side">
-                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
-                            </div>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="box-col">
-                        <div class=" col-sm-7 left-side ">
-                            <a href="single.html"> <img class="img-responsive" src="images/sb3.jpg" alt=""></a>
-                        </div>
-                        <div class="  col-sm-5 middle-side">
-                            <h4>Possession: Immediate</h4>
-                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
-                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
-                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
-                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
-                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
-                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
-                            <div class="   right-side">
-                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
-                            </div>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="box-col">
-                        <div class=" col-sm-7 left-side ">
-                            <a href="single.html"> <img class="img-responsive" src="images/sb4.jpg" alt=""></a>
-                        </div>
-                        <div class="  col-sm-5 middle-side">
-                            <h4>Possession: Immediate</h4>
-                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
-                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
-                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
-                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
-                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
-                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
-                            <div class="   right-side">
-                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
-                            </div>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="box-col">
-                        <div class=" col-sm-7 left-side ">
-                            <a href="single.html"><img class="img-responsive" src="images/sb5.jpg" alt=""></a>
-                        </div>
-                        <div class="  col-sm-5 middle-side">
-                            <h4>Possession: Immediate</h4>
-                            <p><span class="bath">Bed </span>: <span class="two">2 BHK</span></p>
-                            <p>  <span class="bath1">Baths </span>: <span class="two">2</span></p>
-                            <p><span class="bath2">Built-up Area</span>: <span class="two">100 Sq.Yrds</span></p>
-                            <p><span class="bath3">Plot Area </span>:<span class="two"> 150 Sq.Yrds</span></p>
-                            <p><span class="bath4">Age of property</span> : <span class="two">4 - 10 Years</span></p>
-                            <p><span class="bath5">Price </span>:<span class="two"> 30-40 Lacs</span></p>
-                            <div class="   right-side">
-                                <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
-                            </div>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
+
+                    <c:forEach items="${houseList}" var="h" begin="0" end="5" >
+                       <div class="box-col">
+                           <div class=" col-sm-7 left-side ">
+                               <a href="/tosingle?hid=${h.hid}"> <img class="img-responsive" src="${h.imgurl}" alt=""></a>
+                           </div>
+                           <div class="  col-sm-5 middle-side">
+
+                               <h4>${h.hname}</h4>
+                               <p><span class="bath">户型</span>: <span class="two">${h.hstructure}</span></p>
+                               <p>  <span class="bath1">面积</span>: <span class="two">${h.harea}</span></p>
+                               <p><span class="bath2">朝向</span>: <span class="two">${h.face}</span></p>
+                               <p><span class="bath3">小区</span>:<span class="two"> ${h.village}</span></p>
+                               <p><span class="bath4">出租</span> : <span class="two">${h.lend}</span></p>
+                               <p><span class="bath5">价格</span>:<span class="two"> ${h.price} 元</span></p>
+                               <div class="   right-side">
+                                   <a href="contact.html" class="hvr-sweep-to-right more" >Contact Builder</a>
+                               </div>
+
+                           </div>
+                           <div class="clearfix">
+                           </div>
+                       </div>
+                    </c:forEach>
+
+
+
+
+
+
+
+
                 </div>
             </div>
             <div class="col-md-3 map-single-bottom">
+               <%--地图信息--%>
+
                 <div class="map-single">
-                    <%--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37494223.23909492!2d103!3d55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x453c569a896724fb%3A0x1409fdf86611f613!2sRussia!5e0!3m2!1sen!2sin!4v1415776049771"></iframe>--%>
+                    <iframe src="/tomap"></iframe>
                 </div>
+
+
+
                 <div class="single-box-right">
-                    <h4>Featured Communities</h4>
+                    <h4>特色社区</h4>
+                    <c:forEach var="goodHouse" items="${goodList}">
                     <div class="single-box-img">
                         <div class="box-img">
-                            <a href="single.html"><img class="img-responsive" src="images/sl.jpg" alt=""></a>
+                            <a href="/tosingle?hid=${goodHouse.hid}"><img class="img-responsive" src="${goodHouse.imgurl}" alt=""></a>
                         </div>
                         <div class="box-text">
-                            <p><a href="single.html">Lorem ipsum dolor sit amet</a></p>
-                            <a href="single.html" class="in-box">More Info</a>
+                            <p><a href="/tosingle?hid=${goodHouse.hid}">${goodHouse.hname}</a></p>
+                            <a href="/tosingle?hid=${goodHouse.hid}" class="in-box">更多信息</a>
                         </div>
                         <div class="clearfix"> </div>
                     </div>
-                    <div class="single-box-img">
-                        <div class="box-img">
-                            <a href="single.html"><img class="img-responsive" src="images/sl1.jpg" alt=""></a>
-                        </div>
-                        <div class="box-text">
-                            <p><a href="single.html">Lorem ipsum dolor sit amet</a></p>
-                            <a href="single.html" class="in-box">More Info</a>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="single-box-img">
-                        <div class="box-img">
-                            <a href="single.html"><img class="img-responsive" src="images/sl2.jpg" alt=""></a>
-                        </div>
-                        <div class="box-text">
-                            <p><a href="single.html">Lorem ipsum dolor sit amet</a></p>
-                            <a href="single.html" class="in-box">More Info</a>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="single-box-img">
-                        <div class="box-img">
-                            <a href="single.html"><img class="img-responsive" src="images/sl3.jpg" alt=""></a>
-                        </div>
-                        <div class="box-text">
-                            <p><a href="single.html">Lorem ipsum dolor sit amet</a></p>
-                            <a href="single.html" class="in-box">More Info</a>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="single-box-img">
-                        <div class="box-img">
-                            <a href="single.html"><img class="img-responsive" src="images/sl4.jpg" alt=""></a>
-                        </div>
-                        <div class="box-text">
-                            <p><a href="single.html">Lorem ipsum dolor sit amet</a></p>
-                            <a href="single.html" class="in-box">More Info</a>
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>
+                    </c:forEach>
+
                 </div>
             </div>
+
             <div class="clearfix"> </div>
+
             <div class="nav-page">
                 <nav>
                     <ul class="pagination">
                         <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
                         <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+
                         <li><a href="#">2</a></li>
                         <li><a href="#">3</a></li>
                         <li><a href="#">4</a></li>

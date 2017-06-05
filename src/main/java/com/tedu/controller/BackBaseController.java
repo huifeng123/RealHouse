@@ -26,8 +26,9 @@ public class BackBaseController {
     private HouseService houseService;
     @Autowired
     private NoticeService noticeService;
-    @RequestMapping("/back/backIndex")
-    public String toBackIndex(){
+    @RequestMapping("/back/index")
+    public String toBackIndex(HttpSession httpSession){
+        System.out.println(httpSession.getAttribute("session_user"));
         return"/back/backIndex";
     }
     @RequestMapping("/back/backUser")

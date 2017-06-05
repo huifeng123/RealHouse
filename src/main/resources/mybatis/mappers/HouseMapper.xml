@@ -3,6 +3,20 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tedu.mapper.HouseMapper">
+
+    <sql id="selectall">
+      SELECT * from
+        (SELECT * from
+        house_p h
+        LEFT JOIN
+        (SELECT itmeId,hid info_hid,hasbed,hastv,hasfridge,haswasher,haskt,hasnq,
+        hasnet,hasfurniture,hasgas,hasrsq FROM house_info_p) info
+        ON h.hid=info.info_hid) hinfo
+        LEFT JOIN
+        (SELECT uid u_uid,uname from user_p) u
+        ON hinfo.uid=u.u_uid
+
+    </sql>
     <update id="updateHouse">
         update house_p
         <set>
@@ -31,7 +45,7 @@
     </update>
     <!--查询所用房屋信息-->
     <select id="findAll" resultMap="houseRM">
-        SELECT * from
+       SELECT * from
         (SELECT * from
         house_p h
         LEFT JOIN
@@ -41,6 +55,7 @@
         LEFT JOIN
         (SELECT uid u_uid,uname from user_p) u
         ON hinfo.uid=u.u_uid
+        order by price asc
     </select>
     <!--结果集封装-->
     <!--主表封装-->
@@ -161,5 +176,42 @@
         ON hinfo.uid=u.u_uid
         where area = #{area}
         order by price desc;
+    </select>
+
+    <select id="findVIPHouseByHcountry" resultMap="houseRM">
+        SELECT * from
+        (SELECT * from
+        house_p h
+        LEFT JOIN
+        (SELECT itmeId,hid info_hid,hasbed,hastv,hasfridge,haswasher,haskt,hasnq,
+        hasnet,hasfurniture,hasgas,hasrsq FROM house_info_p) info
+        ON h.hid=info.info_hid) hinfo
+        LEFT JOIN
+        (SELECT uid u_uid,uname from user_p) u
+        ON hinfo.uid=u.u_uid
+        where hcountry = #{hcountry}
+        order by price desc
+        limit 20
+    </select>
+    <select id="findHouses" resultMap="houseRM">
+         SELECT * from
+        (SELECT * from
+        house_p h
+        LEFT JOIN
+        (SELECT itmeId,hid info_hid,hasbed,hastv,hasfridge,haswasher,haskt,hasnq,
+        hasnet,hasfurniture,hasgas,hasrsq FROM house_info_p) info
+        ON h.hid=info.info_hid) hinfo
+        LEFT JOIN
+        (SELECT uid u_uid,uname from user_p) u
+        ON hinfo.uid=u.u_uid
+        <where>
+            <if test="#{hcountry != null}">hcountry==#{hcountry},</if>
+            <if test="#{hstructure != null}">hstructure==#{hstructure} </if>
+            price in (
+            <if test="#{hstructure != null}">hstructure==#{hstructure} </if>,
+            <if test="#{hstructure != null}">hstructure==#{hstructure} </if>
+            )
+
+        </where>
     </select>
 </mapper>

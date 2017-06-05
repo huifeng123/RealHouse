@@ -10,6 +10,7 @@
 </head>
 <body>
 
+
 <h1>登录</h1>
 
 <div id="Layer1" style="position:absolute; left:0; top:0; width:100%; height:100%; z-index:-1">
@@ -55,6 +56,7 @@
                         </div>
 
                         <div style="padding-left:50px;margin-top:20px;"><input type="submit" value="登 录" style="width:150px;" class="button_blue"/></div>
+
                     </form>
                 </div>
 

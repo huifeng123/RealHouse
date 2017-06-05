@@ -53,7 +53,9 @@
                 </ul>
             </div>
         </div>
+
         <%@ include file="/serch.jsp"%>
+
     </div>
 
 </div>
