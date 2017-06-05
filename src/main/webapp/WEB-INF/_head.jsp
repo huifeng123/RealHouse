@@ -5,23 +5,23 @@
 <head>
 
 </head>
-<body>
 
 <!--header-->
-<div class="navigation">
+<div class="navigation ">
     <div class="container-fluid">
         <nav class="pull">
             <ul>
                 <li><a  href="${ctx}/">恋家</a></li>
-                <li><a  href="${ctx}/WEB-INF/pages/about.html">公司简介</a></li>
-                <li><a  href="${ctx}/WEB-INF/pages/blog.html">博客</a></li>
-                <li><a  href="${ctx}/WEB-INF/pages/terms.html">条款</a></li>
-                <li><a  href="${ctx}/WEB-INF/pages/privacy.html">隐私</a></li>
-                <li><a  href="${ctx}/WEB-INF/pages/contact.html">联系方式</a></li>
+                <li><a  href="${ctx}/about">公司简介</a></li>
+                <li><a  href="${ctx}/blog">博客</a></li>
+                <li><a  href="${ctx}/terms">条款</a></li>
+                <li><a  href="${ctx}/privacy">隐私</a></li>
+                <li><a  href="${ctx}/contact">联系方式</a></li>
             </ul>
         </nav>
     </div>
 </div>
+
 <div class="header">
     <div class="container">
         <!--logo-->
@@ -37,7 +37,7 @@
                 </c:if>
                 <c:if test="${!(empty session_user)}">
                     <li><i class="glyphicon glyphicon-user"> </i>您好，${session_user.uname}</li>
-                    <li><a  href="${ctx}/toLogOut"><i class="glyphicon glyphicon-user"> </i>退出</a></li>
+                    <li><a  href="${ctx}/toUserLogOut"><i class="glyphicon glyphicon-user"> </i>退出</a></li>
                 </c:if>
                 <li><a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i> </a></li>
 
@@ -95,5 +95,5 @@
     </div>
 </div>
 
-</body>
+
 </html>

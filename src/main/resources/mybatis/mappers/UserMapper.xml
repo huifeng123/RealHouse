@@ -41,10 +41,14 @@
     </delete>
 
     <insert id="saveUser">
-        insert into user_p(uid,uname,urname,uemail,upassword,sex,tel,uaddress) values(#{uid},#{uname},#{urname},#{uemail},#{upassword},#{sex},#{tel},#{uaddress})
+        insert into user_p(uid,uname,urname,uemail,upassword,sex,tel,uaddress,post,qq,upower) values(#{uid},#{uname},#{urname},#{uemail},#{upassword},#{sex},#{tel},#{uaddress},#{post},#{qq},#{upower})
     </insert>
 
     <select id="findUserByUserName" resultType="User">
         SELECT * from user_p where uname=#{userName}
+    </select>
+
+    <select id="findUserByUsernameAndPassword" resultType="User">
+        select * from user_p where uname=#{userName} and upassword=#{password}
     </select>
 </mapper>

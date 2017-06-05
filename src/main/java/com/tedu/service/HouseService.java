@@ -11,7 +11,7 @@ import java.util.List;
 public interface HouseService {
 
 
-
+    public void updateHouse(House house, HouseInfo houseInfo, String hid);
 
     public List<House> findHousesByArea(String area);
     /**
@@ -34,5 +34,13 @@ public interface HouseService {
 
     public void deleteHouse(String[] hids);
 
-    public void updateHouse(House house);
+    /**
+     * 通过房屋所在区域(hcountry)查询精品房源(暂时按照价格高低分配)
+     * @param hcountry 房屋所在区域
+     * @return 精品房源
+     */
+    public List<House> findVIPHousesByHcountry(String hcountry);
+
+
+    List<House> findHousesByInfo(String hcountry, String hstructure, String minPrice, String maxPrice, String minArea, String maxArea);
 }

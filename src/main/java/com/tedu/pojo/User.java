@@ -117,10 +117,19 @@ public class User extends BaseEntity{
 
     @Override
     public String toString() {
-        return "aa [uid=" + uid + ", uname=" + uname + ", urname=" + urname
-                + ", uemail=" + uemail + ", uuser=" + uuser + ", upassword="
-                + upassword + ", sex=" + sex + ", tel=" + tel + ", post="
-                + post + ", uaddress=" + uaddress + ", qq=" + qq + ", upower="
-                + upower + "]";
+        return "User{" +
+                "uid='" + uid + '\'' +
+                ", uname='" + uname + '\'' +
+                ", urname='" + urname + '\'' +
+                ", uemail='" + uemail + '\'' +
+                ", uuser='" + uuser + '\'' +
+                ", upassword='" + upassword + '\'' +
+                ", sex='" + sex + '\'' +
+                ", tel='" + tel + '\'' +
+                ", post='" + post + '\'' +
+                ", uaddress='" + uaddress + '\'' +
+                ", qq='" + qq + '\'' +
+                ", upower=" + upower +
+                '}';
     }
 }

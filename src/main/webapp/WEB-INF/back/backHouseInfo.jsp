@@ -9,6 +9,7 @@
 
 <body>
 <div class="nav navbar-default navbar-mystyle navbar-fixed-top">
+
     <div class="navbar-header">
         <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
@@ -35,7 +36,8 @@
             </li>
         </ul>
     </div>
-</div>
+
+
 <div class="down-main">
     <div class="left-main left-full">
         <div class="sidebar-fold"><span class="glyphicon glyphicon-menu-hamburger"></span></div>

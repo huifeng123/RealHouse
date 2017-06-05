@@ -3,35 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tedu.mapper.HouseMapper">
-    <update id="updateHouse">
-        update house_p
-        <set>
-            <if test="hname !=null">hname=#{hname},</if>
-            <if test="hcountry !=null">hcountry=#{hcountry},</if>
-            <if test="village !=null">village=#{village},</if>
-            <if test="area !=null">area=#{area},</if>
-            <if test="hstructure !=null">hstructure=#{hstructure},</if>
-            <if test="face !=null">face=#{face},</if>
-            <if test="harea !=null">harea=#{harea},</if>
-            <if test="hfloor !=null">hfloor=#{hfloor},</if>
-            <if test="lend !=null">lend=#{lend},</if>
-            <if test="price !=null">price=#{price},</if>
-            <if test="haddress !=null">haddress=#{haddress},</if>
-            <if test="hrepair !=null">hrepair=#{hrepair},</if>
-            <if test="validate !=null">validate=#{validate},</if>
-            <if test="publishtime !=null">publishtime=#{publishtime},</if>
-            <if test="contact !=null">contact=#{contact},</if>
-            <if test="tel !=null">tel=#{tel},</if>
-            <if test="remarks !=null">remarks=#{remarks},</if>
-            <if test="state !=null">state=#{state},</if>
-            <if test="think !=null">think=#{think},</if>
-            <if test="imgurl !=null">imgurl=#{imgurl},</if>
-        </set>
-        where hid=#{hid}
-    </update>
-    <!--查询所用房屋信息-->
-    <select id="findAll" resultMap="houseRM">
-        SELECT * from
+
+    <sql id="selectall">
+      SELECT * from
         (SELECT * from
         house_p h
         LEFT JOIN
@@ -41,6 +15,47 @@
         LEFT JOIN
         (SELECT uid u_uid,uname from user_p) u
         ON hinfo.uid=u.u_uid
+
+    </sql>
+    <update id="updateHouse">
+        update house_p
+        <set>
+            <if test="hname !=null">hname={hname},</if>
+            <if test="hcountry !=null">hcountry={hcountry},</if>
+            <if test="village !=null">village={village},</if>
+            <if test="area !=null">area={area},</if>
+            <if test="hstructure !=null">hstructure={hstructure},</if>
+            <if test="face !=null">face={face},</if>
+            <if test="harea !=null">harea={harea},</if>
+            <if test="hfloor !=null">hfloor={hfloor},</if>
+            <if test="lend !=null">lend={lend},</if>
+            <if test="price !=null">price={price},</if>
+            <if test="haddress !=null">haddress={haddress},</if>
+            <if test="hrepair !=null">hrepair={hrepair},</if>
+            <if test="validate !=null">validate={validate},</if>
+            <if test="publishtime !=null">publishtime={publishtime},</if>
+            <if test="contact !=null">contact={contact},</if>
+            <if test="tel !=null">tel={tel},</if>
+            <if test="remarks !=null">remarks={remarks},</if>
+            <if test="state !=null">state={state},</if>
+            <if test="think !=null">think={think},</if>
+            <if test="imgurl !=null">imgurl={imgurl},</if>
+        </set>
+        where hid=#{hid}
+    </update>
+    <!--查询所用房屋信息-->
+    <select id="findAll" resultMap="houseRM">
+       SELECT * from
+        (SELECT * from
+        house_p h
+        LEFT JOIN
+        (SELECT itmeId,hid info_hid,hasbed,hastv,hasfridge,haswasher,haskt,hasnq,
+        hasnet,hasfurniture,hasgas,hasrsq FROM house_info_p) info
+        ON h.hid=info.info_hid) hinfo
+        LEFT JOIN
+        (SELECT uid u_uid,uname from user_p) u
+        ON hinfo.uid=u.u_uid
+        order by price asc
     </select>
     <!--结果集封装-->
     <!--主表封装-->
@@ -148,4 +163,54 @@
         delete from house_p where hid=#{hid}
     </delete>
 
+    <select id="findHousesByArea" resultMap="houseRM">
+        SELECT * from
+        (SELECT * from
+        house_p h
+        LEFT JOIN
+        (SELECT itmeId,hid info_hid,hasbed,hastv,hasfridge,haswasher,haskt,hasnq,
+        hasnet,hasfurniture,hasgas,hasrsq FROM house_info_p) info
+        ON h.hid=info.info_hid) hinfo
+        LEFT JOIN
+        (SELECT uid u_uid,uname from user_p) u
+        ON hinfo.uid=u.u_uid
+        where area = #{area}
+        order by price desc;
+    </select>
+
+    <select id="findVIPHouseByHcountry" resultMap="houseRM">
+        SELECT * from
+        (SELECT * from
+        house_p h
+        LEFT JOIN
+        (SELECT itmeId,hid info_hid,hasbed,hastv,hasfridge,haswasher,haskt,hasnq,
+        hasnet,hasfurniture,hasgas,hasrsq FROM house_info_p) info
+        ON h.hid=info.info_hid) hinfo
+        LEFT JOIN
+        (SELECT uid u_uid,uname from user_p) u
+        ON hinfo.uid=u.u_uid
+        where hcountry = #{hcountry}
+        order by price desc
+        limit 20
+    </select>
+    <select id="findHousesByInfo" resultMap="houseRM">
+        SELECT * FROM
+        (SELECT  * FROM
+        (SELECT  * FROM
+         (SELECT * from
+        (SELECT * from
+        house_p h
+        LEFT JOIN
+        (SELECT itmeId,hid info_hid,hasbed,hastv,hasfridge,haswasher,haskt,hasnq,
+        hasnet,hasfurniture,hasgas,hasrsq FROM house_info_p) info
+        ON h.hid=info.info_hid) hinfo
+        LEFT JOIN
+        (SELECT uid u_uid,uname from user_p) u
+        ON hinfo.uid=u.u_uid ) h
+        <where> <if test="#{hcountry != null}">h.hcountry = #{hcountry} AND</if>
+            <if test="#{hstructure != null}">h.hstructure = #{hstructure}</if>
+        </where>
+        ) hh WHERE hh.price BETWEEN  #{minPrice} AND  #{maxPrice}) hhh
+        WHERE hhh.harea BETWEEN  #{minArea} AND  #{maxArea}
+    </select>
 </mapper>

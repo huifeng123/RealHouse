@@ -2,7 +2,6 @@ package com.tedu.service.impl;
 
         import com.tedu.mapper.HouseInfoMapper;
         import com.tedu.mapper.HouseMapper;
-        import com.tedu.mapper.UserMapper;
         import com.tedu.pojo.House;
         import com.tedu.pojo.HouseInfo;
         import com.tedu.pojo.User;
@@ -25,8 +24,7 @@ public class HouseServiceImpl implements HouseService {
     private HouseMapper houseMapper;
     @Autowired
     private HouseInfoMapper houseInfoMapper;
-    @Autowired
-    private UserMapper userMapper;
+
     @Override
     public List<House> findAll() {
         return houseMapper.findAll();
@@ -87,21 +85,34 @@ public class HouseServiceImpl implements HouseService {
         }
     }
 
-    public void updateHouse(House house){
-        HouseInfo houseInfo=house.getHouseInfo();
-        User user=house.getUserHouse();
-        String uid=house.getUid();
-        String hid=house.getHid();
+    @Override
+    public List<House> findVIPHousesByHcountry(String hcountry) {
+        return houseMapper.findVIPHouseByHcountry(hcountry
+        );
+    }
 
-        user.setUid(uid);
-        userMapper.updateUser(user);
-        houseInfo.setHid(hid);
-        houseInfoMapper.updateHouseInfo(houseInfo);
-        houseMapper.updateHouse(house);
+    @Override
+    public List<House> findHousesByInfo(String hcountry, String hstructure, String minPrice, String maxPrice, String minArea, String maxArea) {
 
+        System.out.println("hcountry"+hcountry);
+        System.out.println("hstructure"+hstructure);
+        System.out.println("maxArea"+maxArea);
+        System.out.println("maxPrice"+maxPrice);
+        System.out.println("minArea"+minArea);
+        System.out.println("minPrice"+minPrice);
+        return houseMapper.findHousesByInfo(hcountry,hstructure,minPrice,maxPrice,minArea,maxArea);
     }
 
 
-
+    /**
+     * 新增房屋信息
+     * @param house
+     */
+    @Override
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void updateHouse(House house,HouseInfo houseInfo,String uid){
+        houseMapper.updateHouse(house,uid);
+        houseInfoMapper.updateHouseInfo(houseInfo,uid);
+    }
 
 }

@@ -6,11 +6,14 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/base.jsp" %>
 <html>
 <head>
     <title>terms</title>
 </head>
 <body>
-
+<%@include file="/WEB-INF/_head.jsp"%>
+<%@include file="/WEB-INF/_foot.jsp"%>
 </body>
 </html>
