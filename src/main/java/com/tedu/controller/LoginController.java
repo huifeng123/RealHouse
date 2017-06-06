@@ -113,15 +113,19 @@ public class LoginController {
     @RequestMapping("/toAjaxCheckUname")
     public void toAjaxCheckUname(String uname, HttpServletResponse response){
         User user=userService.findUserByUserName(uname);
-        try {
-            if(user!=null) {
-                response.getWriter().write("<font color='red'>用户名已存在</font>");
-                return;
+        if (!"".equals(uname)){
+            try {
+
+                if(user!=null) {
+                    response.getWriter().write("<font color='red'>用户名已存在</font>");
+                    return;
+                }
+                response.getWriter().write("<font color='red'>用户名可以使用</font>");
+            }catch (IOException e){
+                e.printStackTrace();
             }
-            response.getWriter().write("<font color='red'>用户名可以使用</font>");
-        }catch (IOException e){
-            e.printStackTrace();
         }
+
 
 
     }

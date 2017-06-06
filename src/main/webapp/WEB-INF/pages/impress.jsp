@@ -1,13 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ include file="/WEB-INF/base.jsp"%>
+<%--<%@ include file="/WEB-INF/base.jsp"%>--%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>deliberate lies - interactive DHTML</title>
+    <title>印象搜房</title>
     <meta name="Author" content="Gerard Ferrandez at http://www.mobanwang.com">
     <meta http-equiv="imagetoolbar" content="no">
     <%--印象搜房--%>
-    <link href="${ctx}/staticfile/css/impress.css" rel="stylesheet">
+    <%--<link href="${ctx}/staticfile/css/impress.css" rel="stylesheet">--%>
     <script src="${ctx}/staticfile/js/impress.js"></script>
     <%--印象搜房--%>
     <style type="text/css">
@@ -114,7 +114,7 @@
 
         geometry = new THREE.Geometry();
 
-        var texture = THREE.ImageUtils.loadTexture( '/staticfile/images/yuncai/cloud10.png' );
+        var texture = THREE.ImageUtils.loadTexture( 'staticfile/images/yuncai/cloud10.png' );
         texture.magFilter = THREE.LinearMipMapLinearFilter;
         texture.minFilter = THREE.LinearMipMapLinearFilter;
 
@@ -220,7 +220,7 @@
     setTimeout(function() {
         m3D.init(
                 [
-                    { src: '2.jpg', url: 'http://www.mobanwang.com/random/', title: 'jump to random script', color: '#fff' },
+                    { src: '2.jpg', url: '/toBuy', title: 'jump to random script', color: '#fff' },
                     { src: 'sl.jpg' },
                     { src: 'sl1.jpg' },
                     { src: 'sl2.jpg' },
@@ -257,7 +257,7 @@
                     { src: 'de8.jpg' },
                     { src: 'de9.jpg' },
                     { src: 'de10.jpg' },
-                    { src: 'de11.jpg', url: 'http://www.mobanwang.com/random/', color: '#fff' }
+                    { src: 'de11.jpg', url: '/toBuy', color: '#fff' }
                 ]
         );
     }, 500);

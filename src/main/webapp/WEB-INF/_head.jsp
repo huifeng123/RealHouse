@@ -26,7 +26,7 @@
     <div class="container">
         <!--logo-->
         <div class="logo">
-            <h1><a href="${ctx}/WEB-INF/index.jsp">REAL HOME</a></h1>
+            <h1><a href="${ctx}/">REAL HOME</a></h1>
         </div>
         <!--//logo-->
         <div class="top-nav">
@@ -36,7 +36,7 @@
                     <li><a  href="${ctx}/toRegister"><i class="glyphicon glyphicon-user"> </i>注册</a></li>
                 </c:if>
                 <c:if test="${!(empty session_user)}">
-                    <li><i class="glyphicon glyphicon-user"> </i>您好，${session_user.uname}</li>
+                    <li><a href="#"><i class="glyphicon glyphicon-user"> </i>您好，${session_user.uname}</a></li>
                     <li><a  href="${ctx}/toUserLogOut"><i class="glyphicon glyphicon-user"> </i>退出</a></li>
                 </c:if>
                 <li><a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i> </a></li>

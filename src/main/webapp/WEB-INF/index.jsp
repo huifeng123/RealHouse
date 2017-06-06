@@ -140,32 +140,32 @@
             <div class="col-md-4 box_2">
                 <a href="/toSingle/" class="mask">
                     <img class="img-responsive zoom-img" src="${ctx}/staticfile/images/pc4.jpg" alt="">
-                    <span class="four">40,000$</span>
+                    <span class="four">45,688￥</span>
                 </a>
                 <div class="most-1">
-                    <h5><a href="single.html">Contrary to popular</a></h5>
-                    <p>Lorem ipsum</p>
+                    <h5><a href="toBuy">个性别墅</a></h5>
+                    <p>点击查看</p>
                 </div>
             </div>
             <div class="col-md-4 box_2">
-                <a href="single.html" class="mask">
+                <a href="toBuy" class="mask">
                     <img class="img-responsive zoom-img" src="${ctx}/staticfile/images/pc5.jpg" alt="">
-                    <span class="four">40,000$</span>
+                    <span class="four">66,688￥</span>
                 </a>
                 <div class="most-1">
-                    <h5><a href="single.html">Contrary to popular</a></h5>
-                    <p>Lorem ipsum</p>
+                    <h5><a href="toBuy">洋气小别墅</a></h5>
+                    <p>点击查看</p>
                 </div>
 
             </div>
             <div class="col-md-4 box_2">
-                <a href="single.html" class="mask">
+                <a href="toBuy" class="mask">
                     <img class="img-responsive zoom-img" src="${ctx}/staticfile/images/pc3.jpg" alt="" >
-                    <span class="four">40,000$</span>
+                    <span class="four">55,688￥</span>
                 </a>
                 <div class="most-1">
-                    <h5><a href="single.html">Contrary to popular</a></h5>
-                    <p>Lorem ipsum</p>
+                    <h5><a href="toBuy">精典复式楼</a></h5>
+                    <p>点击查看</p>
                 </div>
 
             </div>
@@ -179,7 +179,7 @@
             <div class="grid-at">
                 <div class="col-md-3 grid-city">
                     <div class="grid-lo">
-                        <a href="buy_single.html">
+                        <a href="/toHotArea?hcountry=朝阳">
                             <figure class="effect-layla">
                                 <img class=" img-responsive" src="${ctx}/staticfile/images/ce.jpg" alt="img06">
                                 <figcaption>
@@ -192,7 +192,7 @@
                 </div>
                 <div class="col-md-3 grid-city">
                     <div class="grid-lo">
-                        <a href="buy_single.html">
+                        <a href="/toHotArea?hcountry=西城">
                             <figure class="effect-layla">
                                 <img class=" img-responsive" src="${ctx}/staticfile/images/ce1.jpg" alt="img06">
                                 <figcaption>
@@ -207,7 +207,7 @@
                     <div class="grid-me">
                         <div class="col-md-8 grid-lo1">
                             <div class=" grid-lo">
-                                <a href="buy_single.html">
+                                <a href="/toHotArea?hcountry=东城">
                                     <figure class="effect-layla">
                                         <img class=" img-responsive" src="${ctx}/staticfile/images/ce2.jpg" alt="img06">
                                         <figcaption>
@@ -220,11 +220,11 @@
                         </div>
                         <div class="col-md-4 grid-lo2">
                             <div class=" grid-lo">
-                                <a href="buy_single.html">
+                                <a href="//toHotArea?hcountry=延庆">
                                     <figure class="effect-layla">
                                         <img class=" img-responsive" src="${ctx}/staticfile/images/ce3.jpg" alt="img06">
                                         <figcaption>
-                                            <h4 class="effect2">大兴区</h4>
+                                            <h4 class="effect2">延庆区</h4>
 
                                         </figcaption>
                                     </figure>
@@ -236,7 +236,7 @@
                     <div class="grid-me">
                         <div class="col-md-6 grid-lo3">
                             <div class=" grid-lo">
-                                <a href="buy_single.html">
+                                <a href="//toHotArea?hcountry=昌平">
                                     <figure class="effect-layla">
                                         <img class="img-responsive" src="${ctx}/staticfile/images/ce4.jpg" alt="img06">
                                         <figcaption>
@@ -249,11 +249,11 @@
                         </div>
                         <div class="col-md-6 grid-lo4">
                             <div class=" grid-lo">
-                                <a href="buy_single.html">
+                                <a href="//toHotArea?hcountry=海淀">
                                     <figure class="effect-layla">
                                         <img class="img-responsive" src="${ctx}/staticfile/images/ce5.jpg" alt="img06">
                                         <figcaption>
-                                            <h4 class="effect3">通州区</h4>
+                                            <h4 class="effect3">海淀区</h4>
 
                                         </figcaption>
                                     </figure>
@@ -274,10 +274,10 @@
     <div class="content-middle">
         <div class="container">
             <div class="mid-content">
-                <h3>the best features</h3>
-                <p>Contrary to popular belief
-                    , Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                <a class="hvr-sweep-to-right more-in" href="single.html">Read More</a>
+                <h3>最好的功能</h3>
+                <p>
+                    与流行的信念相反，乱数假文不是简单的随机文本。它植根于一个古典拉丁文学从公元前45年，使它超过2000岁。</p>
+                <a class="hvr-sweep-to-right more-in" href="toBuy">查看更多</a>
             </div>
         </div>
     </div>
@@ -292,18 +292,18 @@
                 <h4>您可以&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;随时随地找房</h4>
                 <div class="text-1">
-                    <h5>Custom Location Tracker</h5>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majorit</p>
+                    <h5>附近搜房</h5>
+                    <p>您可以查看您附近的房源</p>
                 </div>
                 <div class="text-1">
-                    <h5>Map Search</h5>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majorit</p>
+                    <h5>地图找房</h5>
+                    <p>通过地图来查看指定地点的房源信息</p>
                 </div>
                 <div class="text-1">
-                    <h5>Quick Details</h5>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majorit</p>
+                    <h5>快速检索详情信息</h5>
+                    <p>您可以通过手机来快捷查看房源详情信息</p>
                 </div>
-                <a href="mobile_app.html" class="hvr-sweep-to-right more">Download the App</a>
+                <a href="javascript:void(0)" class="hvr-sweep-to-right more">下载APP</a>
             </div>
         </div>
     </div>
@@ -315,81 +315,81 @@
             <div class="project-top">
                 <div class="col-md-3 project-grid">
                     <div class="project-grid-top">
-                        <a href="single.html" class="mask"><img src="${ctx}/staticfile/images/ga.jpg" class="img-responsive zoom-img" alt=""/></a>
+                        <a href="toBuy" class="mask"><img src="${ctx}/staticfile/images/ga.jpg" class="img-responsive zoom-img" alt=""/></a>
                         <div class="col-md1">
                             <div class="col-md2">
                                 <div class="col-md3">
-                                    <span class="star"> 4.5</span>
+                                    <span class="star"> 4.6</span>
                                 </div>
                                 <div class="col-md4">
-                                    <strong>Venice</strong>
-                                    <small>50 Reviews</small>
+                                    <strong>舒适商品房</strong>
+                                    <small>20平米</small>
                                 </div>
                                 <div class="clearfix"> </div>
                             </div>
-                            <p>2, 3, 4 BHK Flats</p>
-                            <p class="cost">$65,000</p>
-                            <a href="single.html" class="hvr-sweep-to-right more">See Details</a>
+                            <p>一居室，两居室，三居室</p>
+                            <p class="cost">￥46,688</p>
+                            <a href="toBuy" class="hvr-sweep-to-right more">查看详情</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 project-grid">
                     <div class="project-grid-top">
-                        <a href="single.html" class="mask"><img src="${ctx}/staticfile/images/ga1.jpg" class="img-responsive zoom-img" alt=""/></a>
+                        <a href="toBuy" class="mask"><img src="${ctx}/staticfile/images/ga1.jpg" class="img-responsive zoom-img" alt=""/></a>
                         <div class="col-md1">
                             <div class="col-md2">
                                 <div class="col-md3">
                                     <span class="star"> 4.5</span>
                                 </div>
                                 <div class="col-md4">
-                                    <strong>Venice</strong>
-                                    <small>50 Reviews</small>
+                                    <strong>个性小楼房</strong>
+                                    <small>33平米</small>
                                 </div>
                                 <div class="clearfix"> </div>
                             </div>
-                            <p>2, 3, 4 BHK Flats</p>
-                            <p class="cost">$65,000</p>
-                            <a href="single.html" class="hvr-sweep-to-right more">See Details</a>
+                            <p>二居室，三居室</p>
+                            <p class="cost">$67,288</p>
+                            <a href="toBuy" class="hvr-sweep-to-right more">查看详情</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 project-grid">
                     <div class="project-grid-top">
-                        <a href="single.html" class="mask"><img src="${ctx}/staticfile/images/ga2.jpg" class="img-responsive zoom-img" alt=""/></a>
+                        <a href="toBuy" class="mask"><img src="${ctx}/staticfile/images/ga2.jpg" class="img-responsive zoom-img" alt=""/></a>
                         <div class="col-md1">
                             <div class="col-md2">
                                 <div class="col-md3">
                                     <span class="star"> 4.5</span>
                                 </div>
                                 <div class="col-md4">
-                                    <strong>Venice</strong>
-                                    <small>50 Reviews</small>
+                                    <strong>豪华小别墅</strong>
+                                    <small>200平米</small>
                                 </div>
                                 <div class="clearfix"> </div>
                             </div>
-                            <p>2, 3, 4 BHK Flats</p>
+                            <p>两居室，三居室，四居室</p>
                             <p class="cost">$65,000</p>
-                            <a href="single.html" class="hvr-sweep-to-right more">See Details</a>
+                            <a href="toBuy" class="hvr-sweep-to-right more">查看详情</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 project-grid">
                     <div class="project-grid-top">
-                        <a href="single.html" class="mask"><img src="${ctx}/staticfile/images/ga3.jpg" class="img-responsive zoom-img" alt=""/></a>
+                        <a href="toBuy" class="mask"><img src="${ctx}/staticfile/images/ga3.jpg" class="img-responsive zoom-img" alt=""/></a>
                         <div class="col-md1">
                             <div class="col-md2">
                                 <div class="col-md3">
                                     <span class="star"> 4.5</span>
                                 </div>
                                 <div class="col-md4">
-                                    <strong>Venice</strong>
-                                    <small>50 Reviews</small>
+                                    <strong>风情小高层</strong>
+                                    <small>60平米</small>
                                 </div>
                                 <div class="clearfix"> </div>
                             </div>
-                            <p>2, 3, 4 BHK Flats</p>
-                            <p class="cost">$65,000</p>
-                            <a href="single.html" class="hvr-sweep-to-right more">See Details</a>
+                            <p>两居室</p>
+                            <p class="cost">￥78,180</p>
+                            <a href="、toBuy" class="hvr-sweep-to-right more">查看详情</a>
                         </div>
                     </div>
                 </div>
@@ -404,8 +404,7 @@
             <h3>热门评论</h3>
             <div class="col-md-6 name-in">
                 <div class=" bottom-in">
-                    <p class="para-in">Duis aute irure dolor in reprehenderit in voluptate
-                        velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p class="para-in">在恋家找房，我放心，服务很周到，价格也很合理</p>
                     <i class="dolor"> </i>
                     <div class="men-grid">
                         <a href="#" class="men-top"><img class="img-responsive men-top" src="${ctx}/staticfile/images/te.jpg" alt=""></a>
@@ -417,8 +416,7 @@
                     </div>
                 </div>
                 <div class=" bottom-in">
-                    <p class="para-in">Duis aute irure dolor in reprehenderit in voluptate
-                        velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p class="para-in">恋家价格合理，服务周全，对于租户都不用考虑太多，恋家已经为我们打理好了一切。</p>
                     <i class="dolor"> </i>
                     <div class="men-grid">
                         <a href="#" class="men-top"><img class="img-responsive " src="${ctx}/staticfile/images/te2.jpg" alt=""></a>
@@ -432,8 +430,7 @@
             </div>
             <div class="col-md-6  name-on">
                 <div class="bottom-in ">
-                    <p class="para-in">Duis aute irure dolor in reprehenderit in voluptate
-                        velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p class="para-in">每次租房都是在恋家找，一开始是朋友介绍的，后来发现恋家真实不错的网站。点个赞！！！</p>
                     <i class="dolor"> </i>
                     <div class="men-grid">
                         <a href="#" class="men-top"><img class="img-responsive " src="${ctx}/staticfile/images/te1.jpg" alt=""></a>
