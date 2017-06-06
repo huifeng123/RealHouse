@@ -26,7 +26,7 @@ public class BackBaseController {
     private HouseService houseService;
     @Autowired
     private NoticeService noticeService;
-    @RequestMapping("/backIndex")
+    @RequestMapping("/back/index")
     public String toBackIndex(){
         return"/back/backIndex";
     }
