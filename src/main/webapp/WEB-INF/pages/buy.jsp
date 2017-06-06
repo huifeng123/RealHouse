@@ -72,7 +72,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <form method="post"  >
     <div class="price">
         <div class="price-grid">
-            <div class="col-sm-2 price-top">
+            <div class="col-sm-4 price-top">
                 <h4>城市</h4>
                 <select class="in-drop" name="city">
                     <option>---请选择城市---</option>
@@ -111,7 +111,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <option>西城</option>
                 </select>
             </div>
-            <div class="col-sm-2 price-top">
+            <div class="col-sm-4 price-top">
                 <h4>房屋结构</h4>
                 <select class="in-drop" name="hstructure">
                     <option value=null>---请选择结构---</option>
@@ -124,7 +124,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </select>
             </div>
             <div class="clearfix"> </div>
-            <div class="col-sm-3 price-top1">
+            <div class="col-sm-6 price-top1">
                 <h4>价格区间</h4>
                 <ul>
                     <li>
@@ -155,7 +155,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </li>
                 </ul>
             </div>
-            <div class="col-sm-3 price-top1">
+            <div class="col-sm-6 price-top1">
                 <h4>面积区间</h4>
                 <ul>
                     <li>

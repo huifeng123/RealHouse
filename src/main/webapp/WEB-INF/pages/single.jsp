@@ -74,13 +74,13 @@
         <ul class="menu">
             <li class="item1"><a href="#"> Menu<i class="glyphicon glyphicon-menu-down"> </i> </a>
                 <ul class="cute">
-                    <li class="subitem1"><a href="buy.html">Buy </a></li>
-                    <li class="subitem2"><a href="buy.html">Rent </a></li>
-                    <li class="subitem3"><a href="buy.html">Hostels </a></li>
-                    <li class="subitem1"><a href="buy.html">Resale </a></li>
-                    <li class="subitem2"><a href="loan.html">Home Loan</a></li>
-                    <li class="subitem3"><a href="buy.html">Apartment </a></li>
-                    <li class="subitem3"><a href="dealers.html">Dealers</a></li>
+                    <li class="subitem1"><a href="/toBuy">Buy </a></li>
+                    <li class="subitem2"><a href="/toBuy">Rent </a></li>
+                    <li class="subitem3"><a href="/toBuy">Hostels </a></li>
+                    <li class="subitem1"><a href="/toBuy">Resale </a></li>
+                    <li class="subitem2"><a href="/to">Home Loan</a></li>
+                    <li class="subitem3"><a href="/toback">Apartment </a></li>
+                    <li class="subitem3"><a href="/back/toIndex">Dealers</a></li>
                 </ul>
             </li>
         </ul>
@@ -238,7 +238,7 @@
                         </div>
                         <div class="box-text">
                             <p><a href="single.action">${h.hname}</a></p>
-                            <a href="single.action" class="in-box">更多信息</a>
+                            <a href="/tosingle?hid=${h.hid}" class="in-box">更多信息</a>
                         </div>
                         <div class="clearfix"> </div>
                     </div>
@@ -260,7 +260,7 @@
             <ul id="flexiselDemo1">
                 <c:forEach items="${goodList}" var="goodhouse">
                     <li><div class="project-fur">
-                        <a href="single.html" ><img class="img-responsive" src="${goodhouse.imgurl}" alt="" />	</a>
+                        <a href="/tosingle?hid=${goodhouse.hid}" ><img class="img-responsive" src="${goodhouse.imgurl}" alt="" />	</a>
                         <div class="fur">
                             <div class="fur1">
                                 <span class="fur-money">${goodhouse.price} 元</span>
