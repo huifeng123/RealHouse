@@ -7,7 +7,7 @@
     <meta name="Author" content="Gerard Ferrandez at http://www.mobanwang.com">
     <meta http-equiv="imagetoolbar" content="no">
     <%--印象搜房--%>
-    <%--<link href="${ctx}/staticfile/css/impress.css" rel="stylesheet">--%>
+    <link href="${ctx}/staticfile/css/impress.css" rel="stylesheet">
     <script src="${ctx}/staticfile/js/impress.js"></script>
     <%--印象搜房--%>
     <style type="text/css">

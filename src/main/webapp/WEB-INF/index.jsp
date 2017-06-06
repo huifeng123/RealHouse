@@ -82,7 +82,7 @@
                     </a>
                 </div>
                 <div class=" bottom-head">
-                    <a href="${ctx}/tosingle">
+                    <a href="${ctx}/tosingle?hid=536cd77a-0c28-4b35-8f44-b6944abd8150">
                         <div class="buy-media">
                             <i class="pg"> </i>
                             <h6>单single</h6>
