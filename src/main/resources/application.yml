@@ -17,7 +17,8 @@ spring:
       force: true
   data:
           elasticsearch:
-              cluster-name: es
+              cluster-name: elasticsearch
+              node-name: node1
               cluster-nodes: 10.8.41.142:9300 #配置es节点信息，逗号分隔，如果没有指定，则启动ClientNode
 mybatis:
   type-aliases-package: com.tedu.pojo

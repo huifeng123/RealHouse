@@ -23,9 +23,9 @@ public class EsController {
     public String toEs(Model model){
         String keywords = "03e5f6f8-c843-40b5-be9a-b2fcfaa661ee";
         String village = "国际";
-        House house = esService.findByHid(keywords);
+//        House house = esService.findByHid(keywords);
         List<House> houseList = esService.findByVillage(village);
-        model.addAttribute("eshouse",house);
+//        model.addAttribute("eshouse",house);
         model.addAttribute("ehouseList",houseList);
         return "/pages/single";
     }

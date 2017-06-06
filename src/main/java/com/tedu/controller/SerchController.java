@@ -26,7 +26,12 @@ public class SerchController {
         System.out.println("1111111111111111111");
         //通过提交的关键字查询全局数据
 //        System.out.println(serch);
-        String village = serch;
+        String village = "";
+        if("查询房源 区域 小区".equals(serch)){
+            village = "园";
+        }else {
+            village = serch;
+        }
 //        List<House> houseList = serchService.findSerchAll(serch);
         List<House> houseList = esService.findByVillage(village);
 //        model.addAttribute("ehouseList",houseList);

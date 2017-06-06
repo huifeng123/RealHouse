@@ -45,7 +45,7 @@
     var transfer = new AMap.Transfer(transOptions);
     //根据起、终点名称查询公交换乘路线
     transfer.search([
-        {keyword: '故宫',city:'北京'},
+        {keyword: '经海路',city:'北京'},
         //第一个元素city缺省时取transOptions的city属性
         {keyword: '${village}',city:'北京'}
         //第二个元素city缺省时取transOptions的cityd属性,

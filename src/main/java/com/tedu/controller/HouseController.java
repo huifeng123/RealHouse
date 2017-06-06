@@ -39,7 +39,7 @@ public class HouseController {
     //            House house = houseService.findHouseByHid("44f105ee-aa27-47af-a10c-0a94a39dd49b");
            // System.out.println(village);
             model.addAttribute("village",village);
-            return "pages/map/mapHot";
+            return "pages/map/mapRun";
         }
 
 

@@ -85,7 +85,7 @@
                     <a href="${ctx}/tosingle">
                         <div class="buy-media">
                             <i class="pg"> </i>
-                            <h6>single</h6>
+                            <h6>单single</h6>
                         </div>
                     </a>
                 </div>
