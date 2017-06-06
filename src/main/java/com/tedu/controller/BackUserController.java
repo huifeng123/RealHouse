@@ -34,7 +34,7 @@ public class BackUserController {
     //进行用户添加
     @RequestMapping("/back/userAdd")
     public String backUserAdd(User user){
-        System.out.println(user+"+++++++++++");
+        //System.out.println(user+"+++++++++++");
         userService.addUser(user);
         System.out.print("***************");
         return "redirect:/back/backUser";

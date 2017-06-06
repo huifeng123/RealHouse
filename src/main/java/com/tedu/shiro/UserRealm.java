@@ -41,7 +41,9 @@ public class UserRealm extends AuthorizingRealm {
 		//将token进行格式转换
 		UsernamePasswordToken loginToken=(UsernamePasswordToken) token;
 		String userName=loginToken.getUsername();
+		//System.out.println(userName);
 		User user=userService.findUserByUserName(userName);
+		//System.out.println(user);
 		AuthenticationInfo info=new SimpleAuthenticationInfo(user,user.getUpassword(),this.getName());
 		return info;
 	}

@@ -23,8 +23,10 @@ public class SerchController {
     private SerchService serchService;
     @RequestMapping("/serch")
     public String serchFind(@RequestParam(required = true) String serch, Model model){
-        System.out.println("1111111111111111111");
+        //System.out.println("1111111111111111111");
         //通过提交的关键字查询全局数据
+        //System.out.println(serch);
+        List<House> houseList = serchService.findSerchAll(serch);
 //        System.out.println(serch);
         String village = "";
         if("查询房源 区域 小区".equals(serch)){
@@ -37,6 +39,6 @@ public class SerchController {
 //        model.addAttribute("ehouseList",houseList);
         System.out.print(houseList);
         model.addAttribute("houseList",houseList);
-        return "/pages/buy";
+        return "/back/test";
     }
 }
