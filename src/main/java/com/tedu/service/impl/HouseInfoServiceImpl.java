@@ -18,5 +18,4 @@ public class HouseInfoServiceImpl implements HouseInfoService{
         return houseInfoMapper.findByHouseId(hid);
     }
 
-
 }

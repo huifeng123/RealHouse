@@ -1,9 +1,7 @@
 package com.tedu.controller;
 
 import com.tedu.exception.MsgException;
-import com.tedu.pojo.House;
 import com.tedu.pojo.User;
-import com.tedu.service.HouseService;
 import com.tedu.service.UserService;
 import com.tedu.utils.MD5Hash;
 import org.apache.shiro.SecurityUtils;
@@ -15,7 +13,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
@@ -33,8 +30,6 @@ public class LoginController {
 
     @Autowired
     private UserService userService;
-    @Autowired
-    private HouseService houseService;
 
     @RequestMapping("/toLogin")
     public String toLogin(){
@@ -91,7 +86,6 @@ public class LoginController {
         try {
             String md5Password= MD5Hash.getMd5HashPassword(user.getUpassword(),user.getUname());
             user.setUpassword(md5Password);
-            //System.out.println(user);
             userService.saveUser(user);
             return "redirect:/toLogin";
         } catch (MsgException e) {
@@ -99,7 +93,6 @@ public class LoginController {
              * 用户名存在不能注册，则返回到注册页面
              */
             model.addAttribute("msg",e.getMessage());
-            //System.out.println(user.getUname());
             return "pages/register";
         }
     }
@@ -133,13 +126,15 @@ public class LoginController {
             }
         }
 
+
+
     }
+
     @RequestMapping("/toshowMyMessage")
     public String toshowMyMessage(HttpSession session,Model model){
         User user=(User)session.getAttribute("session_user");
         model.addAttribute("user",user);
         return "/pages/myMessage";
     }
-
 
 }

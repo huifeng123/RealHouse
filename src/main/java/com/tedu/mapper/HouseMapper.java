@@ -45,10 +45,13 @@ public interface HouseMapper {
     public String findUidByUuser(String uuser);
 
     public void deleteHouse(String hid);
-    public void updateHouse(House house);
+
+    public void updateHouse(House house,String hid);
+
+    List<House> findVIPHouseByHcountry(String hcountry);
 
 
-
+    List<House> findHousesByInfo(@Param(value = "hcountry") String hcountry,@Param(value = "hstructure") String hstructure,@Param(value = "minPrice") String minPrice,@Param(value = "maxPrice") String maxPrice,@Param(value = "minArea") String minArea,@Param(value = "maxArea") String maxArea);
 
 
 
@@ -59,6 +62,5 @@ public interface HouseMapper {
 
 
     public House findOne(String hid);
-
 
 }

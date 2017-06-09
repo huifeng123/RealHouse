@@ -44,7 +44,7 @@ public class ShiroConfiguration {
         filterChainDefinitionMap.put("/staticfile/**", "anon");
         //filterChainDefinitionMap.put("/pages/**", "anon");
         //如果不让用户访问后台可以按照下面范例配置路径
-        /*filterChainDefinitionMap.put("/back*//**","authc");*/
+        filterChainDefinitionMap.put("/back/**","authc");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         return shiroFilterFactoryBean;
     }

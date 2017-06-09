@@ -2,7 +2,6 @@ package com.tedu.service.impl;
 
         import com.tedu.mapper.HouseInfoMapper;
         import com.tedu.mapper.HouseMapper;
-        import com.tedu.mapper.UserMapper;
         import com.tedu.pojo.House;
         import com.tedu.pojo.HouseInfo;
         import com.tedu.pojo.User;
@@ -25,8 +24,7 @@ public class HouseServiceImpl implements HouseService {
     private HouseMapper houseMapper;
     @Autowired
     private HouseInfoMapper houseInfoMapper;
-    @Autowired
-    private UserMapper userMapper;
+
     @Override
     public List<House> findAll() {
         return houseMapper.findAll();
@@ -87,19 +85,6 @@ public class HouseServiceImpl implements HouseService {
         }
     }
 
-    public void updateHouse(House house){
-        HouseInfo houseInfo=house.getHouseInfo();
-        User user=house.getUserHouse();
-        String uid=house.getUid();
-        String hid=house.getHid();
-        if(user!=null){
-            user.setUid(uid);
-            userMapper.updateUser(user);
-        }
-
-        houseInfo.setHid(hid);
-        houseInfoMapper.updateHouseInfo(houseInfo);
-        houseMapper.updateHouse(house);
     @Override
     public List<House> findVIPHousesByHcountry(String hcountry) {
         return houseMapper.findVIPHouseByHcountry(hcountry
@@ -118,21 +103,6 @@ public class HouseServiceImpl implements HouseService {
         return houseMapper.findHousesByInfo(hcountry,hstructure,minPrice,maxPrice,minArea,maxArea);
     }
 
-    @Override
-    @Transactional(propagation=Propagation.REQUIRED)
-    public void userSaveHouse(House house) {
-        //准备房屋id
-        String hid=UUID.randomUUID().toString();
-        //补充房屋id
-        house.setHid(hid);
-        //提取房屋详情对象
-        HouseInfo houseInfo=house.getHouseInfo();
-        if (houseInfo!=null){
-            //补充房屋详情表id
-            houseInfo.setItmeId(UUID.randomUUID().toString());
-            //补充房屋详情表中的uid字段
-            houseInfo.setHid(hid);
-        }
 
     /**
      * 新增房屋信息
@@ -144,12 +114,25 @@ public class HouseServiceImpl implements HouseService {
         houseMapper.updateHouse(house,uid);
         houseInfoMapper.updateHouseInfo(houseInfo,uid);
     }
-        // 保存用户表
-        houseMapper.saveHouse(house);
-        //System.out.println(house);
-        //保存用户详情表
-        houseInfoMapper.saveHouseInfo(houseInfo);
+    @Override
+    public House findOne(String hid) {
+        return houseMapper.findOne(hid);
+    }
+    //前台查询
+    @Override
+    public List<House> findHouseAll(String uid) {
+        return houseMapper.findHouseAll(uid);
     }
 
+    @Override
+    public void deleteHouseqian(String[] hids) {
+        for (String hid : hids) {
+            houseMapper.deleteHouseqian(hid);
+        }
+        for (String hid : hids) {
+            houseInfoMapper.deleteHouseInfoqian(hid);
+        }
 
-}
+    }
+
+    }
